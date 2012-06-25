@@ -1,9 +1,9 @@
-/* line 12, ../sass/style.scss */
+/* line 18, ../sass/style.scss */
 body {
   background-color: #eee;
 }
 
-/* line 16, ../sass/style.scss */
+/* line 22, ../sass/style.scss */
 #hero {
   width: 974px;
   height: 370px;
@@ -17,29 +17,52 @@ body {
   padding: 0px;
 }
 
-/* line 31, ../sass/style.scss */
-.features ul li {
-  display: inline-block;
-}
 /* line 35, ../sass/style.scss */
+.features {
+  height: 26px;
+}
+/* line 37, ../sass/style.scss */
+.features ul {
+  margin: 0px;
+  margin-left: 97.4px;
+  padding: 0px;
+  height: 100%;
+}
+/* line 42, ../sass/style.scss */
+.features ul li {
+  width: 194.8px;
+  display: inline-block;
+  background-color: #ccc;
+  text-align: center;
+  height: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+/* line 52, ../sass/style.scss */
 .features ul li.opened {
   font-weight: bold;
 }
+/* line 56, ../sass/style.scss */
+.features ul span.feature {
+  position: relative;
+  height: 18px;
+  top: 6px;
+}
 
-/* line 42, ../sass/style.scss */
+/* line 65, ../sass/style.scss */
 .feature {
   padding: 0px;
   width: 100%;
   display: block;
 }
-/* line 47, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 .feature .feature-content {
   padding: 4px;
   height: 332px;
   overflow: hidden;
   top: 0px;
 }
-/* line 54, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 .feature .feature-article {
   width: 225.5px;
   height: 324px;
@@ -50,12 +73,12 @@ body {
   background-color: #666;
   overflow: hidden;
 }
-/* line 64, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 .feature .feature-article .article-title {
   border-bottom: solid 1px #fff;
   margin-bottom: 4px;
 }
-/* line 69, ../sass/style.scss */
+/* line 92, ../sass/style.scss */
 .feature .article-figure {
   float: right;
   padding: 6px;
@@ -63,17 +86,17 @@ body {
   margin: 0px;
   width: 150px;
 }
-/* line 76, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
 .feature .article-figure img {
   display: block;
   max-width: 100%;
 }
-/* line 81, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 .feature .article-figure figcaption {
   font-style: italic;
 }
 
-/* line 87, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 .feature.opened {
   overflow: hidden;
 }

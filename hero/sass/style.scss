@@ -1,6 +1,12 @@
 $hero-width: 974px;
 $hero-height: 370px;
 
+$features-list-outer-height: 30px;
+$features-list-padding: 2px;
+$features-item-width: $hero-width/5;
+$features-list-margin: ($hero-width - $features-item-width*4)/2;
+$features-item-line-height: 18px;
+
 $feature-content-padding: 4px;
 $feature-content-height: $hero-height - 30px - $feature-content-padding*2;
 
@@ -27,13 +33,30 @@ body {
 }
 
 .features{
+	height: $features-list-outer-height - $features-list-padding*2;
 	ul{
+		margin:0px;
+		margin-left: $features-list-margin;
+		padding: 0px;
+		height: 100%;
 		li{
+			width: $features-item-width;
 			display: inline-block;
+			background-color: #ccc;
+			text-align: center;
+			height: 100%;
+			margin: 0px;
+			padding: 0px;
 		}
 		
 		li.opened{
 			font-weight: bold;
+		}
+		
+		span.feature{
+			position: relative;
+			height: $features-item-line-height;
+			top: ($features-list-outer-height - $features-item-line-height)/2;
 		}
 	}
 }
