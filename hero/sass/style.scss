@@ -1,17 +1,9 @@
 $hero-width: 974px;
 $hero-height: 370px;
 
-//There are four of these.
-$feature-title-inner-height: 20px;
-$feature-title-padding: 3px;
-$feature-title-height: $feature-title-inner-height + $feature-title-padding*2;
-
-$feature-opened-height: $hero-height - $feature-title-height*3;
-
 $feature-content-padding: 4px;
-$feature-content-height: $hero-height - $feature-title-height*4 - $feature-content-padding*2;
+$feature-content-height: $hero-height - 30px - $feature-content-padding*2;
 
-//There are four of these.
 $feature-article-padding: 4px;
 $feature-article-height: $feature-content-height - $feature-article-padding*2;
 $feature-article-margin: 4px;
@@ -27,10 +19,23 @@ body {
 	background-color: #777;
 	margin-left: auto;
 	margin-right: auto;
-	margin-top: 100px;
+	position: relative;
+	top: 150px;
 	display: block;
 	overflow: hidden;
 	padding: 0px;
+}
+
+.features{
+	ul{
+		li{
+			display: inline-block;
+		}
+		
+		li.opened{
+			font-weight: bold;
+		}
+	}
 }
 
 
@@ -43,6 +48,7 @@ body {
 		padding: $feature-content-padding;
 		height: $feature-content-height;
 		overflow: hidden;
+		top: 0px;
 	}
 	
 	.feature-article{
@@ -57,15 +63,8 @@ body {
 		
 		.article-title{
 			border-bottom: solid 1px #fff;
+			margin-bottom: 4px;
 		}
-	}
-	.feature-title{
-		width: 100%;
-		height: $feature-title-inner-height;
-		padding: $feature-title-padding;
-		clear: both;
-		background-color: #fff;
-		border-bottom: 1px solid #000;
 	}
 	.article-figure{
 		float: right;
@@ -86,6 +85,6 @@ body {
 }
 
 .feature.opened{
-	height: $feature-opened-height;
+	//height: $feature-opened-height;
 	overflow: hidden;
 }
