@@ -50,20 +50,21 @@ body {
 }
 
 /* line 65, ../sass/style.scss */
-.feature {
+section.feature {
   padding: 0px;
   width: 100%;
-  display: block;
+  overflow: hidden;
+  display: none;
 }
-/* line 70, ../sass/style.scss */
-.feature .feature-content {
+/* line 71, ../sass/style.scss */
+section.feature .feature-content {
   padding: 4px;
   height: 332px;
   overflow: hidden;
   top: 0px;
 }
-/* line 77, ../sass/style.scss */
-.feature .feature-article {
+/* line 78, ../sass/style.scss */
+section.feature .feature-article {
   width: 225.5px;
   height: 324px;
   padding: 4px;
@@ -73,30 +74,30 @@ body {
   background-color: #666;
   overflow: hidden;
 }
-/* line 87, ../sass/style.scss */
-.feature .feature-article .article-title {
+/* line 88, ../sass/style.scss */
+section.feature .feature-article .article-title {
   border-bottom: solid 1px #fff;
   margin-bottom: 4px;
 }
-/* line 92, ../sass/style.scss */
-.feature .article-figure {
+/* line 93, ../sass/style.scss */
+section.feature .article-figure {
   float: right;
   padding: 6px;
   background-color: #ccc;
   margin: 0px;
   width: 150px;
 }
-/* line 99, ../sass/style.scss */
-.feature .article-figure img {
+/* line 100, ../sass/style.scss */
+section.feature .article-figure img {
   display: block;
   max-width: 100%;
 }
-/* line 104, ../sass/style.scss */
-.feature .article-figure figcaption {
+/* line 105, ../sass/style.scss */
+section.feature .article-figure figcaption {
   font-style: italic;
 }
 
-/* line 110, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 .feature.opened {
-  overflow: hidden;
+  display: block;
 }
