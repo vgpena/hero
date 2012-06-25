@@ -1,9 +1,9 @@
-/* line 1, ../sass/style.scss */
+/* line 20, ../sass/style.scss */
 body {
   background-color: #eee;
 }
 
-/* line 5, ../sass/style.scss */
+/* line 24, ../sass/style.scss */
 #hero {
   width: 974px;
   height: 370px;
@@ -16,54 +16,62 @@ body {
   padding: 0px;
 }
 
-/* line 18, ../sass/style.scss */
-section .feature {
+/* line 37, ../sass/style.scss */
+.feature {
   padding: 0px;
   width: 100%;
   display: block;
 }
-/* line 23, ../sass/style.scss */
-section .feature .opened {
-  height: 290px;
-  display: block;
+/* line 42, ../sass/style.scss */
+.feature .feature-content {
+  padding: 4px;
+  height: 258px;
+  overflow: hidden;
 }
-/* line 28, ../sass/style.scss */
-section .feature .feature-article {
-  width: 227px;
-  height: 278px;
+/* line 48, ../sass/style.scss */
+.feature .feature-article {
+  width: 225.5px;
+  height: 250px;
   padding: 4px;
   margin-left: 4px;
   margin-right: 4px;
   float: left;
-  overflow: hidden;
   background-color: #666;
+  overflow: hidden;
 }
-/* line 37, ../sass/style.scss */
-section .feature .feature-article .article-title {
+/* line 58, ../sass/style.scss */
+.feature .feature-article .article-title {
   border-bottom: solid 1px #fff;
 }
-/* line 44, ../sass/style.scss */
-section .feature .feature-title {
+/* line 62, ../sass/style.scss */
+.feature .feature-title {
   width: 100%;
   height: 20px;
+  padding: 3px;
   clear: both;
   background-color: #fff;
-  border-bottom: solid 1px #000;
+  border-bottom: 1px solid #000;
 }
-/* line 51, ../sass/style.scss */
-section .feature .article-figure {
+/* line 70, ../sass/style.scss */
+.feature .article-figure {
   float: right;
   padding: 6px;
   background-color: #ccc;
   margin: 0px;
   width: 150px;
 }
-/* line 58, ../sass/style.scss */
-section .feature .article-figure img {
+/* line 77, ../sass/style.scss */
+.feature .article-figure img {
   display: block;
   max-width: 100%;
 }
-/* line 63, ../sass/style.scss */
-section .feature .article-figure figcaption {
+/* line 82, ../sass/style.scss */
+.feature .article-figure figcaption {
   font-style: italic;
+}
+
+/* line 88, ../sass/style.scss */
+.feature.opened {
+  height: 292px;
+  overflow: hidden;
 }
