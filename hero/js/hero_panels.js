@@ -31,7 +31,7 @@
 			});
 		},
 		
-		linkedclick: function(link, panel){
+		linkedclick: function(link, panel){//once we get going, this might be easier done by eliminating the 'opened' clas
 			this.panel = panel;
 			if (panel.hasClass('opened')){//don't do anything if this is already the panel being displayed.
 				return;
@@ -43,14 +43,12 @@
 					}
 				});
 				this.panel.addClass('opened');
-				console.log('opened added to '+panel.attr('id'));
 				var pos = this.panel.position(),
 					displacement = pos.left;
-				console.log(this.panel.attr('id')+", "+displacement);
+					$('#strip').animate({left: displacement*-1,});
 			};
 		},
 	};
-	
 
 	$.fn.featureNav = function (arg) {
 		return this.each(function(){

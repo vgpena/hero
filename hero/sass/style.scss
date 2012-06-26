@@ -34,6 +34,8 @@ body {
 
 nav.features{
 	height: $features-list-outer-height - $features-list-padding*2;
+	position: absolute;
+	top: $hero-height - $features-list-outer-height;
 	
 	ul{
 		margin:0px;
@@ -63,6 +65,9 @@ nav.features{
 }
 
 #strip{
+	position: absolute;
+	top: 0px;
+	left: 0px;
 	width: $hero-width*4;
 }
 

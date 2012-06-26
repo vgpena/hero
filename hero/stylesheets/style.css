@@ -20,15 +20,17 @@ body {
 /* line 35, ../sass/style.scss */
 nav.features {
   height: 26px;
+  position: absolute;
+  top: 340px;
 }
-/* line 38, ../sass/style.scss */
+/* line 40, ../sass/style.scss */
 nav.features ul {
   margin: 0px;
   margin-left: 97.4px;
   padding: 0px;
   height: 100%;
 }
-/* line 43, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 nav.features ul li {
   width: 194.8px;
   display: inline-block;
@@ -38,23 +40,26 @@ nav.features ul li {
   margin: 0px;
   padding: 0px;
 }
-/* line 53, ../sass/style.scss */
+/* line 55, ../sass/style.scss */
 nav.features ul li.opened {
   font-weight: bold;
 }
-/* line 57, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 nav.features ul span.feature {
   position: relative;
   height: 18px;
   top: 6px;
 }
 
-/* line 65, ../sass/style.scss */
+/* line 67, ../sass/style.scss */
 #strip {
+  position: absolute;
+  top: 0px;
+  left: 0px;
   width: 3896px;
 }
 
-/* line 69, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 section.feature {
   padding: 0px;
   width: 974px;
@@ -62,14 +67,14 @@ section.feature {
   float: left;
   top: 0px;
 }
-/* line 76, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 section.feature .feature-content {
   padding: 4px;
   height: 332px;
   overflow: hidden;
   top: 0px;
 }
-/* line 83, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 section.feature .feature-article {
   width: 225.5px;
   height: 324px;
@@ -80,12 +85,12 @@ section.feature .feature-article {
   background-color: #666;
   overflow: hidden;
 }
-/* line 93, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 section.feature .feature-article .article-title {
   border-bottom: solid 1px #fff;
   margin-bottom: 4px;
 }
-/* line 98, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 section.feature .article-figure {
   float: right;
   padding: 6px;
@@ -93,17 +98,17 @@ section.feature .article-figure {
   margin: 0px;
   width: 150px;
 }
-/* line 105, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 section.feature .article-figure img {
   display: block;
   max-width: 100%;
 }
-/* line 110, ../sass/style.scss */
+/* line 115, ../sass/style.scss */
 section.feature .article-figure figcaption {
   font-style: italic;
 }
 
-/* line 116, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 .feature.opened {
   /*	display: block;*/
 }
