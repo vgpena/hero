@@ -1,27 +1,29 @@
 (function($){
-	
+	var that;
 	var FeatureNav = function (el) {
-		var that = this;
+		that = this;
 		this.el = el;
 		console.log('new featureNav! :D');
 		that.build(el);
 	};
 	
 	FeatureNav.prototype = {
-
+		
 		constructor: FeatureNav,
+		
 
 		build: function (el) {
 			var $this = el;
 			console.log('building');
 			$('li', $this).each(function(){
 				console.log($(this));
-				that.sensitize();
+				that.sensitize($(this));
 			});
 		},
 		
-		_sensitize: function(el){
+		sensitize: function(el){
 			var $this = el;
+			console.log("sensitized: "+$this.html());
 		},
 	};
 	
