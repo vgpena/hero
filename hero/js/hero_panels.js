@@ -55,13 +55,12 @@
 	$.fn.featureNav = function (arg) {
 		return this.each(function(){
 			var $this = $(this),
-				data = $this.data('features'),
-				options = $.extend({}, $.fn.featureNav.defaults, arg, typeof option == 'object' && option);
+				data = $this.data('features');
 			
 			if (data) {
 				data[arg]();
 			}else{
-				$this.data('features', new FeatureNav($this, options));
+				$this.data('features', new FeatureNav($this));
 			};
 		});
 	};
