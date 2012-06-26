@@ -1,5 +1,5 @@
 (function($){
-	var that;
+	var that; //you might want to/have to make this more local. But for now...
 	var FeatureNav = function (el) {
 		that = this;
 		this.el = el;
@@ -16,14 +16,30 @@
 			var $this = el;
 			console.log('building');
 			$('li', $this).each(function(){
-				console.log($(this));
 				that.sensitize($(this));
 			});
 		},
 		
 		sensitize: function(el){
-			var $this = el;
-			console.log("sensitized: "+$this.html());
+			var $this = el,
+			id = $this.attr('id');
+			$('section', '#hero').each(function(){
+				if ($(this).attr('id')==id){
+					var linked = $(this);
+					$this.on('click', linked, function(){
+						that.linkedclick($this, linked);
+					});
+				};
+			});
+		},
+		
+		linkedclick: function(link, panel){
+			if (panel.hasClass('opened')){//don't do anything if this is already the panel being displayed.
+				return;
+			}
+			else{
+				$('section', 'hero').each(function())
+			};
 		},
 	};
 	
