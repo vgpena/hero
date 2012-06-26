@@ -1,7 +1,7 @@
 (function($){
-	var that; //you might want to/have to make this more local. But for now...
+	
 	var FeatureNav = function (el) {
-		that = this;
+		var that = this;
 		this.el = el;
 		that.build(el);
 	};
@@ -10,43 +10,33 @@
 		
 		constructor: FeatureNav,
 		
-
 		build: function (el) {
-			var $this = el;
+			var $this = el,
+				that = this;
 			$('li', $this).each(function(){
-				that.sensitize($(this));
+				that._sensitize($(this));
 			});
 		},
 		
-		sensitize: function(el){
+		_sensitize: function(el){
 			var $this = el,
+				that = this;
 			id = $this.attr('id');
 			$('section', '#hero').each(function(){
 				if ($(this).attr('id')==id){
 					var linked = $(this);
 					$this.on('click', linked, function(){
-						that.linkedclick($this, linked);
+						that._linkedclick(linked);
 					});
 				};
 			});
 		},
 		
-		linkedclick: function(link, panel){//once we get going, this might be easier done by eliminating the 'opened' clas
-			this.panel = panel;
-			if (panel.hasClass('opened')){//don't do anything if this is already the panel being displayed.
-				return;
-			}
-			else{
-				$('section', '#hero').each(function(){
-					if ($(this).hasClass('opened')){
-						$(this).removeClass('opened');
-					}
-				});
-				this.panel.addClass('opened');
-				var pos = this.panel.position(),
-					displacement = pos.left;
-					$('#strip').animate({left: displacement*-1,});
-			};
+		_linkedclick: function(panel){
+			var panel = panel,
+				pos = panel.position(),
+				displacement = pos.left;
+			$('#strip').animate({left: displacement*-1,});
 		},
 	};
 
