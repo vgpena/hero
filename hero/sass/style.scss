@@ -1,12 +1,14 @@
 $hero-width: 974px;
 $hero-height: 370px;
+$hero-padding: 4px;
 
 $features-list-outer-height: 30px;
+$features-list-outer-width: $hero-width - $hero-padding*2;
 $features-list-padding: 2px;
-$features-item-width: $hero-width/5;
-$features-list-margin: ($hero-width - $features-item-width*4)/2;
+$features-item-width: $features-list-outer-width/4;
+$features-list-margin: 2px;
 $features-item-line-height: 18px;
-
+//($hero-width - $features-item-width*4)/2 + 2;
 $feature-content-padding: 4px;
 $feature-content-height: $hero-height - 30px - $feature-content-padding*2;
 
@@ -34,22 +36,28 @@ body {
 
 nav.features{
 	height: $features-list-outer-height - $features-list-padding*2;
+	width: $features-list-outer-width;
 	position: absolute;
 	top: $hero-height - $features-list-outer-height;
+	left: $features-list-margin;
+	overflow: hidden;
 	
 	ul{
 		margin:0px;
 		margin-left: $features-list-margin;
 		padding: 0px;
 		height: 100%;
+		width: 100%;
 		li{
 			width: $features-item-width;
-			display: inline-block;
+			display: block;
+			float: left;
 			background-color: #ccc;
 			text-align: center;
 			height: 100%;
 			margin: 0px;
 			padding: 0px;
+			//border: 1px solid #000;
 		}
 		
 		li.opened{
