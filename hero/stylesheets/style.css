@@ -13,7 +13,7 @@ body {
   position: relative;
   top: 150px;
   display: block;
-  /*overflow: hidden;*/
+  overflow: hidden;
   padding: 0px;
 }
 
@@ -59,18 +59,17 @@ section.feature {
   padding: 0px;
   width: 974px;
   overflow: hidden;
-  /*display: none;*/
   float: left;
   top: 0px;
 }
-/* line 77, ../sass/style.scss */
+/* line 76, ../sass/style.scss */
 section.feature .feature-content {
   padding: 4px;
   height: 332px;
   overflow: hidden;
   top: 0px;
 }
-/* line 84, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 section.feature .feature-article {
   width: 225.5px;
   height: 324px;
@@ -81,12 +80,12 @@ section.feature .feature-article {
   background-color: #666;
   overflow: hidden;
 }
-/* line 94, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 section.feature .feature-article .article-title {
   border-bottom: solid 1px #fff;
   margin-bottom: 4px;
 }
-/* line 99, ../sass/style.scss */
+/* line 98, ../sass/style.scss */
 section.feature .article-figure {
   float: right;
   padding: 6px;
@@ -94,17 +93,17 @@ section.feature .article-figure {
   margin: 0px;
   width: 150px;
 }
-/* line 106, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 section.feature .article-figure img {
   display: block;
   max-width: 100%;
 }
-/* line 111, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 section.feature .article-figure figcaption {
   font-style: italic;
 }
 
-/* line 117, ../sass/style.scss */
+/* line 116, ../sass/style.scss */
 .feature.opened {
   /*	display: block;*/
 }

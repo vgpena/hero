@@ -3,7 +3,6 @@
 	var FeatureNav = function (el) {
 		that = this;
 		this.el = el;
-		console.log('new featureNav! :D');
 		that.build(el);
 	};
 	
@@ -14,7 +13,6 @@
 
 		build: function (el) {
 			var $this = el;
-			console.log('building');
 			$('li', $this).each(function(){
 				that.sensitize($(this));
 			});
@@ -34,6 +32,7 @@
 		},
 		
 		linkedclick: function(link, panel){
+			this.panel = panel;
 			if (panel.hasClass('opened')){//don't do anything if this is already the panel being displayed.
 				return;
 			}
@@ -41,9 +40,13 @@
 				$('section', '#hero').each(function(){
 					if ($(this).hasClass('opened')){
 						$(this).removeClass('opened');
-						panel.addClass('opened');
 					}
 				});
+				this.panel.addClass('opened');
+				console.log('opened added to '+panel.attr('id'));
+				var pos = this.panel.position(),
+					displacement = pos.left;
+				console.log(this.panel.attr('id')+", "+displacement);
 			};
 		},
 	};
