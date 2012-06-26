@@ -26,16 +26,28 @@
 				if ($(this).attr('id')==id){
 					var linked = $(this);
 					$this.on('click', linked, function(){
-						that._linkedclick(linked);
+						that._linkedclick($this, linked);
 					});
 				};
 			});
 		},
 		
-		_linkedclick: function(panel){
+		_linkedclick: function(link, panel){
 			var panel = panel,
+				link = link,
 				pos = panel.position(),
 				displacement = pos.left;
+			if (link.hasClass('opened')){//this will change the styling on the link of the visible panel.
+				return;
+			}
+			else{
+				$('li', 'nav.features').each(function(){
+					if ($(this).hasClass('opened')){
+						$(this).removeClass('opened');
+					}
+				});
+				link.addClass('opened');
+			};
 			$('#strip').animate({left: displacement*-1,});
 		},
 	};
