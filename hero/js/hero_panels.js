@@ -38,7 +38,12 @@
 				return;
 			}
 			else{
-				$('section', 'hero').each(function())
+				$('section', '#hero').each(function(){
+					if ($(this).hasClass('opened')){
+						$(this).removeClass('opened');
+						panel.addClass('opened');
+					}
+				});
 			};
 		},
 	};
