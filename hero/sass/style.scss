@@ -28,12 +28,13 @@ body {
 	position: relative;
 	top: 150px;
 	display: block;
-	overflow: hidden;
+	/*overflow: hidden;*/
 	padding: 0px;
 }
 
-.features{
+nav.features{
 	height: $features-list-outer-height - $features-list-padding*2;
+	
 	ul{
 		margin:0px;
 		margin-left: $features-list-margin;
@@ -61,12 +62,17 @@ body {
 	}
 }
 
+#strip{
+	width: $hero-width*4;
+}
 
 section.feature{
 	padding: 0px;
-	width: 100%;
+	width: $hero-width;
 	overflow: hidden;
-	display: none;
+	/*display: none;*/
+	float: left;
+	top: 0px;
 	
 	.feature-content{
 		padding: $feature-content-padding;
@@ -109,5 +115,5 @@ section.feature{
 }
 
 .feature.opened{
-	display: block;
+/*	display: block;*/
 }

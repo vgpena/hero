@@ -13,23 +13,23 @@ body {
   position: relative;
   top: 150px;
   display: block;
-  overflow: hidden;
+  /*overflow: hidden;*/
   padding: 0px;
 }
 
 /* line 35, ../sass/style.scss */
-.features {
+nav.features {
   height: 26px;
 }
-/* line 37, ../sass/style.scss */
-.features ul {
+/* line 38, ../sass/style.scss */
+nav.features ul {
   margin: 0px;
   margin-left: 97.4px;
   padding: 0px;
   height: 100%;
 }
-/* line 42, ../sass/style.scss */
-.features ul li {
+/* line 43, ../sass/style.scss */
+nav.features ul li {
   width: 194.8px;
   display: inline-block;
   background-color: #ccc;
@@ -38,32 +38,39 @@ body {
   margin: 0px;
   padding: 0px;
 }
-/* line 52, ../sass/style.scss */
-.features ul li.opened {
+/* line 53, ../sass/style.scss */
+nav.features ul li.opened {
   font-weight: bold;
 }
-/* line 56, ../sass/style.scss */
-.features ul span.feature {
+/* line 57, ../sass/style.scss */
+nav.features ul span.feature {
   position: relative;
   height: 18px;
   top: 6px;
 }
 
 /* line 65, ../sass/style.scss */
+#strip {
+  width: 3896px;
+}
+
+/* line 69, ../sass/style.scss */
 section.feature {
   padding: 0px;
-  width: 100%;
+  width: 974px;
   overflow: hidden;
-  display: none;
+  /*display: none;*/
+  float: left;
+  top: 0px;
 }
-/* line 71, ../sass/style.scss */
+/* line 77, ../sass/style.scss */
 section.feature .feature-content {
   padding: 4px;
   height: 332px;
   overflow: hidden;
   top: 0px;
 }
-/* line 78, ../sass/style.scss */
+/* line 84, ../sass/style.scss */
 section.feature .feature-article {
   width: 225.5px;
   height: 324px;
@@ -74,12 +81,12 @@ section.feature .feature-article {
   background-color: #666;
   overflow: hidden;
 }
-/* line 88, ../sass/style.scss */
+/* line 94, ../sass/style.scss */
 section.feature .feature-article .article-title {
   border-bottom: solid 1px #fff;
   margin-bottom: 4px;
 }
-/* line 93, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
 section.feature .article-figure {
   float: right;
   padding: 6px;
@@ -87,17 +94,17 @@ section.feature .article-figure {
   margin: 0px;
   width: 150px;
 }
-/* line 100, ../sass/style.scss */
+/* line 106, ../sass/style.scss */
 section.feature .article-figure img {
   display: block;
   max-width: 100%;
 }
-/* line 105, ../sass/style.scss */
+/* line 111, ../sass/style.scss */
 section.feature .article-figure figcaption {
   font-style: italic;
 }
 
-/* line 111, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 .feature.opened {
-  display: block;
+  /*	display: block;*/
 }
