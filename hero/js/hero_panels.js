@@ -37,7 +37,7 @@
 				link = link,
 				pos = panel.position(),
 				displacement = pos.left;
-			if (link.hasClass('opened')){//this will change the styling on the link of the visible panel.
+			if (link.hasClass('opened')){//this part will change the styling on the link of the visible panel.
 				return;
 			}
 			else{
@@ -48,7 +48,7 @@
 				});
 				link.addClass('opened');
 			};
-			$('#strip').animate({left: displacement*-1,});
+			$('#strip').animate({left: displacement*-1}, '50');
 		},
 	};
 

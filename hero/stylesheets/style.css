@@ -42,7 +42,7 @@ nav.features ul li {
 }
 /* line 55, ../sass/style.scss */
 nav.features ul li.opened {
-  font-weight: bold;
+  text-decoration: overline;
 }
 /* line 59, ../sass/style.scss */
 nav.features ul span.feature {
