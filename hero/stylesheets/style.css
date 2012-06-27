@@ -1,9 +1,9 @@
-/* line 20, ../sass/style.scss */
+/* line 26, ../sass/style.scss */
 body {
-  background-color: #eee;
+  background-color: #fff;
 }
 
-/* line 24, ../sass/style.scss */
+/* line 30, ../sass/style.scss */
 #hero {
   width: 974px;
   height: 370px;
@@ -17,46 +17,47 @@ body {
   padding: 0px;
 }
 
-/* line 37, ../sass/style.scss */
+/* line 43, ../sass/style.scss */
 nav.features {
   height: 26px;
-  width: 966px;
+  width: 974px;
   position: absolute;
   top: 340px;
-  left: 2px;
+  left: 0px;
   overflow: hidden;
 }
-/* line 45, ../sass/style.scss */
+/* line 51, ../sass/style.scss */
 nav.features ul {
   margin: 0px;
-  margin-left: 2px;
+  margin-left: 0px;
   padding: 0px;
   height: 100%;
   width: 100%;
 }
-/* line 51, ../sass/style.scss */
+/* line 57, ../sass/style.scss */
 nav.features ul li {
-  width: 241.5px;
+  width: 243.5px;
   display: block;
   float: left;
-  background-color: #ccc;
+  background-color: #C20017;
   text-align: center;
   height: 100%;
   margin: 0px;
   padding: 0px;
+  color: #eeebd7;
 }
-/* line 63, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 nav.features ul li.opened {
   text-decoration: overline;
 }
-/* line 67, ../sass/style.scss */
+/* line 74, ../sass/style.scss */
 nav.features ul span.feature {
   position: relative;
   height: 18px;
   top: 6px;
 }
 
-/* line 75, ../sass/style.scss */
+/* line 82, ../sass/style.scss */
 #strip {
   position: absolute;
   top: 0px;
@@ -64,7 +65,7 @@ nav.features ul span.feature {
   width: 3896px;
 }
 
-/* line 82, ../sass/style.scss */
+/* line 89, ../sass/style.scss */
 section.feature {
   padding: 0px;
   width: 974px;
@@ -72,14 +73,14 @@ section.feature {
   float: left;
   top: 0px;
 }
-/* line 89, ../sass/style.scss */
+/* line 96, ../sass/style.scss */
 section.feature .feature-content {
   padding: 4px;
   height: 332px;
   overflow: hidden;
   top: 0px;
 }
-/* line 96, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 section.feature .feature-article {
   width: 225.5px;
   height: 324px;
@@ -90,12 +91,12 @@ section.feature .feature-article {
   background-color: #666;
   overflow: hidden;
 }
-/* line 106, ../sass/style.scss */
+/* line 113, ../sass/style.scss */
 section.feature .feature-article .article-title {
   border-bottom: solid 1px #fff;
   margin-bottom: 4px;
 }
-/* line 111, ../sass/style.scss */
+/* line 118, ../sass/style.scss */
 section.feature .article-figure {
   float: right;
   padding: 6px;
@@ -103,17 +104,17 @@ section.feature .article-figure {
   margin: 0px;
   width: 150px;
 }
-/* line 118, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 section.feature .article-figure img {
   display: block;
   max-width: 100%;
 }
-/* line 123, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 section.feature .article-figure figcaption {
   font-style: italic;
 }
 
-/* line 129, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 .feature.opened {
   /*	display: block;*/
 }
