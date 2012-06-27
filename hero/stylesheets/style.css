@@ -1,9 +1,9 @@
-/* line 26, ../sass/style.scss */
+/* line 28, ../sass/style.scss */
 body {
   background-color: #fff;
 }
 
-/* line 30, ../sass/style.scss */
+/* line 32, ../sass/style.scss */
 #hero {
   width: 974px;
   height: 370px;
@@ -17,16 +17,16 @@ body {
   padding: 0px;
 }
 
-/* line 43, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 nav.features {
   height: 26px;
-  width: 974px;
+  width: 976px;
   position: absolute;
   top: 340px;
   left: 0px;
   overflow: hidden;
 }
-/* line 51, ../sass/style.scss */
+/* line 53, ../sass/style.scss */
 nav.features ul {
   margin: 0px;
   margin-left: 0px;
@@ -34,30 +34,35 @@ nav.features ul {
   height: 100%;
   width: 100%;
 }
-/* line 57, ../sass/style.scss */
+/* line 59, ../sass/style.scss */
 nav.features ul li {
-  width: 243.5px;
+  width: 244px;
   display: block;
   float: left;
-  background-color: #C20017;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ed3232), color-stop(90%, #a61c1f));
+  background-image: -webkit-linear-gradient(#ed3232, #a61c1f 90%);
+  background-image: -moz-linear-gradient(#ed3232, #a61c1f 90%);
+  background-image: -o-linear-gradient(#ed3232, #a61c1f 90%);
+  background-image: -ms-linear-gradient(#ed3232, #a61c1f 90%);
+  background-image: linear-gradient(#ed3232, #a61c1f 90%);
   text-align: center;
   height: 100%;
   margin: 0px;
   padding: 0px;
   color: #eeebd7;
 }
-/* line 70, ../sass/style.scss */
+/* line 71, ../sass/style.scss */
 nav.features ul li.opened {
   text-decoration: overline;
 }
-/* line 74, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 nav.features ul span.feature {
   position: relative;
   height: 18px;
   top: 6px;
 }
 
-/* line 82, ../sass/style.scss */
+/* line 83, ../sass/style.scss */
 #strip {
   position: absolute;
   top: 0px;
@@ -65,7 +70,7 @@ nav.features ul span.feature {
   width: 3896px;
 }
 
-/* line 89, ../sass/style.scss */
+/* line 90, ../sass/style.scss */
 section.feature {
   padding: 0px;
   width: 974px;
@@ -73,14 +78,14 @@ section.feature {
   float: left;
   top: 0px;
 }
-/* line 96, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
 section.feature .feature-content {
   padding: 4px;
   height: 332px;
   overflow: hidden;
   top: 0px;
 }
-/* line 103, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 section.feature .feature-article {
   width: 225.5px;
   height: 324px;
@@ -91,12 +96,12 @@ section.feature .feature-article {
   background-color: #666;
   overflow: hidden;
 }
-/* line 113, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 section.feature .feature-article .article-title {
   border-bottom: solid 1px #fff;
   margin-bottom: 4px;
 }
-/* line 118, ../sass/style.scss */
+/* line 119, ../sass/style.scss */
 section.feature .article-figure {
   float: right;
   padding: 6px;
@@ -104,17 +109,17 @@ section.feature .article-figure {
   margin: 0px;
   width: 150px;
 }
-/* line 125, ../sass/style.scss */
+/* line 126, ../sass/style.scss */
 section.feature .article-figure img {
   display: block;
   max-width: 100%;
 }
-/* line 130, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 section.feature .article-figure figcaption {
   font-style: italic;
 }
 
-/* line 136, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 .feature.opened {
   /*	display: block;*/
 }

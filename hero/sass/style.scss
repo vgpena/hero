@@ -1,9 +1,11 @@
+@import "compass";
+
 $hero-width: 974px;
 $hero-height: 370px;
 $hero-padding: 4px;
 
 $features-list-outer-height: 30px;
-$features-list-outer-width: $hero-width;
+$features-list-outer-width: $hero-width + 2;
 $features-list-padding: 2px;
 $features-item-width: $features-list-outer-width/4;
 $features-list-margin: 0px;
@@ -58,13 +60,12 @@ nav.features{
 			width: $features-item-width;
 			display: block;
 			float: left;
-			background-color: #C20017;
+			@include background-image(linear-gradient(#ED3232, $light-red 90%));
 			text-align: center;
 			height: 100%;
 			margin: 0px;
 			padding: 0px;
 			color: $cream;
-			//border: 1px solid #000;
 		}
 		
 		li.opened{
