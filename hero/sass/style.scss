@@ -18,7 +18,7 @@ $stories-thumb-margin: 4px;
 $stories-thumb-dim: $feature-content-height/3 - $stories-thumb-margin*3;
 
 $story-width: $hero-width*(2/3);
-$story-padding: 18px;
+$story-padding: 24px;
 
 $highlight-red: #F25757;
 $light-red:#ED3232;
@@ -91,12 +91,12 @@ body {
 		}
 		
 		li.opened{
-			@include text-shadow(rgba($cream, 0.4) 0 0 2px);
+			@include text-shadow(rgba($cream, 0.4) 0 0 4px);
 		}
 		
 		li:hover{
 			color: #FFFDF5;
-			@include text-shadow(rgba(black, 0.8) 0 0 2px);
+			@include text-shadow(rgba($cream, 0.8) 0 0 4px);
 		}
 		
 		.feature-nav{
@@ -134,7 +134,6 @@ body {
 		height: $feature-content-height;
 		width: $feature-content-height;
 		padding: 8px;
-		background-color: #eee;
 		figure{
 			height: $stories-thumb-dim;
 			width: $stories-thumb-dim;
@@ -156,7 +155,6 @@ body {
 		width: $feature-content-height*2;
 		position: absolute;
 		top: 0px;
-		background-color: #666;
 		.story-image{
 			width: $feature-content-height;
 			height: 100%;
@@ -169,22 +167,23 @@ body {
 			}
 		}
 		section.story-blurb{
-			width: $feature-content-height;
+			width: $feature-content-height - $story-padding*2;
 			height: $feature-content-height;
-			//padding: $story-padding;
+			padding: $story-padding;
 			position: relative;
 			left: 4px;
 			@include clearfix;
 			float: right;
 			header.story-blurb{
 				font-family: $serif;
-				font-size: 24px;
+				font-size: 26px;
 			}
 			.blurb{
 				margin-top: 24px;
 				p{
 					font-family: $sans;
-					font-size: 13px;
+					font-size: 14px;
+					line-height: 18px;
 				}
 			}
 			.story-read-more{
@@ -196,9 +195,8 @@ body {
 				padding: 6px;
 				float: right;
 				font-size: 11px;
-				//margin-right: 20px;
 				@include border-radius(3px);
-				@include box-shadow(0px 0px 6px #aaa);
+				@include box-shadow(0px 0px 6px #ccc);
 				@include text-shadow(rgba(black, 0.5) 0 0 2px);
 			}
 			

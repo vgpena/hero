@@ -73,12 +73,12 @@ body {
 }
 /* line 93, ../sass/style.scss */
 #features ul li.opened {
-  text-shadow: rgba(250, 247, 237, 0.4) 0 0 2px;
+  text-shadow: rgba(250, 247, 237, 0.4) 0 0 4px;
 }
 /* line 97, ../sass/style.scss */
 #features ul li:hover {
   color: #FFFDF5;
-  text-shadow: rgba(0, 0, 0, 0.8) 0 0 2px;
+  text-shadow: rgba(250, 247, 237, 0.8) 0 0 4px;
 }
 /* line 102, ../sass/style.scss */
 #features ul .feature-nav {
@@ -115,9 +115,8 @@ body {
   height: 324.667px;
   width: 324.667px;
   padding: 8px;
-  background-color: #eee;
 }
-/* line 138, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 #stories #stories-thumbs figure {
   height: 96.222px;
   width: 96.222px;
@@ -132,25 +131,24 @@ body {
   -o-box-shadow: 0px 0px 6px #dddddd;
   box-shadow: 0px 0px 6px #dddddd;
 }
-/* line 147, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 #stories #stories-thumbs figure img {
   width: 100%;
 }
-/* line 151, ../sass/style.scss */
+/* line 150, ../sass/style.scss */
 #stories #stories-thumbs .opened {
   -moz-box-shadow: 0px 0px 6px #333333;
   -webkit-box-shadow: 0px 0px 6px #333333;
   -o-box-shadow: 0px 0px 6px #333333;
   box-shadow: 0px 0px 6px #333333;
 }
-/* line 155, ../sass/style.scss */
+/* line 154, ../sass/style.scss */
 #stories .story {
   width: 649.333px;
   position: absolute;
   top: 0px;
-  background-color: #666;
 }
-/* line 160, ../sass/style.scss */
+/* line 158, ../sass/style.scss */
 #stories .story .story-image {
   width: 324.667px;
   height: 100%;
@@ -159,36 +157,38 @@ body {
   *zoom: 1;
   float: left;
 }
-/* line 166, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 #stories .story .story-image img {
   height: 100%;
   background-color: #000;
 }
-/* line 171, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 #stories .story section.story-blurb {
-  width: 324.667px;
+  width: 276.667px;
   height: 324.667px;
+  padding: 24px;
   position: relative;
   left: 4px;
   overflow: hidden;
   *zoom: 1;
   float: right;
 }
-/* line 179, ../sass/style.scss */
+/* line 177, ../sass/style.scss */
 #stories .story section.story-blurb header.story-blurb {
   font-family: "Georgia", "Times New Roman", serif;
-  font-size: 24px;
+  font-size: 26px;
 }
-/* line 183, ../sass/style.scss */
+/* line 181, ../sass/style.scss */
 #stories .story section.story-blurb .blurb {
   margin-top: 24px;
 }
-/* line 185, ../sass/style.scss */
+/* line 183, ../sass/style.scss */
 #stories .story section.story-blurb .blurb p {
   font-family: "Helvetica", "Arial", sans-serif;
-  font-size: 13px;
+  font-size: 14px;
+  line-height: 18px;
 }
-/* line 190, ../sass/style.scss */
+/* line 189, ../sass/style.scss */
 #stories .story section.story-blurb .story-read-more {
   background-color: #d42222;
   border: none;
@@ -204,17 +204,17 @@ body {
   -ms-border-radius: 3px;
   -khtml-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: 0px 0px 6px #aaaaaa;
-  -webkit-box-shadow: 0px 0px 6px #aaaaaa;
-  -o-box-shadow: 0px 0px 6px #aaaaaa;
-  box-shadow: 0px 0px 6px #aaaaaa;
+  -moz-box-shadow: 0px 0px 6px #cccccc;
+  -webkit-box-shadow: 0px 0px 6px #cccccc;
+  -o-box-shadow: 0px 0px 6px #cccccc;
+  box-shadow: 0px 0px 6px #cccccc;
   text-shadow: rgba(0, 0, 0, 0.5) 0 0 2px;
 }
-/* line 205, ../sass/style.scss */
+/* line 203, ../sass/style.scss */
 #stories .story section.story-blurb .story-read-more:hover {
   background-color: #ed3232;
 }
-/* line 209, ../sass/style.scss */
+/* line 207, ../sass/style.scss */
 #stories .story section.story-blurb .story-read-more:active {
   background-color: #a61c1f;
 }
