@@ -155,6 +155,7 @@ body {
 		width: $feature-content-height*2;
 		position: absolute;
 		top: 0px;
+		display: none;
 		.story-image{
 			width: $feature-content-height;
 			height: 100%;
@@ -162,7 +163,7 @@ body {
 			@include clearfix;
 			float: left;
 			img{
-				height: 100%;
+				width: 100%;
 				background-color: #000;
 			}
 		}
@@ -208,5 +209,8 @@ body {
 				background-color: $dark-red;
 			}
 		}
+	}
+	.story.opened{
+		display: block;
 	}
 }
