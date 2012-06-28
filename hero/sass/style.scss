@@ -11,12 +11,12 @@ $features-item-width: $features-list-outer-width/4;
 $features-list-margin: 0px;
 $features-item-line-height: 18px;
 
-$feature-content-padding: 4px;
-$feature-content-height: $hero-height - 30px - $feature-content-padding*2;
+$feature-content-padding: 0px;
+$feature-content-height: $hero-height - 26px - $feature-content-padding*2;
 
 $feature-article-padding: 4px;
 $feature-article-height: $feature-content-height - $feature-article-padding*2;
-$feature-article-margin: 4px;
+$feature-article-margin: 0px;
 $feature-article-width: ($hero-width - $feature-content-padding*2 - $feature-article-margin*8 - $feature-article-padding*8)/4;
 
 $light-red:#A61C1F;
@@ -46,7 +46,7 @@ nav.features{
 	height: $features-list-outer-height - $features-list-padding*2;
 	width: $features-list-outer-width;
 	position: absolute;
-	top: $hero-height - $features-list-outer-height;
+	top: $hero-height - $features-list-outer-height +4;
 	left: $features-list-margin;
 	overflow: hidden;
 	
@@ -105,8 +105,8 @@ section.feature{
 		width: $feature-article-width;
 		height: $feature-article-height;
 		padding: $feature-article-padding;
-		margin-left: 4px;
-		margin-right: 4px;
+		margin-left: 0px;
+		margin-right: 0px;
 		float: left;
 		background-color: #666;
 		overflow: hidden;

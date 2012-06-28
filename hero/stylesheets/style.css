@@ -22,7 +22,7 @@ nav.features {
   height: 26px;
   width: 976px;
   position: absolute;
-  top: 340px;
+  top: 344px;
   left: 0px;
   overflow: hidden;
 }
@@ -43,7 +43,6 @@ nav.features ul li {
   background-image: -webkit-linear-gradient(#ed3232, #a61c1f 90%);
   background-image: -moz-linear-gradient(#ed3232, #a61c1f 90%);
   background-image: -o-linear-gradient(#ed3232, #a61c1f 90%);
-  background-image: -ms-linear-gradient(#ed3232, #a61c1f 90%);
   background-image: linear-gradient(#ed3232, #a61c1f 90%);
   text-align: center;
   height: 100%;
@@ -80,18 +79,18 @@ section.feature {
 }
 /* line 97, ../sass/style.scss */
 section.feature .feature-content {
-  padding: 4px;
-  height: 332px;
+  padding: 0px;
+  height: 344px;
   overflow: hidden;
   top: 0px;
 }
 /* line 104, ../sass/style.scss */
 section.feature .feature-article {
-  width: 225.5px;
-  height: 324px;
+  width: 235.5px;
+  height: 336px;
   padding: 4px;
-  margin-left: 4px;
-  margin-right: 4px;
+  margin-left: 0px;
+  margin-right: 0px;
   float: left;
   background-color: #666;
   overflow: hidden;
