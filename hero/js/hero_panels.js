@@ -41,7 +41,7 @@
 				return;
 			}
 			else{
-				$('li', 'nav.features').each(function(){
+				$('li', '#features').each(function(){
 					if ($(this).hasClass('opened')){
 						$(this).removeClass('opened');
 					}
@@ -67,7 +67,7 @@
 	
 
 	$(function(){
-		$('nav.features').featureNav();
+		$('#features').featureNav();
 	});
 	
 }(jQuery));

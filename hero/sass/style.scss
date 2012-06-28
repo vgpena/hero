@@ -24,7 +24,9 @@ $dark-red:#711312;
 $cream:#EEEBD7;
 
 
-
+/*
+* Large-element styles
+*/
 body {
   background-color: #fff;
 }
@@ -42,7 +44,17 @@ body {
 	padding: 0px;
 }
 
-nav.features{
+#strip{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: $hero-width*4;
+}
+
+/*
+* Main nav styles
+*/
+#features{
 	height: $features-list-outer-height - $features-list-padding*2;
 	width: $features-list-outer-width;
 	position: absolute;
@@ -72,7 +84,7 @@ nav.features{
 			text-decoration: overline;
 		}
 		
-		span.feature{
+		.feature-nav{
 			position: relative;
 			height: $features-item-line-height;
 			top: ($features-list-outer-height - $features-item-line-height)/2;
@@ -80,14 +92,9 @@ nav.features{
 	}
 }
 
-#strip{
-	position: absolute;
-	top: 0px;
-	left: 0px;
-	width: $hero-width*4;
-}
 
-section.feature{
+
+.feature{
 	padding: 0px;
 	width: $hero-width;
 	overflow: hidden;
@@ -132,8 +139,4 @@ section.feature{
 			font-style: italic;
 		}
 	}
-}
-
-.feature.opened{
-/*	display: block;*/
 }

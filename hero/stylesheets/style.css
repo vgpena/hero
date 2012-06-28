@@ -1,9 +1,12 @@
-/* line 28, ../sass/style.scss */
+/*
+* Large-element styles
+*/
+/* line 30, ../sass/style.scss */
 body {
   background-color: #fff;
 }
 
-/* line 32, ../sass/style.scss */
+/* line 34, ../sass/style.scss */
 #hero {
   width: 974px;
   height: 370px;
@@ -17,8 +20,19 @@ body {
   padding: 0px;
 }
 
-/* line 45, ../sass/style.scss */
-nav.features {
+/* line 47, ../sass/style.scss */
+#strip {
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  width: 3896px;
+}
+
+/*
+* Main nav styles
+*/
+/* line 57, ../sass/style.scss */
+#features {
   height: 26px;
   width: 976px;
   position: absolute;
@@ -26,16 +40,16 @@ nav.features {
   left: 0px;
   overflow: hidden;
 }
-/* line 53, ../sass/style.scss */
-nav.features ul {
+/* line 65, ../sass/style.scss */
+#features ul {
   margin: 0px;
   margin-left: 0px;
   padding: 0px;
   height: 100%;
   width: 100%;
 }
-/* line 59, ../sass/style.scss */
-nav.features ul li {
+/* line 71, ../sass/style.scss */
+#features ul li {
   width: 244px;
   display: block;
   float: left;
@@ -50,42 +64,34 @@ nav.features ul li {
   padding: 0px;
   color: #eeebd7;
 }
-/* line 71, ../sass/style.scss */
-nav.features ul li.opened {
+/* line 83, ../sass/style.scss */
+#features ul li.opened {
   text-decoration: overline;
 }
-/* line 75, ../sass/style.scss */
-nav.features ul span.feature {
+/* line 87, ../sass/style.scss */
+#features ul .feature-nav {
   position: relative;
   height: 18px;
   top: 6px;
 }
 
-/* line 83, ../sass/style.scss */
-#strip {
-  position: absolute;
-  top: 0px;
-  left: 0px;
-  width: 3896px;
-}
-
-/* line 90, ../sass/style.scss */
-section.feature {
+/* line 97, ../sass/style.scss */
+.feature {
   padding: 0px;
   width: 974px;
   overflow: hidden;
   float: left;
   top: 0px;
 }
-/* line 97, ../sass/style.scss */
-section.feature .feature-content {
+/* line 104, ../sass/style.scss */
+.feature .feature-content {
   padding: 0px;
   height: 344px;
   overflow: hidden;
   top: 0px;
 }
-/* line 104, ../sass/style.scss */
-section.feature .feature-article {
+/* line 111, ../sass/style.scss */
+.feature .feature-article {
   width: 235.5px;
   height: 336px;
   padding: 4px;
@@ -95,30 +101,25 @@ section.feature .feature-article {
   background-color: #666;
   overflow: hidden;
 }
-/* line 114, ../sass/style.scss */
-section.feature .feature-article .article-title {
+/* line 121, ../sass/style.scss */
+.feature .feature-article .article-title {
   border-bottom: solid 1px #fff;
   margin-bottom: 4px;
 }
-/* line 119, ../sass/style.scss */
-section.feature .article-figure {
+/* line 126, ../sass/style.scss */
+.feature .article-figure {
   float: right;
   padding: 6px;
   background-color: #ccc;
   margin: 0px;
   width: 150px;
 }
-/* line 126, ../sass/style.scss */
-section.feature .article-figure img {
+/* line 133, ../sass/style.scss */
+.feature .article-figure img {
   display: block;
   max-width: 100%;
 }
-/* line 131, ../sass/style.scss */
-section.feature .article-figure figcaption {
+/* line 138, ../sass/style.scss */
+.feature .article-figure figcaption {
   font-style: italic;
-}
-
-/* line 137, ../sass/style.scss */
-.feature.opened {
-  /*	display: block;*/
 }
