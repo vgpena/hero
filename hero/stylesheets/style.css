@@ -1,12 +1,12 @@
 /*
 * Large-element styles
 */
-/* line 30, ../sass/style.scss */
+/* line 28, ../sass/style.scss */
 body {
   background-color: #fff;
 }
 
-/* line 34, ../sass/style.scss */
+/* line 32, ../sass/style.scss */
 #hero {
   width: 974px;
   height: 370px;
@@ -20,7 +20,7 @@ body {
   padding: 0px;
 }
 
-/* line 47, ../sass/style.scss */
+/* line 45, ../sass/style.scss */
 #strip {
   position: absolute;
   top: 0px;
@@ -31,7 +31,7 @@ body {
 /*
 * Main nav styles
 */
-/* line 57, ../sass/style.scss */
+/* line 55, ../sass/style.scss */
 #features {
   height: 26px;
   width: 976px;
@@ -40,7 +40,7 @@ body {
   left: 0px;
   overflow: hidden;
 }
-/* line 65, ../sass/style.scss */
+/* line 63, ../sass/style.scss */
 #features ul {
   margin: 0px;
   margin-left: 0px;
@@ -48,7 +48,7 @@ body {
   height: 100%;
   width: 100%;
 }
-/* line 71, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 #features ul li {
   width: 244px;
   display: block;
@@ -64,17 +64,20 @@ body {
   padding: 0px;
   color: #eeebd7;
 }
-/* line 83, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 #features ul li.opened {
   text-decoration: overline;
 }
-/* line 87, ../sass/style.scss */
+/* line 85, ../sass/style.scss */
 #features ul .feature-nav {
   position: relative;
   height: 18px;
   top: 6px;
 }
 
+/*
+* Inside of the feature itself. General styles.
+*/
 /* line 97, ../sass/style.scss */
 .feature {
   padding: 0px;
@@ -90,36 +93,34 @@ body {
   overflow: hidden;
   top: 0px;
 }
-/* line 111, ../sass/style.scss */
-.feature .feature-article {
-  width: 235.5px;
-  height: 336px;
-  padding: 4px;
-  margin-left: 0px;
-  margin-right: 0px;
-  float: left;
-  background-color: #666;
+
+/*
+* For the Stories feature.
+*/
+/* line 116, ../sass/style.scss */
+#stories #stories-thumbs {
   overflow: hidden;
-}
-/* line 121, ../sass/style.scss */
-.feature .feature-article .article-title {
-  border-bottom: solid 1px #fff;
-  margin-bottom: 4px;
-}
-/* line 126, ../sass/style.scss */
-.feature .article-figure {
+  *zoom: 1;
   float: right;
-  padding: 6px;
+  height: 344px;
+  width: 344px;
+  position: relative;
+  top: 4px;
+}
+/* line 123, ../sass/style.scss */
+#stories #stories-thumbs figure {
+  height: 102.667px;
+  width: 102.667px;
+  border: solid 1px #fff;
   background-color: #ccc;
-  margin: 0px;
-  width: 150px;
+  margin: 4px;
+  padding: 0px;
+  overflow: hidden;
+  overflow: hidden;
+  *zoom: 1;
+  float: left;
 }
 /* line 133, ../sass/style.scss */
-.feature .article-figure img {
-  display: block;
-  max-width: 100%;
-}
-/* line 138, ../sass/style.scss */
-.feature .article-figure figcaption {
-  font-style: italic;
+#stories #stories-thumbs figure img {
+  width: 100%;
 }

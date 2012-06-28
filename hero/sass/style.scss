@@ -14,10 +14,8 @@ $features-item-line-height: 18px;
 $feature-content-padding: 0px;
 $feature-content-height: $hero-height - 26px - $feature-content-padding*2;
 
-$feature-article-padding: 4px;
-$feature-article-height: $feature-content-height - $feature-article-padding*2;
-$feature-article-margin: 0px;
-$feature-article-width: ($hero-width - $feature-content-padding*2 - $feature-article-margin*8 - $feature-article-padding*8)/4;
+$stories-thumb-margin: 4px;
+$stories-thumb-dim: $feature-content-height/3 - $stories-thumb-margin*3;
 
 $light-red:#A61C1F;
 $dark-red:#711312;
@@ -93,7 +91,9 @@ body {
 }
 
 
-
+/*
+* Inside of the feature itself. General styles.
+*/
 .feature{
 	padding: 0px;
 	width: $hero-width;
@@ -107,36 +107,32 @@ body {
 		overflow: hidden;
 		top: 0px;
 	}
-	
-	.feature-article{
-		width: $feature-article-width;
-		height: $feature-article-height;
-		padding: $feature-article-padding;
-		margin-left: 0px;
-		margin-right: 0px;
-		float: left;
-		background-color: #666;
-		overflow: hidden;
-		
-		.article-title{
-			border-bottom: solid 1px #fff;
-			margin-bottom: 4px;
-		}
-	}
-	.article-figure{
+}
+
+/*
+* For the Stories feature.
+*/
+#stories{
+	#stories-thumbs{
+		@include clearfix;
 		float: right;
-	  	padding: 6px;
-	  	background-color: #ccc;
-		margin: 0px;
-		width: 150px;
-	
-		img{
-			display: block;
-			max-width: 100%;
-		}
-		
-		figcaption{
-			font-style: italic;
+		height: $feature-content-height;
+		width: $feature-content-height;
+		position: relative;
+		top: 4px;
+		figure{
+			height: $stories-thumb-dim;
+			width: $stories-thumb-dim;
+			border: solid 1px #fff;
+			background-color: #ccc;
+			margin: $stories-thumb-margin;
+			padding: 0px;
+			overflow: hidden;
+			@include clearfix;
+			float: left;
+			img{
+				width: 100%;
+			}
 		}
 	}
 }
