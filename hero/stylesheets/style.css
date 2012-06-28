@@ -104,23 +104,26 @@ body {
   float: right;
   height: 344px;
   width: 344px;
-  position: relative;
-  top: 4px;
+  padding: 8px;
 }
-/* line 123, ../sass/style.scss */
+/* line 122, ../sass/style.scss */
 #stories #stories-thumbs figure {
   height: 102.667px;
   width: 102.667px;
-  border: solid 1px #fff;
-  background-color: #ccc;
+  background-color: #000;
   margin: 4px;
   padding: 0px;
   overflow: hidden;
-  overflow: hidden;
   *zoom: 1;
-  float: left;
+  float: right;
 }
-/* line 133, ../sass/style.scss */
+/* line 130, ../sass/style.scss */
 #stories #stories-thumbs figure img {
   width: 100%;
+}
+/* line 134, ../sass/style.scss */
+#stories #stories-thumbs .opened {
+  -webkit-box-shadow: 0px 0px 6px #ffeeee;
+  -moz-box-shadow: 0px 0px 6px #ffeeee;
+  box-shadow: 0px 0px 6px #ffeeee;
 }

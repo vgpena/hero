@@ -118,21 +118,21 @@ body {
 		float: right;
 		height: $feature-content-height;
 		width: $feature-content-height;
-		position: relative;
-		top: 4px;
+		padding: 8px;
 		figure{
 			height: $stories-thumb-dim;
 			width: $stories-thumb-dim;
-			border: solid 1px #fff;
-			background-color: #ccc;
+			background-color: #000;
 			margin: $stories-thumb-margin;
 			padding: 0px;
-			overflow: hidden;
 			@include clearfix;
-			float: left;
+			float: right;
 			img{
 				width: 100%;
 			}
+		}
+		.opened{
+			@include box-shadow(0px 0px 6px #fee);
 		}
 	}
 }
