@@ -1,12 +1,12 @@
 /*
 * Large-element styles
 */
-/* line 31, ../sass/style.scss */
+/* line 35, ../sass/style.scss */
 body {
   background-color: #ccc;
 }
 
-/* line 35, ../sass/style.scss */
+/* line 39, ../sass/style.scss */
 #hero {
   width: 974px;
   height: 370px;
@@ -20,7 +20,7 @@ body {
   padding: 0px;
 }
 
-/* line 48, ../sass/style.scss */
+/* line 52, ../sass/style.scss */
 #strip {
   position: absolute;
   top: 0px;
@@ -31,7 +31,7 @@ body {
 /*
 * Main nav styles
 */
-/* line 58, ../sass/style.scss */
+/* line 62, ../sass/style.scss */
 #features {
   height: 41.333px;
   width: 976px;
@@ -39,7 +39,7 @@ body {
   top: 330.667px;
   left: 0px;
 }
-/* line 65, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 #features ul {
   margin: 0px;
   margin-left: 0px;
@@ -47,7 +47,7 @@ body {
   height: 100%;
   width: 100%;
 }
-/* line 71, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 #features ul li {
   width: 244px;
   display: block;
@@ -63,12 +63,13 @@ body {
   margin: 0px;
   padding: 0px;
   color: #faf7ed;
+  font-family: "Helvetica", "Arial", sans-serif;
 }
-/* line 83, ../sass/style.scss */
+/* line 88, ../sass/style.scss */
 #features ul li.opened {
-  text-decoration: overline;
+  font-weight: bold;
 }
-/* line 87, ../sass/style.scss */
+/* line 92, ../sass/style.scss */
 #features ul .feature-nav {
   position: relative;
   height: 18px;
@@ -78,14 +79,14 @@ body {
 /*
 * Inside of the feature itself. General styles.
 */
-/* line 99, ../sass/style.scss */
+/* line 104, ../sass/style.scss */
 .feature {
   padding: 0px;
   width: 974px;
   float: left;
   top: 0px;
 }
-/* line 105, ../sass/style.scss */
+/* line 110, ../sass/style.scss */
 .feature .feature-content {
   padding: 0px;
   height: 324.667px;
@@ -95,7 +96,7 @@ body {
 /*
 * For the Stories feature.
 */
-/* line 117, ../sass/style.scss */
+/* line 121, ../sass/style.scss */
 #stories #stories-thumbs {
   overflow: hidden;
   *zoom: 1;
@@ -104,7 +105,7 @@ body {
   width: 324.667px;
   padding: 8px;
 }
-/* line 123, ../sass/style.scss */
+/* line 127, ../sass/style.scss */
 #stories #stories-thumbs figure {
   height: 96.222px;
   width: 96.222px;
@@ -119,54 +120,70 @@ body {
   -o-box-shadow: 0px 0px 6px #dddddd;
   box-shadow: 0px 0px 6px #dddddd;
 }
-/* line 132, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 #stories #stories-thumbs figure img {
   width: 100%;
 }
-/* line 136, ../sass/style.scss */
+/* line 140, ../sass/style.scss */
 #stories #stories-thumbs .opened {
   -moz-box-shadow: 0px 0px 6px #333333;
   -webkit-box-shadow: 0px 0px 6px #333333;
   -o-box-shadow: 0px 0px 6px #333333;
   box-shadow: 0px 0px 6px #333333;
 }
-/* line 140, ../sass/style.scss */
+/* line 144, ../sass/style.scss */
 #stories .story {
-  width: 604px;
-  float: left;
+  width: 649.333px;
   position: absolute;
   top: 0px;
 }
-/* line 145, ../sass/style.scss */
+/* line 148, ../sass/style.scss */
 #stories .story .story-image {
-  width: 302px;
+  width: 324.667px;
   height: 100%;
   overflow: hidden;
   overflow: hidden;
   *zoom: 1;
   float: left;
 }
-/* line 151, ../sass/style.scss */
+/* line 154, ../sass/style.scss */
 #stories .story .story-image img {
   height: 100%;
   background-color: #000;
 }
-/* line 156, ../sass/style.scss */
+/* line 159, ../sass/style.scss */
 #stories .story section.story-blurb {
-  width: 270px;
+  width: 292.667px;
   height: 324.667px;
   padding: 8px;
   position: relative;
-  top: 20px;
+  top: 30px;
   overflow: hidden;
   *zoom: 1;
   float: right;
 }
-/* line 164, ../sass/style.scss */
+/* line 167, ../sass/style.scss */
 #stories .story section.story-blurb header.story-blurb {
   font-family: "Georgia", "Times New Roman", serif;
+  font-size: 24px;
 }
-/* line 168, ../sass/style.scss */
+/* line 171, ../sass/style.scss */
+#stories .story section.story-blurb .blurb {
+  margin-top: 24px;
+}
+/* line 173, ../sass/style.scss */
 #stories .story section.story-blurb .blurb p {
   font-family: "Helvetica", "Arial", sans-serif;
+  font-size: 13px;
+}
+/* line 178, ../sass/style.scss */
+#stories .story section.story-blurb .story-read-more {
+  background-color: #D42222;
+  border: none;
+  font-family: "Helvetica", "Arial", sans-serif;
+  color: #faf7ed;
+  padding: 6px;
+  float: right;
+  font-size: 11px;
+  margin-right: 20px;
 }
