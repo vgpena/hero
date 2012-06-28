@@ -18,10 +18,12 @@ $stories-thumb-margin: 4px;
 $stories-thumb-dim: $feature-content-height/3 - $stories-thumb-margin*3;
 
 $story-width: $hero-width*(2/3);
-$story-padding: 8px;
+$story-padding: 4px;
 
-$light-red:#A61C1F;
-$dark-red:#711312;
+$highlight-red: #F25757;
+$light-red:#ED3232;
+$dark-red:#A61C1F;
+$button-red: #D42222;
 $cream:#FAF7ED;
 
 
@@ -65,6 +67,10 @@ body {
 	position: absolute;
 	top: $hero-height - $features-list-outer-height +6;
 	left: $features-list-margin;
+	@include box-shadow(rgba(black, 0.3) 0 0 8px);
+	@include text-shadow(rgba(black, 0.4) 0 0 2px);
+	@include background-image(linear-gradient($highlight-red, $light-red 20%, $dark-red 90%));
+	text-transform: uppercase;
 	
 	ul{
 		margin:0px;
@@ -76,7 +82,6 @@ body {
 			width: $features-item-width;
 			display: block;
 			float: left;
-			@include background-image(linear-gradient(#ED3232, $light-red 90%));
 			text-align: center;
 			height: 100%;
 			margin: 0px;
@@ -86,7 +91,12 @@ body {
 		}
 		
 		li.opened{
-			font-weight: bold;
+			@include text-shadow(rgba($cream, 0.4) 0 0 2px);
+		}
+		
+		li:hover{
+			color: #FFFDF5;
+			@include text-shadow(rgba(black, 0.8) 0 0 2px);
 		}
 		
 		.feature-nav{
@@ -176,14 +186,26 @@ body {
 				}
 			}
 			.story-read-more{
-				background-color: #D42222;
+				background-color: $button-red;
 				border: none;
 				font-family: $sans;
-				color: $cream;
+				text-transform: uppercase;
+				color: #FFFDF5;
 				padding: 6px;
 				float: right;
 				font-size: 11px;
 				margin-right: 20px;
+				@include border-radius(3px);
+				@include box-shadow(0px 0px 6px #aaa);
+				@include text-shadow(rgba(black, 0.5) 0 0 2px);
+			}
+			
+			.story-read-more:hover{
+				background-color: $light-red;
+			}
+			
+			.story-read-more:active{
+				background-color: $dark-red;
 			}
 		}
 	}

@@ -1,12 +1,12 @@
 /*
 * Large-element styles
 */
-/* line 35, ../sass/style.scss */
+/* line 37, ../sass/style.scss */
 body {
   background-color: #ccc;
 }
 
-/* line 39, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
 #hero {
   width: 974px;
   height: 370px;
@@ -20,7 +20,7 @@ body {
   padding: 0px;
 }
 
-/* line 52, ../sass/style.scss */
+/* line 54, ../sass/style.scss */
 #strip {
   position: absolute;
   top: 0px;
@@ -31,15 +31,27 @@ body {
 /*
 * Main nav styles
 */
-/* line 62, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 #features {
   height: 41.333px;
   width: 976px;
   position: absolute;
   top: 330.667px;
   left: 0px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px;
+  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px;
+  box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px;
+  text-shadow: rgba(0, 0, 0, 0.4) 0 0 2px;
+  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f25757), color-stop(20%, #ed3232), color-stop(90%, #a61c1f));
+  background-image: -webkit-linear-gradient(#f25757, #ed3232 20%, #a61c1f 90%);
+  background-image: -moz-linear-gradient(#f25757, #ed3232 20%, #a61c1f 90%);
+  background-image: -o-linear-gradient(#f25757, #ed3232 20%, #a61c1f 90%);
+  background-image: -ms-linear-gradient(#f25757, #ed3232 20%, #a61c1f 90%);
+  background-image: linear-gradient(#f25757, #ed3232 20%, #a61c1f 90%);
+  text-transform: uppercase;
 }
-/* line 69, ../sass/style.scss */
+/* line 75, ../sass/style.scss */
 #features ul {
   margin: 0px;
   margin-left: 0px;
@@ -47,17 +59,11 @@ body {
   height: 100%;
   width: 100%;
 }
-/* line 75, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 #features ul li {
   width: 244px;
   display: block;
   float: left;
-  background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #ed3232), color-stop(90%, #a61c1f));
-  background-image: -webkit-linear-gradient(#ed3232, #a61c1f 90%);
-  background-image: -moz-linear-gradient(#ed3232, #a61c1f 90%);
-  background-image: -o-linear-gradient(#ed3232, #a61c1f 90%);
-  background-image: -ms-linear-gradient(#ed3232, #a61c1f 90%);
-  background-image: linear-gradient(#ed3232, #a61c1f 90%);
   text-align: center;
   height: 100%;
   margin: 0px;
@@ -65,11 +71,16 @@ body {
   color: #faf7ed;
   font-family: "Helvetica", "Arial", sans-serif;
 }
-/* line 88, ../sass/style.scss */
+/* line 93, ../sass/style.scss */
 #features ul li.opened {
-  font-weight: bold;
+  text-shadow: rgba(250, 247, 237, 0.4) 0 0 2px;
 }
-/* line 92, ../sass/style.scss */
+/* line 97, ../sass/style.scss */
+#features ul li:hover {
+  color: #FFFDF5;
+  text-shadow: rgba(0, 0, 0, 0.8) 0 0 2px;
+}
+/* line 102, ../sass/style.scss */
 #features ul .feature-nav {
   position: relative;
   height: 18px;
@@ -79,14 +90,14 @@ body {
 /*
 * Inside of the feature itself. General styles.
 */
-/* line 104, ../sass/style.scss */
+/* line 114, ../sass/style.scss */
 .feature {
   padding: 0px;
   width: 974px;
   float: left;
   top: 0px;
 }
-/* line 110, ../sass/style.scss */
+/* line 120, ../sass/style.scss */
 .feature .feature-content {
   padding: 0px;
   height: 324.667px;
@@ -96,7 +107,7 @@ body {
 /*
 * For the Stories feature.
 */
-/* line 121, ../sass/style.scss */
+/* line 131, ../sass/style.scss */
 #stories #stories-thumbs {
   overflow: hidden;
   *zoom: 1;
@@ -105,7 +116,7 @@ body {
   width: 324.667px;
   padding: 8px;
 }
-/* line 127, ../sass/style.scss */
+/* line 137, ../sass/style.scss */
 #stories #stories-thumbs figure {
   height: 96.222px;
   width: 96.222px;
@@ -120,24 +131,24 @@ body {
   -o-box-shadow: 0px 0px 6px #dddddd;
   box-shadow: 0px 0px 6px #dddddd;
 }
-/* line 136, ../sass/style.scss */
+/* line 146, ../sass/style.scss */
 #stories #stories-thumbs figure img {
   width: 100%;
 }
-/* line 140, ../sass/style.scss */
+/* line 150, ../sass/style.scss */
 #stories #stories-thumbs .opened {
   -moz-box-shadow: 0px 0px 6px #333333;
   -webkit-box-shadow: 0px 0px 6px #333333;
   -o-box-shadow: 0px 0px 6px #333333;
   box-shadow: 0px 0px 6px #333333;
 }
-/* line 144, ../sass/style.scss */
+/* line 154, ../sass/style.scss */
 #stories .story {
   width: 649.333px;
   position: absolute;
   top: 0px;
 }
-/* line 148, ../sass/style.scss */
+/* line 158, ../sass/style.scss */
 #stories .story .story-image {
   width: 324.667px;
   height: 100%;
@@ -146,44 +157,64 @@ body {
   *zoom: 1;
   float: left;
 }
-/* line 154, ../sass/style.scss */
+/* line 164, ../sass/style.scss */
 #stories .story .story-image img {
   height: 100%;
   background-color: #000;
 }
-/* line 159, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 #stories .story section.story-blurb {
-  width: 292.667px;
+  width: 308.667px;
   height: 324.667px;
-  padding: 8px;
+  padding: 4px;
   position: relative;
   top: 30px;
   overflow: hidden;
   *zoom: 1;
   float: right;
 }
-/* line 167, ../sass/style.scss */
+/* line 177, ../sass/style.scss */
 #stories .story section.story-blurb header.story-blurb {
   font-family: "Georgia", "Times New Roman", serif;
   font-size: 24px;
 }
-/* line 171, ../sass/style.scss */
+/* line 181, ../sass/style.scss */
 #stories .story section.story-blurb .blurb {
   margin-top: 24px;
 }
-/* line 173, ../sass/style.scss */
+/* line 183, ../sass/style.scss */
 #stories .story section.story-blurb .blurb p {
   font-family: "Helvetica", "Arial", sans-serif;
   font-size: 13px;
 }
-/* line 178, ../sass/style.scss */
+/* line 188, ../sass/style.scss */
 #stories .story section.story-blurb .story-read-more {
-  background-color: #D42222;
+  background-color: #d42222;
   border: none;
   font-family: "Helvetica", "Arial", sans-serif;
-  color: #faf7ed;
+  text-transform: uppercase;
+  color: #FFFDF5;
   padding: 6px;
   float: right;
   font-size: 11px;
   margin-right: 20px;
+  -moz-border-radius: 3px;
+  -webkit-border-radius: 3px;
+  -o-border-radius: 3px;
+  -ms-border-radius: 3px;
+  -khtml-border-radius: 3px;
+  border-radius: 3px;
+  -moz-box-shadow: 0px 0px 6px #aaaaaa;
+  -webkit-box-shadow: 0px 0px 6px #aaaaaa;
+  -o-box-shadow: 0px 0px 6px #aaaaaa;
+  box-shadow: 0px 0px 6px #aaaaaa;
+  text-shadow: rgba(0, 0, 0, 0.5) 0 0 2px;
+}
+/* line 203, ../sass/style.scss */
+#stories .story section.story-blurb .story-read-more:hover {
+  background-color: #ed3232;
+}
+/* line 207, ../sass/style.scss */
+#stories .story section.story-blurb .story-read-more:active {
+  background-color: #a61c1f;
 }
