@@ -1,16 +1,16 @@
 /*
 * Large-element styles
 */
-/* line 30, ../sass/style.scss */
+/* line 31, ../sass/style.scss */
 body {
   background-color: #ccc;
 }
 
-/* line 34, ../sass/style.scss */
+/* line 35, ../sass/style.scss */
 #hero {
   width: 974px;
   height: 370px;
-  background-color: #eeebd7;
+  background-color: #faf7ed;
   margin-left: auto;
   margin-right: auto;
   position: relative;
@@ -20,7 +20,7 @@ body {
   padding: 0px;
 }
 
-/* line 47, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 #strip {
   position: absolute;
   top: 0px;
@@ -31,12 +31,12 @@ body {
 /*
 * Main nav styles
 */
-/* line 57, ../sass/style.scss */
+/* line 58, ../sass/style.scss */
 #features {
-  height: 36px;
+  height: 41.333px;
   width: 976px;
   position: absolute;
-  top: 334px;
+  top: 330.667px;
   left: 0px;
 }
 /* line 65, ../sass/style.scss */
@@ -56,12 +56,13 @@ body {
   background-image: -webkit-linear-gradient(#ed3232, #a61c1f 90%);
   background-image: -moz-linear-gradient(#ed3232, #a61c1f 90%);
   background-image: -o-linear-gradient(#ed3232, #a61c1f 90%);
+  background-image: -ms-linear-gradient(#ed3232, #a61c1f 90%);
   background-image: linear-gradient(#ed3232, #a61c1f 90%);
   text-align: center;
   height: 100%;
   margin: 0px;
   padding: 0px;
-  color: #eeebd7;
+  color: #faf7ed;
 }
 /* line 83, ../sass/style.scss */
 #features ul li.opened {
@@ -71,7 +72,7 @@ body {
 #features ul .feature-nav {
   position: relative;
   height: 18px;
-  top: 11px;
+  top: 13.667px;
 }
 
 /*
@@ -84,35 +85,39 @@ body {
   float: left;
   top: 0px;
 }
-/* line 106, ../sass/style.scss */
+/* line 105, ../sass/style.scss */
 .feature .feature-content {
   padding: 0px;
-  height: 330px;
+  height: 324.667px;
   top: 0px;
 }
 
 /*
 * For the Stories feature.
 */
-/* line 118, ../sass/style.scss */
+/* line 117, ../sass/style.scss */
 #stories #stories-thumbs {
   overflow: hidden;
   *zoom: 1;
   float: right;
-  height: 330px;
-  width: 330px;
+  height: 324.667px;
+  width: 324.667px;
   padding: 8px;
 }
-/* line 124, ../sass/style.scss */
+/* line 123, ../sass/style.scss */
 #stories #stories-thumbs figure {
-  height: 98px;
-  width: 98px;
+  height: 96.222px;
+  width: 96.222px;
   background-color: #000;
   margin: 4px;
   padding: 0px;
   overflow: hidden;
   *zoom: 1;
   float: right;
+  -moz-box-shadow: 0px 0px 6px #dddddd;
+  -webkit-box-shadow: 0px 0px 6px #dddddd;
+  -o-box-shadow: 0px 0px 6px #dddddd;
+  box-shadow: 0px 0px 6px #dddddd;
 }
 /* line 132, ../sass/style.scss */
 #stories #stories-thumbs figure img {
@@ -120,8 +125,9 @@ body {
 }
 /* line 136, ../sass/style.scss */
 #stories #stories-thumbs .opened {
-  -webkit-box-shadow: 0px 0px 6px #333333;
   -moz-box-shadow: 0px 0px 6px #333333;
+  -webkit-box-shadow: 0px 0px 6px #333333;
+  -o-box-shadow: 0px 0px 6px #333333;
   box-shadow: 0px 0px 6px #333333;
 }
 /* line 140, ../sass/style.scss */
@@ -146,15 +152,21 @@ body {
   background-color: #000;
 }
 /* line 156, ../sass/style.scss */
-#stories .story .story-blurb {
-  width: 302px;
-  height: 330px;
+#stories .story section.story-blurb {
+  width: 270px;
+  height: 324.667px;
+  padding: 8px;
+  position: relative;
+  top: 20px;
   overflow: hidden;
   *zoom: 1;
   float: right;
 }
-/* line 161, ../sass/style.scss */
-#stories .story .story-blurb .blurb {
-  position: absolute;
-  top: 20px;
+/* line 164, ../sass/style.scss */
+#stories .story section.story-blurb header.story-blurb {
+  font-family: "Georgia", "Times New Roman", serif;
+}
+/* line 168, ../sass/style.scss */
+#stories .story section.story-blurb .blurb p {
+  font-family: "Helvetica", "Arial", sans-serif;
 }
