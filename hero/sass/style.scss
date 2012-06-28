@@ -4,7 +4,7 @@ $hero-width: 974px;
 $hero-height: 370px;
 $hero-padding: 4px;
 
-$features-list-outer-height: 30px;
+$features-list-outer-height: 40px;
 $features-list-outer-width: $hero-width + 2;
 $features-list-padding: 2px;
 $features-item-width: $features-list-outer-width/4;
@@ -12,10 +12,12 @@ $features-list-margin: 0px;
 $features-item-line-height: 18px;
 
 $feature-content-padding: 0px;
-$feature-content-height: $hero-height - 26px - $feature-content-padding*2;
+$feature-content-height: $hero-height - $features-list-outer-height;
 
 $stories-thumb-margin: 4px;
 $stories-thumb-dim: $feature-content-height/3 - $stories-thumb-margin*3;
+
+$story-width: $hero-width - $hero-height;
 
 $light-red:#A61C1F;
 $dark-red:#711312;
@@ -26,13 +28,13 @@ $cream:#EEEBD7;
 * Large-element styles
 */
 body {
-  background-color: #fff;
+  background-color: #ccc;
 }
 
 #hero {
 	width: $hero-width;
 	height: $hero-height;
-	background-color: #777;
+	background-color: $cream;
 	margin-left: auto;
 	margin-right: auto;
 	position: relative;
@@ -58,7 +60,7 @@ body {
 	position: absolute;
 	top: $hero-height - $features-list-outer-height +4;
 	left: $features-list-margin;
-	overflow: hidden;
+	//overflow: hidden;
 	
 	ul{
 		margin:0px;
@@ -97,14 +99,14 @@ body {
 .feature{
 	padding: 0px;
 	width: $hero-width;
-	overflow: hidden;
+	//overflow: hidden;
 	float: left;
 	top: 0px;
 	
 	.feature-content{
 		padding: $feature-content-padding;
 		height: $feature-content-height;
-		overflow: hidden;
+		//overflow: hidden;
 		top: 0px;
 	}
 }
@@ -132,7 +134,34 @@ body {
 			}
 		}
 		.opened{
-			@include box-shadow(0px 0px 6px #fee);
+			@include box-shadow(0px 0px 6px #333);
+		}
+	}
+	.story{
+		width: $story-width;
+		float: left;
+		position: absolute;
+		top: 0px;
+		.story-image{
+			width: $story-width/2;
+			height: 100%;
+			overflow: hidden;
+			@include clearfix;
+			float: left;
+			img{
+				height: 100%;
+				background-color: #000;
+			}
+		}
+		.story-blurb{
+			width: $story-width/2;
+			height: $feature-content-height;
+			@include clearfix;
+			float: right;
+			.blurb{
+				position: absolute;
+				top: 20px;
+			}
 		}
 	}
 }
