@@ -20,7 +20,7 @@
 						var elt = $(this);
 						thumb.on('click', elt, function(){
 							
-							$('article', 'section').each(function(){
+							$('article', content).each(function(){
 								if ($(this).hasClass('opened')){
 									$(this).removeClass('opened');
 									$(this).hide();
