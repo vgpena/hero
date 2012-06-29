@@ -49,20 +49,30 @@
 	$.fn.intraNav = function (arg) {
 		return this.each(function(){
 			var $this = $(this),
-				data = $this.data('intraNav');
+				data = $this.data('intraNav'),
+				options = $.extend({}, $.fn.intraNav.defaults, arg, typeof option == 'object' && option);
 			
 			if (data) {
 				data[arg]();
 			}else{
-				$this.data('intraNav', new IntraNav($this));
+				$this.data('intraNav', new IntraNav($this, options));
 			};
 		});
 	};
 	
+	$.fn.intraNav.defaults = {
+		'exit': 'hide',
+		'enter': ('fadeIn', 800);
+	};
+	
 
 	$(function(){
-		$('#stories').intraNav();
-		$('#photos').intraNav();
+		$('#stories').intraNav({
+			'enter': 'show';
+		});
+		$('#photos').intraNav({
+			'exit': ('fadeOut', 800);
+		});
 	});
 	
 }(jQuery));
