@@ -38,16 +38,14 @@ body {
   position: absolute;
   top: 330.667px;
   left: 0px;
-  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px;
   -webkit-box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px;
-  -o-box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px;
+  -moz-box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px;
   box-shadow: rgba(0, 0, 0, 0.3) 0 0 8px;
   text-shadow: rgba(0, 0, 0, 0.4) 0 0 2px;
   background-image: -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #f25757), color-stop(20%, #ed3232), color-stop(90%, #a61c1f));
   background-image: -webkit-linear-gradient(#f25757, #ed3232 20%, #a61c1f 90%);
   background-image: -moz-linear-gradient(#f25757, #ed3232 20%, #a61c1f 90%);
   background-image: -o-linear-gradient(#f25757, #ed3232 20%, #a61c1f 90%);
-  background-image: -ms-linear-gradient(#f25757, #ed3232 20%, #a61c1f 90%);
   background-image: linear-gradient(#f25757, #ed3232 20%, #a61c1f 90%);
   text-transform: uppercase;
 }
@@ -126,9 +124,8 @@ body {
   overflow: hidden;
   *zoom: 1;
   float: right;
-  -moz-box-shadow: 0px 0px 6px #dddddd;
   -webkit-box-shadow: 0px 0px 6px #dddddd;
-  -o-box-shadow: 0px 0px 6px #dddddd;
+  -moz-box-shadow: 0px 0px 6px #dddddd;
   box-shadow: 0px 0px 6px #dddddd;
 }
 /* line 146, ../sass/style.scss */
@@ -137,9 +134,8 @@ body {
 }
 /* line 150, ../sass/style.scss */
 #stories #stories-thumbs .opened {
-  -moz-box-shadow: 0px 0px 6px #333333;
   -webkit-box-shadow: 0px 0px 6px #333333;
-  -o-box-shadow: 0px 0px 6px #333333;
+  -moz-box-shadow: 0px 0px 6px #333333;
   box-shadow: 0px 0px 6px #333333;
 }
 /* line 154, ../sass/style.scss */
@@ -152,16 +148,16 @@ body {
 /* line 159, ../sass/style.scss */
 #stories .story .story-image {
   width: 324.667px;
-  height: 100%;
+  height: 332.667px;
   overflow: hidden;
   overflow: hidden;
   *zoom: 1;
   float: left;
+  background-color: #000;
 }
-/* line 165, ../sass/style.scss */
+/* line 166, ../sass/style.scss */
 #stories .story .story-image img {
   width: 100%;
-  background-color: #000;
 }
 /* line 170, ../sass/style.scss */
 #stories .story section.story-blurb {
@@ -199,15 +195,13 @@ body {
   padding: 6px;
   float: right;
   font-size: 11px;
-  -moz-border-radius: 3px;
   -webkit-border-radius: 3px;
-  -o-border-radius: 3px;
+  -moz-border-radius: 3px;
   -ms-border-radius: 3px;
-  -khtml-border-radius: 3px;
+  -o-border-radius: 3px;
   border-radius: 3px;
-  -moz-box-shadow: 0px 0px 6px #cccccc;
   -webkit-box-shadow: 0px 0px 6px #cccccc;
-  -o-box-shadow: 0px 0px 6px #cccccc;
+  -moz-box-shadow: 0px 0px 6px #cccccc;
   box-shadow: 0px 0px 6px #cccccc;
   text-shadow: rgba(0, 0, 0, 0.5) 0 0 2px;
 }
