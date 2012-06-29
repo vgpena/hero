@@ -17,15 +17,19 @@
 					thumb = $(this);
 				$('article', section).each(function(){
 					if ($(this).attr('id')==id){
-						var elt = $(this);
+						var elt = $(this),
+							prev;
 						thumb.on('click', elt, function(){
 							
 							$('article', content).each(function(){
 								if ($(this).hasClass('opened')){
-									$(this).removeClass('opened');
-									$(this).hide();
+									prev = $(this);
+									return false;
 								};
 							});
+							
+							prev.removeClass('opened');
+							prev.hide();
 							
 							elt.fadeIn(800);
 							elt.addClass('opened');
