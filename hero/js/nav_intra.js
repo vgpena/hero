@@ -20,26 +20,26 @@
 						var elt = $(this),
 							prev;
 						thumb.on('click', elt, function(){
-						console.log(options);
-							
-							$('article', content).each(function(){
-								if ($(this).hasClass('opened')){
-									prev = $(this);
-									return false;
-								};
-							});
-							
-							prev.removeClass('opened');
-							prev[options['exit']]();
-							
-							elt[options['enter']]();
-							elt.addClass('opened');
-							$('figure', thumbs).each(function(){
-								if ($(this).hasClass('opened')){
-									$(this).removeClass('opened');
-								};
-							});
-							thumb.addClass('opened');
+							if (!thumb.hasClass('opened')){
+								$('article', content).each(function(){
+									if ($(this).hasClass('opened')){
+										prev = $(this);
+										return false;
+									};
+								});
+								prev.removeClass('opened');
+								prev[options['exit']]();
+
+								elt[options['enter']]();
+								elt.addClass('opened');
+								$('figure', thumbs).each(function(){
+									if ($(this).hasClass('opened')){
+										$(this).removeClass('opened');
+									};
+								});
+								thumb.addClass('opened');
+							};
+
 						});
 					};
 				});
@@ -63,16 +63,20 @@
 	
 	$.fn.intraNav.defaults = {
 		'exit': 'hide',
+		'exitSpeed': 0,
 		'enter': 'fadeIn',
+		'enterSpeed': 800,
 	};
 	
 
 	$(function(){
 		$('#stories').intraNav({
 			'enter': 'show',
+			'enterSpeed': 0,
 		});
 		$('#photos').intraNav({
 			'exit': 'fadeOut',
+			'exitSpeed': 400,
 		});
 	});
 	
