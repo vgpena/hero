@@ -1,3 +1,6 @@
+/*
+* Variables and imports
+*/
 @import "compass";
 
 $hero-width: 974px;
@@ -32,7 +35,6 @@ $cream:#FAF7ED;
 
 $sans: "Helvetica", "Arial", sans-serif;
 $serif: "Georgia", "Times New Roman", serif;
-
 
 /*
 * Large-element styles
@@ -110,7 +112,6 @@ body {
 	}
 }
 
-
 /*
 * Inside of the feature itself. General styles.
 */
@@ -131,7 +132,7 @@ body {
 * For the Stories feature.
 */
 #stories{
-	#stories-thumbs{
+	.thumbs{
 		@include clearfix;
 		float: right;
 		height: $feature-content-height;
@@ -246,7 +247,7 @@ body {
 		}
 	}
 	
-	#photos-thumbs{
+	.thumbs{
 		width: $photos-thumb-dim + $photos-thumb-margin*2;
 		height: $feature-content-height;
 		position: absolute;

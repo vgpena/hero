@@ -3,8 +3,8 @@
 <head>
 	<link rel="stylesheet" href='hero/stylesheets/style.css' media="screen" title="no title" charset="utf-8" />
 	<script src='hero/js/jquery.1.7.2.min.js' type="text/javascript" charset="utf-8"></script>
-	<script src='hero/js/hero_panels.js' type="text/javascript" charset="utf-8"></script>
-		<script src='hero/js/hero_stories_nav.js' type="text/javascript" charset="utf-8"></script>
+	<script src='hero/js/nav_inter.js' type="text/javascript" charset="utf-8"></script>
+		<script src='hero/js/nav_intra.js' type="text/javascript" charset="utf-8"></script>
 	<title>
 		you're my hero!
 	</title>
@@ -15,16 +15,17 @@
 			<!--****************PHOTOS************-->
 			<section class="feature" id="photos">
 				<section class="feature-content">
+					<section class="content">
+						<article class="feature-article">
+							<section class="article-content">
+								<figure class="opened" id="01">
+									<img src="media/photos/01.jpg">
+								</figure>
+							</section>
+						</article>
+					</section>
 					
-					<article class="feature-article">
-						<section class="article-content">
-							<figure class="opened" id="01">
-								<img src="media/photos/01.jpg">
-							</figure>
-						</section>
-					</article>
-					
-					<section id="photos-thumbs">
+					<section class="thumbs">
 						<figure id="01" class="opened">
 							<img src="media/photos/01.jpg">
 						</figure>
@@ -41,11 +42,12 @@
 					
 				</section>
 			</section>
+			
 			<!--****************STORIES************-->
 			<section class="feature" id="stories">
 				<section class="feature-content">
 					<!--***********NAVIGATION BETWEEN STORIES-->
-					<section id="stories-thumbs">
+					<section class="thumbs">
 						<figure id="bulbasaur" class="opened">
 							<img src="media/stories/bulbasaur.png">
 						</figure>
@@ -75,150 +77,152 @@
 						</figure>
 					</section>
 					<!--***********THE STORIES THEMSELVES-->
-					<article class="story opened" id="bulbasaur">
-						<section class="story-image">
-							<img src="media/stories/bulbasaur.png">
-						</section>
-						<section class="story-blurb">
-							<header class="story-blurb">
-								Bulbasaur '01
-							</header>
-							<div class="blurb">
-								 <p>Bulbasaur is a quadruped, reptilian creature that somewhat resembles a toad or a young dinosaur with a spotted blue-green hide. It has three white toes or claws growing out of its four legs, and its eyes are a bright red. The most notable feature of this Pokémon is the onion-like bulb on its back, which grows from a seed planted on its back by its mother at birth.</p>
-								<button class="story-read-more">
-									Read more
-								</button>
-							</div>
-						</section>
-					</article>
-					<article class="story" id="ivysaur">
-						<section class="story-image">
-							<img src="media/stories/ivysaur.png">
-						</section>
-						<section class="story-blurb">
-							<header class="story-blurb">
-								Ivysaur '02
-							</header>
-							<div class="blurb">
-								 <p>Ivysaur, like its pre-evolved form, Bulbasaur, resembles a toad or a quadruped dinosaur, though the patches in its skin cause it to resemble a dinosaur more closely. After evolving from Bulbasaur, Ivysaur grows small fangs and has visible ear insides and pupils. Ivysaur's skin is also a little bit bluer than Bulbasaur's.</p>
-								<button class="story-read-more">
-									Read more
-								</button>
-							</div>
-						</section>
-					</article>
-					<article class="story" id="venusaur">
-						<section class="story-image">
-							<img src="media/stories/venusaur.jpg">
-						</section>
-						<section class="story-blurb">
-							<header class="story-blurb">
-								Venusaur '03
-							</header>
-							<div class="blurb">
-								 <p>Venusaur is considerably larger and heavier than both of its pre-evolutions are, and as such, it moves slower than the two when it is not in battle, though it retains its quadruped form. The bud on its back has since bloomed into a large red flower with six expansive, white-spotted petals, supported on a brown trunk somewhat like that of a palm tree.</p>
-								<button class="story-read-more">
-									Read more
-								</button>
-							</div>
-						</section>
-					</article>
-					<article class="story" id="charmander">
-						<section class="story-image">
-							<img src="media/stories/charmander.jpg">
-						</section>
-						<section class="story-blurb">
-							<header class="story-blurb">
-								Charmander '04
-							</header>
-							<div class="blurb">
-								 <p>Charmander is an orange reptilian creature resembling a tailed bipedal salamander with some dinosaur qualities, particularly like those of theropods. Charmander has four small fangs visible on its upper and lower jaws, a cream underside and an expansive cream coloration on the sole of its foot.</p>
-								<button class="story-read-more">
-									Read more
-								</button>
-							</div>
-						</section>
-					</article>
-					<article class="story" id="charmeleon">
-						<section class="story-image">
-							<img src="media/stories/charmeleon.png">
-						</section>
-						<section class="story-blurb">
-							<header class="story-blurb">
-								Charmeleon '05
-							</header>
-							<div class="blurb">
-								 <p>Charmeleon is a tailed bipedal, reptilian creature similar to Charmander. It has crimson scales that are much darker than that of the bright orange Charmander. It has a tail with the tip burning with fire, a trait seen in many Fire-type Pokémon, especially the Charmander evolutionary line.</p>
-								<button class="story-read-more">
-									Read more
-								</button>
-							</div>
-						</section>
-					</article>
-					<article class="story" id="charizard">
-						<section class="story-image">
-							<img src="media/stories/charizard.jpg">
-						</section>
-						<section class="story-blurb">
-							<header class="story-blurb">
-								Charizard '06
-							</header>
-							<div class="blurb">
-								 <p>Unlike its pre-evolutions, it has wings that can allow it to fly. Charizard is a very dragon-like Pokémon. Like its previous forms, it is bipedal and has a long tail with a fire burning at the tip. It has extremely sharp claws, a long neck, and two horns protruding from the back of its head.</p>
-								<button class="story-read-more">
-									Read more
-								</button>
-							</div>
-						</section>
-					</article>
-					<article class="story" id="squirtle">
-						<section class="story-image">
-							<img src="media/stories/squirtle.jpg">
-						</section>
-						<section class="story-blurb">
-							<header class="story-blurb">
-								Squirtle '07
-							</header>
-							<div class="blurb">
-								 <p>Squirtle is a short, tailed bipedal Pokémon. However, it has also been shown to be able to walk on all fours. They resemble a light blue turtle with their most notable feature being the hard shell on their back. This shell forms and hardens on its back after birth. They could perhaps be distantly related to some other turtle-like Pokémon, such as Torkoal and Turtwig, but Squirtle seems to only be closely related to their evolutions.</p>
-								<button class="story-read-more">
-									Read more
-								</button>
-							</div>
-						</section>
-					</article>
-					<article class="story" id="wartortle">
-						<section class="story-image">
-							<img src="media/stories/wartortle.jpg">
-						</section>
-						<section class="story-blurb">
-							<header class="story-blurb">
-								Wartortle '08
-							</header>
-							<div class="blurb">
-								 <p>Wartortle are tailed bipedal, indigo-blue turtle-like Pokémon with brown shells and long, furry tails and ears. Wartortle has small fangs protruding out of its mouth, brown irises, and three sharp claws on its arms. To maintain balance while swimming at high speeds, Wartortle move their unusual furry ears and tails. </p>
-								<button class="story-read-more">
-									Read more
-								</button>
-							</div>
-						</section>
-					</article>
-					<article class="story" id="blastoise">
-						<section class="story-image">
-							<img src="media/stories/blastoise.jpg">
-						</section>
-						<section class="story-blurb">
-							<header class="story-blurb">
-								Blastoise '09
-							</header>
-							<div class="blurb">
-								 <p>Blastoise is a large, tailed bipedal, blue tortoise-like Pokémon with a tough brown shell and two powerful water cannons, which are steel-like in appearance, that jut out of the top sides of its shell. The cannons can be withdrawn inside the shell, or rotated to point backwards; this enables Blastoise to commence jet assisted rams. </p>
-								<button class="story-read-more">
-									Read more
-								</button>
-							</div>
-						</section>
-					</article>
+					<section class="content">
+						<article class="story opened" id="bulbasaur">
+							<section class="story-image">
+								<img src="media/stories/bulbasaur.png">
+							</section>
+							<section class="story-blurb">
+								<header class="story-blurb">
+									Bulbasaur '01
+								</header>
+								<div class="blurb">
+									 <p>Bulbasaur is a quadruped, reptilian creature that somewhat resembles a toad or a young dinosaur with a spotted blue-green hide. It has three white toes or claws growing out of its four legs, and its eyes are a bright red. The most notable feature of this Pokémon is the onion-like bulb on its back, which grows from a seed planted on its back by its mother at birth.</p>
+									<button class="story-read-more">
+										Read more
+									</button>
+								</div>
+							</section>
+						</article>
+						<article class="story" id="ivysaur">
+							<section class="story-image">
+								<img src="media/stories/ivysaur.png">
+							</section>
+							<section class="story-blurb">
+								<header class="story-blurb">
+									Ivysaur '02
+								</header>
+								<div class="blurb">
+									 <p>Ivysaur, like its pre-evolved form, Bulbasaur, resembles a toad or a quadruped dinosaur, though the patches in its skin cause it to resemble a dinosaur more closely. After evolving from Bulbasaur, Ivysaur grows small fangs and has visible ear insides and pupils. Ivysaur's skin is also a little bit bluer than Bulbasaur's.</p>
+									<button class="story-read-more">
+										Read more
+									</button>
+								</div>
+							</section>
+						</article>
+						<article class="story" id="venusaur">
+							<section class="story-image">
+								<img src="media/stories/venusaur.jpg">
+							</section>
+							<section class="story-blurb">
+								<header class="story-blurb">
+									Venusaur '03
+								</header>
+								<div class="blurb">
+									 <p>Venusaur is considerably larger and heavier than both of its pre-evolutions are, and as such, it moves slower than the two when it is not in battle, though it retains its quadruped form. The bud on its back has since bloomed into a large red flower with six expansive, white-spotted petals, supported on a brown trunk somewhat like that of a palm tree.</p>
+									<button class="story-read-more">
+										Read more
+									</button>
+								</div>
+							</section>
+						</article>
+						<article class="story" id="charmander">
+							<section class="story-image">
+								<img src="media/stories/charmander.jpg">
+							</section>
+							<section class="story-blurb">
+								<header class="story-blurb">
+									Charmander '04
+								</header>
+								<div class="blurb">
+									 <p>Charmander is an orange reptilian creature resembling a tailed bipedal salamander with some dinosaur qualities, particularly like those of theropods. Charmander has four small fangs visible on its upper and lower jaws, a cream underside and an expansive cream coloration on the sole of its foot.</p>
+									<button class="story-read-more">
+										Read more
+									</button>
+								</div>
+							</section>
+						</article>
+						<article class="story" id="charmeleon">
+							<section class="story-image">
+								<img src="media/stories/charmeleon.png">
+							</section>
+							<section class="story-blurb">
+								<header class="story-blurb">
+									Charmeleon '05
+								</header>
+								<div class="blurb">
+									 <p>Charmeleon is a tailed bipedal, reptilian creature similar to Charmander. It has crimson scales that are much darker than that of the bright orange Charmander. It has a tail with the tip burning with fire, a trait seen in many Fire-type Pokémon, especially the Charmander evolutionary line.</p>
+									<button class="story-read-more">
+										Read more
+									</button>
+								</div>
+							</section>
+						</article>
+						<article class="story" id="charizard">
+							<section class="story-image">
+								<img src="media/stories/charizard.jpg">
+							</section>
+							<section class="story-blurb">
+								<header class="story-blurb">
+									Charizard '06
+								</header>
+								<div class="blurb">
+									 <p>Unlike its pre-evolutions, it has wings that can allow it to fly. Charizard is a very dragon-like Pokémon. Like its previous forms, it is bipedal and has a long tail with a fire burning at the tip. It has extremely sharp claws, a long neck, and two horns protruding from the back of its head.</p>
+									<button class="story-read-more">
+										Read more
+									</button>
+								</div>
+							</section>
+						</article>
+						<article class="story" id="squirtle">
+							<section class="story-image">
+								<img src="media/stories/squirtle.jpg">
+							</section>
+							<section class="story-blurb">
+								<header class="story-blurb">
+									Squirtle '07
+								</header>
+								<div class="blurb">
+									 <p>Squirtle is a short, tailed bipedal Pokémon. However, it has also been shown to be able to walk on all fours. They resemble a light blue turtle with their most notable feature being the hard shell on their back. This shell forms and hardens on its back after birth. They could perhaps be distantly related to some other turtle-like Pokémon, such as Torkoal and Turtwig, but Squirtle seems to only be closely related to their evolutions.</p>
+									<button class="story-read-more">
+										Read more
+									</button>
+								</div>
+							</section>
+						</article>
+						<article class="story" id="wartortle">
+							<section class="story-image">
+								<img src="media/stories/wartortle.jpg">
+							</section>
+							<section class="story-blurb">
+								<header class="story-blurb">
+									Wartortle '08
+								</header>
+								<div class="blurb">
+									 <p>Wartortle are tailed bipedal, indigo-blue turtle-like Pokémon with brown shells and long, furry tails and ears. Wartortle has small fangs protruding out of its mouth, brown irises, and three sharp claws on its arms. To maintain balance while swimming at high speeds, Wartortle move their unusual furry ears and tails. </p>
+									<button class="story-read-more">
+										Read more
+									</button>
+								</div>
+							</section>
+						</article>
+						<article class="story" id="blastoise">
+							<section class="story-image">
+								<img src="media/stories/blastoise.jpg">
+							</section>
+							<section class="story-blurb">
+								<header class="story-blurb">
+									Blastoise '09
+								</header>
+								<div class="blurb">
+									 <p>Blastoise is a large, tailed bipedal, blue tortoise-like Pokémon with a tough brown shell and two powerful water cannons, which are steel-like in appearance, that jut out of the top sides of its shell. The cannons can be withdrawn inside the shell, or rotated to point backwards; this enables Blastoise to commence jet assisted rams. </p>
+									<button class="story-read-more">
+										Read more
+									</button>
+								</div>
+							</section>
+						</article>
+					</section>
 				</section>
 			</section>
 		
