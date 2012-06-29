@@ -257,15 +257,21 @@ body {
   display: block;
 }
 /* line 255, ../sass/style.scss */
+#photos .content {
+  overflow: hidden;
+  *zoom: 1;
+  z-index: 0;
+}
+/* line 260, ../sass/style.scss */
 #photos .thumbs {
+  z-index: 1;
   width: 73.167px;
   height: 324.667px;
   position: absolute;
-  top: 4px;
   margin: 4px;
-  margin-left: 892.833px;
+  margin-left: 896.833px;
 }
-/* line 263, ../sass/style.scss */
+/* line 268, ../sass/style.scss */
 #photos .thumbs figure {
   height: 65.167px;
   width: 65.167px;
@@ -278,12 +284,12 @@ body {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 271, ../sass/style.scss */
+/* line 276, ../sass/style.scss */
 #photos .thumbs figure img {
   height: 100%;
   width: 100%;
 }
-/* line 276, ../sass/style.scss */
+/* line 281, ../sass/style.scss */
 #photos .thumbs figure.opened {
   -webkit-box-shadow: 0px 0px 5px black;
   -moz-box-shadow: 0px 0px 5px black;

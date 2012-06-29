@@ -252,13 +252,18 @@ body {
 		display: block;
 	}
 	
+	.content{
+		@include clearfix;
+		z-index: 0;
+	}
+	
 	.thumbs{
+		z-index: 1;
 		width: $photos-thumb-dim + $photos-thumb-margin*2;
 		height: $feature-content-height;
 		position: absolute;
-		top: $hero-padding;
 		margin: $photos-thumb-margin;
-		margin-left: $hero-width - $hero-padding*2 - $photos-thumb-dim - $photos-thumb-margin*2;
+		margin-left: $hero-width - $hero-padding - $photos-thumb-dim - $photos-thumb-margin*2;
 		
 		figure{
 			height: $photos-thumb-dim;
