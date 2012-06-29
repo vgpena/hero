@@ -235,23 +235,28 @@ body {
   width: 100%;
 }
 /* line 235, ../sass/style.scss */
-#photos .feature-article {
+#photos .photo {
   float: left;
+  display: none;
 }
-/* line 237, ../sass/style.scss */
-#photos .feature-article figure {
+/* line 238, ../sass/style.scss */
+#photos .photo figure {
   width: 100%;
   height: 100%;
   margin: 0px;
 }
-/* line 241, ../sass/style.scss */
-#photos .feature-article figure img {
+/* line 242, ../sass/style.scss */
+#photos .photo figure img {
   width: 100%;
   float: left;
   position: relative;
   top: -200px;
 }
-/* line 250, ../sass/style.scss */
+/* line 251, ../sass/style.scss */
+#photos .photo.opened {
+  display: block;
+}
+/* line 255, ../sass/style.scss */
 #photos .thumbs {
   width: 73.167px;
   height: 324.667px;
@@ -260,7 +265,7 @@ body {
   margin: 4px;
   margin-left: 892.833px;
 }
-/* line 258, ../sass/style.scss */
+/* line 263, ../sass/style.scss */
 #photos .thumbs figure {
   height: 65.167px;
   width: 65.167px;
@@ -273,12 +278,12 @@ body {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 266, ../sass/style.scss */
+/* line 271, ../sass/style.scss */
 #photos .thumbs figure img {
   height: 100%;
   width: 100%;
 }
-/* line 271, ../sass/style.scss */
+/* line 276, ../sass/style.scss */
 #photos .thumbs figure.opened {
   -webkit-box-shadow: 0px 0px 5px black;
   -moz-box-shadow: 0px 0px 5px black;

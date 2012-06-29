@@ -232,8 +232,9 @@ body {
 		width: 100%;
 	}
 	
-	.feature-article{
+	.photo{
 		float: left;
+		display: none;
 		figure{
 			width: 100%;
 			height: 100%;
@@ -245,6 +246,10 @@ body {
 				top: -200px;
 			}
 		}
+	}
+	
+	.photo.opened{
+		display: block;
 	}
 	
 	.thumbs{
