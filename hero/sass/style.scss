@@ -214,3 +214,15 @@ body {
 		display: block;
 	}
 }
+
+/*
+* For the Photos feature.
+*/
+#photos{
+	figure{
+		margin: 0px;
+		img{
+			width: 100%;
+		}
+	}
+}

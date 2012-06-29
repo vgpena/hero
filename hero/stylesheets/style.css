@@ -217,3 +217,15 @@ body {
 #stories .story.opened {
   display: block;
 }
+
+/*
+* For the Photos feature.
+*/
+/* line 222, ../sass/style.scss */
+#photos figure {
+  margin: 0px;
+}
+/* line 224, ../sass/style.scss */
+#photos figure img {
+  width: 100%;
+}
