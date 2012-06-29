@@ -1,15 +1,15 @@
 (function($){
 	
-	var IntraNav = function (section) {
-		var that = this;
-		that.build(section);
+	var IntraNav = function (section, options) {
+		var options = options;
+		this.build(section, options);
 	};
 	
 	IntraNav.prototype = {
 		
 		constructor: IntraNav,
 		
-		build: function (section) {
+		build: function (section, options) {
 			var content = $('.content', section),
 				thumbs = $('.thumbs', section);
 			$('figure', thumbs).each(function(){
@@ -20,6 +20,7 @@
 						var elt = $(this),
 							prev;
 						thumb.on('click', elt, function(){
+						console.log(options);
 							
 							$('article', content).each(function(){
 								if ($(this).hasClass('opened')){
@@ -29,9 +30,9 @@
 							});
 							
 							prev.removeClass('opened');
-							prev.hide();
+							prev[options['exit']]();
 							
-							elt.fadeIn(800);
+							elt[options['enter']]();
 							elt.addClass('opened');
 							$('figure', thumbs).each(function(){
 								if ($(this).hasClass('opened')){
@@ -62,16 +63,16 @@
 	
 	$.fn.intraNav.defaults = {
 		'exit': 'hide',
-		'enter': ('fadeIn', 800);
+		'enter': 'fadeIn',
 	};
 	
 
 	$(function(){
 		$('#stories').intraNav({
-			'enter': 'show';
+			'enter': 'show',
 		});
 		$('#photos').intraNav({
-			'exit': ('fadeOut', 800);
+			'exit': 'fadeOut',
 		});
 	});
 	
