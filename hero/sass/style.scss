@@ -20,6 +20,9 @@ $stories-thumb-dim: $feature-content-height/3 - $stories-thumb-margin*3;
 $story-width: $hero-width*(2/3);
 $story-padding: 24px;
 
+$photos-thumb-margin: 4px;
+$photos-thumb-dim: $feature-content-height/4 - $photos-thumb-margin*4;
+
 $highlight-red: #F25757;
 $light-red:#ED3232;
 $dark-red:#A61C1F;
@@ -219,10 +222,54 @@ body {
 * For the Photos feature.
 */
 #photos{
-	figure{
+	.feature-content{
 		margin: 0px;
-		img{
+		padding: 0px;
+		height: $feature-content-height + $hero-padding + 2;
+		@include clearfix;
+		float: left;
+		width: 100%;
+	}
+	
+	.feature-article{
+		float: left;
+		figure{
 			width: 100%;
+			height: 100%;
+			margin: 0px;
+			img{
+				width: 100%;
+				float: left;
+				position: relative;
+				top: -200px;
+			}
 		}
 	}
+	
+	#photos-thumbs{
+		width: $photos-thumb-dim + $photos-thumb-margin*2;
+		height: $feature-content-height;
+		position: absolute;
+		top: $hero-padding;
+		margin: $photos-thumb-margin;
+		margin-left: $hero-width - $hero-padding*2 - $photos-thumb-dim - $photos-thumb-margin*2;
+		
+		figure{
+			height: $photos-thumb-dim;
+			width: $photos-thumb-dim;
+			margin: $photos-thumb-margin;
+			background-color: #000;
+			padding: 0px;
+			@include box-shadow(0px 0px 5px rgba(black, .4));
+			@include clearfix;
+			img{
+				height: 100%;
+				width: 100%;
+			}
+		}
+		figure.opened{
+			@include box-shadow(0px 0px 5px rgba(black, 1.0));
+		}
+	}
+
 }
