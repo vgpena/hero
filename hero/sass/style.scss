@@ -248,6 +248,14 @@ body {
 		width: $hero-width;
 	}
 	
+	.photoset{
+		display: none;
+	}
+	
+	.photoset.opened{
+		display: block;
+	}
+	
 	.photo{
 		float: left;
 		display: none;
@@ -271,6 +279,7 @@ body {
 			@include clearfix;
 			padding: 8px;
 			background-color: $light-cream;
+			@include box-shadow(rgba(black, 0.05) 0 0 8px);
 			
 			p{
 				margin: 0px;
@@ -285,6 +294,11 @@ body {
 		
 		figcaption:before{
 			content: "\25C0";
+			position: absolute;
+			color: $light-cream;
+			font-size: 30px;
+			left: $photos-feature-content - 20px;
+			top: 15px;
 		}
 	}
 	
@@ -310,6 +324,7 @@ body {
 		
 		header{
 			margin: 8px;
+			line-height: 16px;
 			text-align: center;
 			text-transform: uppercase;
 			border-bottom: solid 1px #000;
@@ -319,6 +334,10 @@ body {
 			list-style: none;
 			margin: $photos-thumb-margin*2;
 			padding: 0px;
+			
+			li.opened{
+				color: #666;
+			}
 		}
 		
 		figure{

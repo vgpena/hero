@@ -39,7 +39,6 @@
 								});
 								link.addClass('opened');
 							};
-
 						});
 					};
 				});
