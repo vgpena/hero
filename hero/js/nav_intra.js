@@ -11,16 +11,16 @@
 		
 		build: function (section, options) {
 			var content = $('.content', section),
-				thumbs = $('.thumbs', section);
-			$('figure', thumbs).each(function(){
+				navlinks = $('.navlinks', section);
+			$('figure', navlinks).each(function(){
 				var id = $(this).attr('id'),
-					thumb = $(this);
+					link = $(this);
 				$('article', section).each(function(){
 					if ($(this).attr('id')==id){
 						var elt = $(this),
 							prev;
-						thumb.on('click', elt, function(){
-							if (!thumb.hasClass('opened')){
+						link.on('click', elt, function(){
+							if (!link.hasClass('opened')){
 								$('article', content).each(function(){
 									if ($(this).hasClass('opened')){
 										prev = $(this);
@@ -32,12 +32,12 @@
 
 								elt[options['enter']]();
 								elt.addClass('opened');
-								$('figure', thumbs).each(function(){
+								$('figure', navlinks).each(function(){
 									if ($(this).hasClass('opened')){
 										$(this).removeClass('opened');
 									};
 								});
-								thumb.addClass('opened');
+								link.addClass('opened');
 							};
 
 						});

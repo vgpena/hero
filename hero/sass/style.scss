@@ -132,7 +132,7 @@ body {
 * For the Stories feature.
 */
 #stories{
-	.thumbs{
+	.navlinks{
 		@include clearfix;
 		float: right;
 		height: $feature-content-height;
@@ -257,7 +257,7 @@ body {
 		z-index: 0;
 	}
 	
-	.thumbs{
+	.navlinks{
 		z-index: 1;
 		width: $photos-thumb-dim + $photos-thumb-margin*2;
 		height: $feature-content-height;

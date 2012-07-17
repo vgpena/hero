@@ -109,7 +109,7 @@ body {
 * For the Stories feature.
 */
 /* line 135, ../sass/style.scss */
-#stories .thumbs {
+#stories .navlinks {
   overflow: hidden;
   *zoom: 1;
   float: right;
@@ -118,7 +118,7 @@ body {
   padding: 8px;
 }
 /* line 141, ../sass/style.scss */
-#stories .thumbs figure {
+#stories .navlinks figure {
   height: 96.222px;
   width: 96.222px;
   background-color: #000;
@@ -132,11 +132,11 @@ body {
   box-shadow: 0px 0px 6px #dddddd;
 }
 /* line 150, ../sass/style.scss */
-#stories .thumbs figure img {
+#stories .navlinks figure img {
   width: 100%;
 }
 /* line 154, ../sass/style.scss */
-#stories .thumbs .opened {
+#stories .navlinks .opened {
   -webkit-box-shadow: 0px 0px 6px #333333;
   -moz-box-shadow: 0px 0px 6px #333333;
   box-shadow: 0px 0px 6px #333333;
@@ -263,7 +263,7 @@ body {
   z-index: 0;
 }
 /* line 260, ../sass/style.scss */
-#photos .thumbs {
+#photos .navlinks {
   z-index: 1;
   width: 73.167px;
   height: 324.667px;
@@ -272,7 +272,7 @@ body {
   margin-left: 896.833px;
 }
 /* line 268, ../sass/style.scss */
-#photos .thumbs figure {
+#photos .navlinks figure {
   height: 65.167px;
   width: 65.167px;
   margin: 4px;
@@ -285,12 +285,12 @@ body {
   *zoom: 1;
 }
 /* line 276, ../sass/style.scss */
-#photos .thumbs figure img {
+#photos .navlinks figure img {
   height: 100%;
   width: 100%;
 }
 /* line 281, ../sass/style.scss */
-#photos .thumbs figure.opened {
+#photos .navlinks figure.opened {
   -webkit-box-shadow: 0px 0px 5px black;
   -moz-box-shadow: 0px 0px 5px black;
   box-shadow: 0px 0px 5px black;
