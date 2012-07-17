@@ -27,6 +27,9 @@ $photos-thumb-margin: 4px;
 $photos-thumb-dim: $feature-content-height/4 - $photos-thumb-margin*4;
 $photos-feature-content: $hero-width*.67;
 
+$nav-dim: 60px;
+$nav-arrow-margin: 12px;
+
 $highlight-red: #F25757;
 $light-red:#ED3232;
 $dark-red:#A61C1F;
@@ -311,6 +314,50 @@ body {
 	.content{
 		z-index: 0;
 		float: left;
+	}
+	
+	.controls{
+		width: $photos-feature-content;
+		position: absolute;
+		top: 0px;
+		
+		.prev, .next{
+			height: $nav-dim;
+			width: $nav-dim;
+			font-family: $serif;
+			font-size: $nav-dim;
+			background-color: rgba(255,255,255,0.5);
+			position: absolute;
+			top: $hero-height/2 - $nav-dim;
+			border-radius: $nav-dim;
+			margin: 4px;
+			border: solid 4px rgba(0,0,0,0.6);
+			
+			p{
+				position: relative;
+				margin: 0px;
+				margin-top: -$nav-arrow-margin/2 - 2;
+				opacity: .6;
+			}
+		}
+		
+		.prev{
+			left: 0px;
+			text-align: left;
+			
+			p{
+				margin-left: $nav-arrow-margin;
+			}
+		}
+		
+		.next{
+			right: 0px;
+			text-align: right;
+			
+			p{
+				margin-right: $nav-arrow-margin;
+			}
+		}
 	}
 	
 	.navlinks{
