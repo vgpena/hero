@@ -32,6 +32,7 @@ $light-red:#ED3232;
 $dark-red:#A61C1F;
 $button-red: #D42222;
 $cream:#FAF7ED;
+$light-cream: #FFFDF7;
 
 
 $sans: "Helvetica", "Arial", sans-serif;
@@ -244,22 +245,46 @@ body {
 		height: $feature-content-height + $hero-padding + 2;
 		@include clearfix;
 		float: left;
-		width: $photos-feature-content;
+		width: $hero-width;
 	}
 	
 	.photo{
 		float: left;
 		display: none;
 		figure{
-			width: 100%;
-			height: 100%;
+			width: $photos-feature-content;
+			height: $hero-height;
 			margin: 0px;
 			img{
 				width: 100%;
 				float: left;
-				position: relative;
-				top: -200px;
 			}
+		}
+		figcaption{
+			width: $hero-width - $photos-feature-content;
+			margin: 0px;
+			margin-left: $photos-feature-content;
+			margin-top: -$hero-height;
+			font-family: $sans;
+			font-size: 13px;
+			line-height: 20px;
+			@include clearfix;
+			padding: 8px;
+			background-color: $light-cream;
+			
+			p{
+				margin: 0px;
+			}
+			
+			.credit{
+				font-size: 11px;
+			}
+			
+
+		}
+		
+		figcaption:before{
+			content: "\25C0";
 		}
 	}
 	
@@ -268,16 +293,28 @@ body {
 	}
 	
 	.content{
-		@include clearfix;
 		z-index: 0;
+		float: left;
 	}
 	
 	.navlinks{
 		z-index: 1;
-		width: $hero-width - $photos-feature-content;
-		height: $feature-content-height;
 		position: absolute;
-		margin-left: $photos-feature-content;
+		bottom: 8px;
+		width: $hero-width - $photos-feature-content;
+		font-family: $serif;
+		font-size: 14px;
+		line-height: 20px;
+		float: right;
+		left: $photos-feature-content;
+		
+		header{
+			margin: 8px;
+			text-align: center;
+			text-transform: uppercase;
+			border-bottom: solid 1px #000;
+		}
+		
 		ul{
 			list-style: none;
 			margin: $photos-thumb-margin*2;
