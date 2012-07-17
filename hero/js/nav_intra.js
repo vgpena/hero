@@ -12,7 +12,7 @@
 		build: function (section, options) {
 			var content = $('.content', section),
 				navlinks = $('.navlinks', section);
-			$('figure', navlinks).each(function(){
+			$('li', navlinks).each(function(){
 				var id = $(this).attr('id'),
 					link = $(this);
 				$('article', section).each(function(){
@@ -32,7 +32,7 @@
 
 								elt[options['enter']]();
 								elt.addClass('opened');
-								$('figure', navlinks).each(function(){
+								$('li', navlinks).each(function(){
 									if ($(this).hasClass('opened')){
 										$(this).removeClass('opened');
 									};
