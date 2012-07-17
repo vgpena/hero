@@ -248,11 +248,11 @@ body {
 		width: $hero-width;
 	}
 	
-	.photoset{
+	article.photoset{
 		display: none;
 	}
 	
-	.photoset.opened{
+	article.photoset.opened{
 		display: block;
 	}
 	
@@ -269,7 +269,7 @@ body {
 			}
 		}
 		figcaption{
-			width: $hero-width - $photos-feature-content;
+			width: $hero-width - $photos-feature-content - 16px;
 			margin: 0px;
 			margin-left: $photos-feature-content;
 			margin-top: -$hero-height;
@@ -281,6 +281,16 @@ body {
 			background-color: $light-cream;
 			@include box-shadow(rgba(black, 0.05) 0 0 8px);
 			
+			.notch{
+				position: absolute;
+				color: $light-cream;
+				font-size: 30px;
+				left: $photos-feature-content - 20px;
+				top: 15px;
+				margin: 0px;
+				padding: 0px;
+			}
+			
 			p{
 				margin: 0px;
 			}
@@ -289,17 +299,9 @@ body {
 				font-size: 11px;
 			}
 			
-
 		}
 		
-		figcaption:before{
-			content: "\25C0";
-			position: absolute;
-			color: $light-cream;
-			font-size: 30px;
-			left: $photos-feature-content - 20px;
-			top: 15px;
-		}
+
 	}
 	
 	.photo.opened{
