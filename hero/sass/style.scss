@@ -25,6 +25,7 @@ $story-padding: 24px;
 
 $photos-thumb-margin: 4px;
 $photos-thumb-dim: $feature-content-height/4 - $photos-thumb-margin*4;
+$photos-feature-content: $hero-width*.67;
 
 $highlight-red: #F25757;
 $light-red:#ED3232;
@@ -243,7 +244,7 @@ body {
 		height: $feature-content-height + $hero-padding + 2;
 		@include clearfix;
 		float: left;
-		width: 100%;
+		width: $photos-feature-content;
 	}
 	
 	.photo{
@@ -273,11 +274,15 @@ body {
 	
 	.navlinks{
 		z-index: 1;
-		width: $photos-thumb-dim + $photos-thumb-margin*2;
+		width: $hero-width - $photos-feature-content;
 		height: $feature-content-height;
 		position: absolute;
-		margin: $photos-thumb-margin;
-		margin-left: $hero-width - $hero-padding - $photos-thumb-dim - $photos-thumb-margin*2;
+		margin-left: $photos-feature-content;
+		ul{
+			list-style: none;
+			margin: $photos-thumb-margin*2;
+			padding: 0px;
+		}
 		
 		figure{
 			height: $photos-thumb-dim;

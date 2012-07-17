@@ -4,12 +4,12 @@
 /*
 * Large-element styles
 */
-/* line 42, ../sass/style.scss */
+/* line 43, ../sass/style.scss */
 body {
   background-color: #ccc;
 }
 
-/* line 46, ../sass/style.scss */
+/* line 47, ../sass/style.scss */
 #hero {
   width: 974px;
   height: 370px;
@@ -23,7 +23,7 @@ body {
   padding: 0px;
 }
 
-/* line 59, ../sass/style.scss */
+/* line 60, ../sass/style.scss */
 #strip {
   position: absolute;
   top: 0px;
@@ -34,7 +34,7 @@ body {
 /*
 * Main nav styles
 */
-/* line 69, ../sass/style.scss */
+/* line 70, ../sass/style.scss */
 #features {
   height: 41.333px;
   width: 976px;
@@ -52,7 +52,7 @@ body {
   background-image: linear-gradient(#f25757, #ed3232 20%, #a61c1f 90%);
   text-transform: uppercase;
 }
-/* line 80, ../sass/style.scss */
+/* line 81, ../sass/style.scss */
 #features ul {
   margin: 0px;
   margin-left: 0px;
@@ -60,7 +60,7 @@ body {
   height: 100%;
   width: 100%;
 }
-/* line 86, ../sass/style.scss */
+/* line 87, ../sass/style.scss */
 #features ul li {
   width: 244px;
   display: block;
@@ -72,16 +72,16 @@ body {
   color: #faf7ed;
   font-family: "Helvetica", "Arial", sans-serif;
 }
-/* line 98, ../sass/style.scss */
+/* line 99, ../sass/style.scss */
 #features ul li.opened {
   text-shadow: rgba(250, 247, 237, 0.4) 0 0 4px;
 }
-/* line 102, ../sass/style.scss */
+/* line 103, ../sass/style.scss */
 #features ul li:hover {
   color: #FFFDF5;
   text-shadow: rgba(250, 247, 237, 0.8) 0 0 4px;
 }
-/* line 107, ../sass/style.scss */
+/* line 108, ../sass/style.scss */
 #features ul .feature-nav {
   position: relative;
   height: 18px;
@@ -91,14 +91,14 @@ body {
 /*
 * Inside of the feature itself. General styles.
 */
-/* line 118, ../sass/style.scss */
+/* line 119, ../sass/style.scss */
 .feature {
   padding: 0px;
   width: 974px;
   float: left;
   top: 0px;
 }
-/* line 124, ../sass/style.scss */
+/* line 125, ../sass/style.scss */
 .feature .feature-content {
   padding: 0px;
   height: 324.667px;
@@ -108,7 +108,7 @@ body {
 /*
 * For the Stories feature.
 */
-/* line 135, ../sass/style.scss */
+/* line 136, ../sass/style.scss */
 #stories .navlinks {
   overflow: hidden;
   *zoom: 1;
@@ -117,7 +117,7 @@ body {
   width: 324.667px;
   padding: 8px;
 }
-/* line 141, ../sass/style.scss */
+/* line 142, ../sass/style.scss */
 #stories .navlinks ul {
   list-style: none;
   margin: 0px;
@@ -125,7 +125,7 @@ body {
   height: 324.667px;
   padding-left: 0px;
 }
-/* line 147, ../sass/style.scss */
+/* line 148, ../sass/style.scss */
 #stories .navlinks ul li {
   height: 96.222px;
   width: 96.222px;
@@ -139,30 +139,30 @@ body {
   -moz-box-shadow: 0px 0px 6px #dddddd;
   box-shadow: 0px 0px 6px #dddddd;
 }
-/* line 156, ../sass/style.scss */
+/* line 157, ../sass/style.scss */
 #stories .navlinks ul li figure {
   height: 96.222px;
   width: 96.222px;
   margin: 0px;
 }
-/* line 161, ../sass/style.scss */
+/* line 162, ../sass/style.scss */
 #stories .navlinks ul li figure img {
   width: 100%;
 }
-/* line 168, ../sass/style.scss */
+/* line 169, ../sass/style.scss */
 #stories .navlinks li.opened {
   -webkit-box-shadow: 0px 0px 6px #333333;
   -moz-box-shadow: 0px 0px 6px #333333;
   box-shadow: 0px 0px 6px #333333;
 }
-/* line 172, ../sass/style.scss */
+/* line 173, ../sass/style.scss */
 #stories .story {
   width: 649.333px;
   position: absolute;
   top: 0px;
   display: none;
 }
-/* line 177, ../sass/style.scss */
+/* line 178, ../sass/style.scss */
 #stories .story .story-image {
   width: 324.667px;
   height: 332.667px;
@@ -172,11 +172,11 @@ body {
   float: left;
   background-color: #000;
 }
-/* line 184, ../sass/style.scss */
+/* line 185, ../sass/style.scss */
 #stories .story .story-image img {
   width: 100%;
 }
-/* line 188, ../sass/style.scss */
+/* line 189, ../sass/style.scss */
 #stories .story section.story-blurb {
   width: 276.667px;
   height: 324.667px;
@@ -187,22 +187,22 @@ body {
   *zoom: 1;
   float: right;
 }
-/* line 196, ../sass/style.scss */
+/* line 197, ../sass/style.scss */
 #stories .story section.story-blurb header.story-blurb {
   font-family: "Georgia", "Times New Roman", serif;
   font-size: 26px;
 }
-/* line 200, ../sass/style.scss */
+/* line 201, ../sass/style.scss */
 #stories .story section.story-blurb .blurb {
   margin-top: 24px;
 }
-/* line 202, ../sass/style.scss */
+/* line 203, ../sass/style.scss */
 #stories .story section.story-blurb .blurb p {
   font-family: "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
 }
-/* line 208, ../sass/style.scss */
+/* line 209, ../sass/style.scss */
 #stories .story section.story-blurb .story-read-more {
   background-color: #d42222;
   border: none;
@@ -222,15 +222,15 @@ body {
   box-shadow: 0px 0px 6px #cccccc;
   text-shadow: rgba(0, 0, 0, 0.5) 0 0 2px;
 }
-/* line 222, ../sass/style.scss */
+/* line 223, ../sass/style.scss */
 #stories .story section.story-blurb .story-read-more:hover {
   background-color: #ed3232;
 }
-/* line 226, ../sass/style.scss */
+/* line 227, ../sass/style.scss */
 #stories .story section.story-blurb .story-read-more:active {
   background-color: #a61c1f;
 }
-/* line 231, ../sass/style.scss */
+/* line 232, ../sass/style.scss */
 #stories .story.opened {
   display: block;
 }
@@ -238,7 +238,7 @@ body {
 /*
 * For the Photos feature.
 */
-/* line 240, ../sass/style.scss */
+/* line 241, ../sass/style.scss */
 #photos .feature-content {
   margin: 0px;
   padding: 0px;
@@ -246,46 +246,51 @@ body {
   overflow: hidden;
   *zoom: 1;
   float: left;
-  width: 100%;
+  width: 652.58px;
 }
-/* line 249, ../sass/style.scss */
+/* line 250, ../sass/style.scss */
 #photos .photo {
   float: left;
   display: none;
 }
-/* line 252, ../sass/style.scss */
+/* line 253, ../sass/style.scss */
 #photos .photo figure {
   width: 100%;
   height: 100%;
   margin: 0px;
 }
-/* line 256, ../sass/style.scss */
+/* line 257, ../sass/style.scss */
 #photos .photo figure img {
   width: 100%;
   float: left;
   position: relative;
   top: -200px;
 }
-/* line 265, ../sass/style.scss */
+/* line 266, ../sass/style.scss */
 #photos .photo.opened {
   display: block;
 }
-/* line 269, ../sass/style.scss */
+/* line 270, ../sass/style.scss */
 #photos .content {
   overflow: hidden;
   *zoom: 1;
   z-index: 0;
 }
-/* line 274, ../sass/style.scss */
+/* line 275, ../sass/style.scss */
 #photos .navlinks {
   z-index: 1;
-  width: 73.167px;
+  width: 321.42px;
   height: 324.667px;
   position: absolute;
-  margin: 4px;
-  margin-left: 896.833px;
+  margin-left: 652.58px;
 }
-/* line 282, ../sass/style.scss */
+/* line 281, ../sass/style.scss */
+#photos .navlinks ul {
+  list-style: none;
+  margin: 8px;
+  padding: 0px;
+}
+/* line 287, ../sass/style.scss */
 #photos .navlinks figure {
   height: 65.167px;
   width: 65.167px;
@@ -298,12 +303,12 @@ body {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 290, ../sass/style.scss */
+/* line 295, ../sass/style.scss */
 #photos .navlinks figure img {
   height: 100%;
   width: 100%;
 }
-/* line 295, ../sass/style.scss */
+/* line 300, ../sass/style.scss */
 #photos .navlinks figure.opened {
   -webkit-box-shadow: 0px 0px 5px black;
   -moz-box-shadow: 0px 0px 5px black;
