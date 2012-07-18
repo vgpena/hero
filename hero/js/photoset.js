@@ -26,16 +26,22 @@
 		},
 		
 		build: function (photos) {
+			
 			var openedID;
+			controls = $('<div class="controls">');
+			nextbutton = $('<div class="next"><p>&#187;</p></div>');
+			prevbutton = $('<div class="prev"><p>&#171;</p></div>');
+			controls.append(nextbutton);
+			controls.append(prevbutton);
+			$('.article-content').append(controls);
+			
 			$('.photoset', photos).each(function(){
-				var thisID = $(this).attr('id');
-				controls = $('<div class="controls" id='+thisID+' >');
-				nextbutton = $('<div id="next-'+thisID+'" class="next"><p>&#187;</p></div>');
-				prevbutton = $('<div id="prev-'+thisID+'" class="prev"><p>&#171;</p></div>');
-				controls.append(nextbutton);
-				controls.append(prevbutton);
-				$('.article-content').append(controls.hide());
-
+				if($(this).hasClass('opened')){
+					console.log('opened: '+ $(this).attr('id'));
+				}
+				else{
+					console.log('not opened: '+ $(this).attr('id'));
+				};
 				$(this).cycle({
 					fx: 'fade',
 					prev: prevbutton,
@@ -43,7 +49,7 @@
 					timeout: 0
 				});
 				
-				Photoset.prototype.toggleButtons($(this), controls);	
+				//Photoset.prototype.toggleButtons($(this), controls);	
 			});
 			
 			
