@@ -28,6 +28,7 @@
 		
 		build: function (photos) {
 			$('.photoset', photos).each(function(){
+				var thisID = $(this).attr('id');
 				$('.photo', $(this)).each(function(){
 					var current = $('figure', $(this));
 					current.controls = $('<div class="controls" >').hide();

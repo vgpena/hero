@@ -253,6 +253,8 @@ body {
 	
 	article.photoset{
 		display: none;
+		height: $hero-height;
+		width: $hero-width;
 	}
 	
 	article.photoset.opened{
@@ -321,7 +323,7 @@ body {
 		position: absolute;
 		top: 0px;
 		
-		.prev, .next{
+		#prev, #next{
 			height: $nav-dim;
 			width: $nav-dim;
 			font-family: $serif;
@@ -341,7 +343,7 @@ body {
 			}
 		}
 		
-		.prev{
+		#prev{
 			left: 0px;
 			text-align: left;
 			
@@ -350,7 +352,7 @@ body {
 			}
 		}
 		
-		.next{
+		#next{
 			right: 0px;
 			text-align: right;
 			
