@@ -11,7 +11,6 @@
 		
 		toggleButtons: function(controls){
 			var buttonsVisible = false;
-			console.log(controls);
 			$('#photos').on('hover', function(){
 				if (buttonsVisible == false){
 					buttonsVisible = true;
@@ -23,6 +22,10 @@
 				};
 			});
 
+		},
+		
+		toggleThumbs: function(el){
+			console.log('toggleThumbs');
 		},
 		
 		build: function (photos) {
@@ -45,7 +48,10 @@
 			
 			Photoset.prototype.toggleButtons(controls);	
 			
-			
+			$('.photoset').on('click', function(){
+				var id = $(this).attr('id');
+				Photoset.prototype.toggleThumbs(controls);
+			});
 		},
 	};
 
