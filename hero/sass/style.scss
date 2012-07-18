@@ -253,6 +253,36 @@ body {
 	
 	.thumbs{
 		display: none;
+		ul{
+			list-style: none;
+			width: $photos-feature-content;
+			height: $feature-content-height;
+			padding-left: 0px;
+			margin: 4px;
+			li{
+				height: $stories-thumb-dim;
+				width: $stories-thumb-dim;
+				background-color: #000;
+				margin: $stories-thumb-margin;
+				padding: 0px;
+				@include clearfix;
+				float: left;
+				@include box-shadow(0px 0px 6px #ddd);
+				figure{
+					height: $stories-thumb-dim;
+					width: $stories-thumb-dim;
+					margin: 0px;
+
+					img{
+						width: 100%;
+					}
+				}
+			}
+			
+			li.opened{
+				@include box-shadow(0px 0px 6px #333);
+			}
+		}
 	}
 	
 	article.photoset{

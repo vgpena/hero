@@ -24,11 +24,21 @@
 
 		},
 		
-		toggleThumbs: function(photoset, controls){
-			var id = photoset.attr('id');
+		toggleThumbs: function(photoset, latest, controls){
+			var setId = photoset.attr('id'),
+				photoId,
+				thumbs = $('.thumbs#'+setId+'');
+			
 			controls.hide();
 			photoset.hide();
-			$('.thumbs#'+id+'').show();
+			
+			$('li', thumbs).each(function(){
+				$(this).removeClass('opened');
+				if ($(this).attr('id')==latest){
+					$(this).addClass('opened');
+				};
+			});
+			thumbs.show();
 		},
 		
 		build: function (photos) {
@@ -52,8 +62,16 @@
 			Photoset.prototype.toggleButtons(controls);	
 			
 			$('.photoset').on('click', function(){
-				var photoset = $(this);
-				Photoset.prototype.toggleThumbs(photoset, controls);
+				var photoset = $(this),
+					latest;
+				$('.photo', photoset).each(function(){
+					var visible = $(this).css('display');
+					if (visible == 'block'){
+						latest = $(this).attr('id');
+						console.log(latest);
+					};
+				});
+				Photoset.prototype.toggleThumbs(photoset, latest, controls);
 			});
 		},
 	};
