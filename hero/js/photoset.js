@@ -10,15 +10,20 @@
 		constructor: Photoset,
 		
 		toggleButtons: function(controls){
-			var buttonsVisible = false;
+			var buttonsVisible = false,
+				bool,
+				photoVisible;
 			$('#photos').on('hover', function(){
-				if (buttonsVisible == false){
-					buttonsVisible = true;
-					controls.css("display", "block");
-				}
-				else{
-					buttonsVisible = false;
-					controls.hide();
+				bool = $('.photoset').css('display');
+				if (bool == "block"){
+					if (buttonsVisible == false){
+						buttonsVisible = true;
+						controls.css("display", "block");
+					}
+					else{
+						buttonsVisible = false;
+						controls.hide();
+					};
 				};
 			});
 
@@ -59,7 +64,7 @@
 				});
 			});
 			
-			Photoset.prototype.toggleButtons(controls);	
+			Photoset.prototype.toggleButtons(controls);
 			
 			$('.photoset').on('click', function(){
 				var photoset = $(this),
@@ -68,7 +73,6 @@
 					var visible = $(this).css('display');
 					if (visible == 'block'){
 						latest = $(this).attr('id');
-						console.log(latest);
 					};
 				});
 				Photoset.prototype.toggleThumbs(photoset, latest, controls);
