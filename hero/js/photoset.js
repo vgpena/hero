@@ -24,8 +24,11 @@
 
 		},
 		
-		toggleThumbs: function(el){
-			console.log('toggleThumbs');
+		toggleThumbs: function(photoset, controls){
+			var id = photoset.attr('id');
+			controls.hide();
+			photoset.hide();
+			$('.thumbs#'+id+'').show();
 		},
 		
 		build: function (photos) {
@@ -49,8 +52,8 @@
 			Photoset.prototype.toggleButtons(controls);	
 			
 			$('.photoset').on('click', function(){
-				var id = $(this).attr('id');
-				Photoset.prototype.toggleThumbs(controls);
+				var photoset = $(this);
+				Photoset.prototype.toggleThumbs(photoset, controls);
 			});
 		},
 	};

@@ -251,12 +251,8 @@ body {
 		width: $hero-width;
 	}
 	
-	.activearea{
-		width: $photos-feature-content;
-		height: $hero-height;
-		z-index: 41;
-		float: left;
-		background-color: black;
+	.thumbs{
+		display: none;
 	}
 	
 	article.photoset{
