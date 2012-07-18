@@ -251,6 +251,12 @@ body {
 		width: $hero-width;
 	}
 	
+	.activearea{
+		width: $photos-feature-content;
+		height: $hero-height;
+		z-index: 43;
+	}
+	
 	article.photoset{
 		display: none;
 		height: $hero-height;
@@ -263,7 +269,6 @@ body {
 	
 	.photo{
 		float: left;
-		//display: none;
 		figure{
 			width: $photos-feature-content;
 			height: $hero-height;
@@ -322,8 +327,9 @@ body {
 		width: $photos-feature-content;
 		position: absolute;
 		top: 0px;
+		z-index: 42;
 		
-		#prev, #next{
+		.prev, .next{
 			height: $nav-dim;
 			width: $nav-dim;
 			font-family: $serif;
@@ -343,7 +349,7 @@ body {
 			}
 		}
 		
-		#prev{
+		.prev{
 			left: 0px;
 			text-align: left;
 			
@@ -352,7 +358,7 @@ body {
 			}
 		}
 		
-		#next{
+		.next{
 			right: 0px;
 			text-align: right;
 			

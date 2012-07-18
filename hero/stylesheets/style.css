@@ -255,31 +255,37 @@ body {
   width: 974px;
 }
 /* line 254, ../sass/style.scss */
+#photos .activearea {
+  width: 652.58px;
+  height: 370px;
+  z-index: 43;
+}
+/* line 260, ../sass/style.scss */
 #photos article.photoset {
   display: none;
   height: 370px;
   width: 974px;
 }
-/* line 260, ../sass/style.scss */
+/* line 266, ../sass/style.scss */
 #photos article.photoset.opened {
   display: block;
 }
-/* line 264, ../sass/style.scss */
+/* line 270, ../sass/style.scss */
 #photos .photo {
   float: left;
 }
-/* line 267, ../sass/style.scss */
+/* line 272, ../sass/style.scss */
 #photos .photo figure {
   width: 652.58px;
   height: 370px;
   margin: 0px;
 }
-/* line 271, ../sass/style.scss */
+/* line 276, ../sass/style.scss */
 #photos .photo figure img {
   width: 100%;
   float: left;
 }
-/* line 276, ../sass/style.scss */
+/* line 281, ../sass/style.scss */
 #photos .photo figcaption {
   width: 305.42px;
   margin: 0px;
@@ -297,7 +303,7 @@ body {
   -o-box-shadow: rgba(0, 0, 0, 0.05) 0 0 8px;
   box-shadow: rgba(0, 0, 0, 0.05) 0 0 8px;
 }
-/* line 289, ../sass/style.scss */
+/* line 294, ../sass/style.scss */
 #photos .photo figcaption .notch {
   position: absolute;
   color: #fffdf7;
@@ -307,31 +313,32 @@ body {
   margin: 0px;
   padding: 0px;
 }
-/* line 299, ../sass/style.scss */
+/* line 304, ../sass/style.scss */
 #photos .photo figcaption p {
   margin: 0px;
 }
-/* line 303, ../sass/style.scss */
+/* line 308, ../sass/style.scss */
 #photos .photo figcaption .credit {
   font-size: 11px;
 }
-/* line 312, ../sass/style.scss */
+/* line 317, ../sass/style.scss */
 #photos .photo.opened {
   display: block;
 }
-/* line 316, ../sass/style.scss */
+/* line 321, ../sass/style.scss */
 #photos .content {
   z-index: 0;
   float: left;
 }
-/* line 321, ../sass/style.scss */
+/* line 326, ../sass/style.scss */
 #photos .controls {
   width: 652.58px;
   position: absolute;
   top: 0px;
+  z-index: 42;
 }
-/* line 326, ../sass/style.scss */
-#photos .controls #prev, #photos .controls #next {
+/* line 332, ../sass/style.scss */
+#photos .controls .prev, #photos .controls .next {
   height: 60px;
   width: 60px;
   font-family: "Georgia", "Times New Roman", serif;
@@ -343,32 +350,32 @@ body {
   margin: 4px;
   border: solid 4px rgba(0, 0, 0, 0.6);
 }
-/* line 338, ../sass/style.scss */
-#photos .controls #prev p, #photos .controls #next p {
+/* line 344, ../sass/style.scss */
+#photos .controls .prev p, #photos .controls .next p {
   position: relative;
   margin: 0px;
   margin-top: -8px;
   opacity: .6;
 }
-/* line 346, ../sass/style.scss */
-#photos .controls #prev {
+/* line 352, ../sass/style.scss */
+#photos .controls .prev {
   left: 0px;
   text-align: left;
 }
-/* line 350, ../sass/style.scss */
-#photos .controls #prev p {
+/* line 356, ../sass/style.scss */
+#photos .controls .prev p {
   margin-left: 12px;
 }
-/* line 355, ../sass/style.scss */
-#photos .controls #next {
+/* line 361, ../sass/style.scss */
+#photos .controls .next {
   right: 0px;
   text-align: right;
 }
-/* line 359, ../sass/style.scss */
-#photos .controls #next p {
+/* line 365, ../sass/style.scss */
+#photos .controls .next p {
   margin-right: 12px;
 }
-/* line 365, ../sass/style.scss */
+/* line 371, ../sass/style.scss */
 #photos .navlinks {
   z-index: 1;
   position: absolute;
@@ -380,7 +387,7 @@ body {
   float: right;
   left: 652.58px;
 }
-/* line 376, ../sass/style.scss */
+/* line 382, ../sass/style.scss */
 #photos .navlinks header {
   margin: 8px;
   line-height: 16px;
@@ -388,17 +395,17 @@ body {
   text-transform: uppercase;
   border-bottom: solid 1px #000;
 }
-/* line 384, ../sass/style.scss */
+/* line 390, ../sass/style.scss */
 #photos .navlinks ul {
   list-style: none;
   margin: 8px;
   padding: 0px;
 }
-/* line 389, ../sass/style.scss */
+/* line 395, ../sass/style.scss */
 #photos .navlinks ul li.opened {
   color: #666;
 }
-/* line 394, ../sass/style.scss */
+/* line 400, ../sass/style.scss */
 #photos .navlinks figure {
   height: 65.167px;
   width: 65.167px;
@@ -412,12 +419,12 @@ body {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 402, ../sass/style.scss */
+/* line 408, ../sass/style.scss */
 #photos .navlinks figure img {
   height: 100%;
   width: 100%;
 }
-/* line 407, ../sass/style.scss */
+/* line 413, ../sass/style.scss */
 #photos .navlinks figure.opened {
   -moz-box-shadow: 0px 0px 5px black;
   -webkit-box-shadow: 0px 0px 5px black;
