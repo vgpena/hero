@@ -12,8 +12,7 @@
 		toggleButtons: function(controls){
 			var buttonsVisible = false;
 			console.log(controls);
-			$('.activearea').on('hover', function(){
-				console.log('hover');
+			$('#photos').on('hover', function(){
 				if (buttonsVisible == false){
 					buttonsVisible = true;
 					controls.css("display", "block");
@@ -42,9 +41,9 @@
 					next: nextbutton,
 					timeout: 0
 				});
-				
-				Photoset.prototype.toggleButtons(controls);	
 			});
+			
+			Photoset.prototype.toggleButtons(controls);	
 			
 			
 		},
