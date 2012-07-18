@@ -129,32 +129,36 @@
   -moz-box-shadow: 0px 0px 6px #dddddd;
   box-shadow: 0px 0px 6px #dddddd;
 }
-/* line 113, ../sass/style.scss */
-.thumbnail-links li figure {
+/* line 114, ../sass/style.scss */
+.thumbnail-links figure {
   height: 96.222px;
   width: 96.222px;
   margin: 0px;
 }
-/* line 117, ../sass/style.scss */
-.thumbnail-links li figure img {
+/* line 118, ../sass/style.scss */
+.thumbnail-links figure img {
   width: 100%;
 }
 /* line 122, ../sass/style.scss */
 .thumbnail-links li.opened, .thumbnail-links li:hover {
-  -webkit-box-shadow: 0px 0px 6px #333333;
-  -moz-box-shadow: 0px 0px 6px #333333;
-  box-shadow: 0px 0px 6px #333333;
+  -webkit-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+  -moz-box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
+  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.5);
 }
 
 /* line 126, ../sass/style.scss */
 .story {
   width: 649.333px;
   position: absolute;
-  top: 0px;
   display: none;
 }
-/* line 131, ../sass/style.scss */
-.story .story-image {
+/* line 130, ../sass/style.scss */
+.story.opened {
+  display: block;
+}
+
+/* line 134, ../sass/style.scss */
+.story-image {
   width: 324.667px;
   height: 332.667px;
   overflow: hidden;
@@ -163,51 +167,46 @@
   float: left;
   background-color: #000;
 }
-/* line 138, ../sass/style.scss */
-.story .story-image img {
+/* line 141, ../sass/style.scss */
+.story-image img {
   width: 100%;
 }
 
-/* line 143, ../sass/style.scss */
-section.story-blurb {
+/* line 145, ../sass/style.scss */
+.story-blurb {
   width: 276.667px;
   height: 324.667px;
   padding: 24px;
   position: relative;
-  left: 4px;
   overflow: hidden;
   *zoom: 1;
+  left: 4px;
   float: right;
 }
-/* line 151, ../sass/style.scss */
-section.story-blurb header.story-blurb {
+
+/* line 154, ../sass/style.scss */
+.story-blurb-header {
   font-family: "Georgia", "Times New Roman", serif;
   font-size: 26px;
+  margin-bottom: 24px;
 }
-/* line 155, ../sass/style.scss */
-section.story-blurb .blurb {
-  margin-top: 24px;
-}
-/* line 157, ../sass/style.scss */
-section.story-blurb .blurb p {
+
+/* line 159, ../sass/style.scss */
+.blurb {
   font-family: "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
 }
-/* line 163, ../sass/style.scss */
-section.story-blurb .story-read-more {
-  float: right;
-}
 
-/* line 167, ../sass/style.scss */
-.story.opened {
-  display: block;
+/* line 164, ../sass/style.scss */
+.story-read-more {
+  float: right;
 }
 
 /*
 * hero button, e.g. story-read-more
 */
-/* line 176, ../sass/style.scss */
+/* line 172, ../sass/style.scss */
 .hero-button {
   background-color: #c60017;
   border: none;
@@ -228,12 +227,12 @@ section.story-blurb .story-read-more {
   text-shadow: rgba(0, 0, 0, 0.5) 0 0 2px;
 }
 
-/* line 190, ../sass/style.scss */
+/* line 186, ../sass/style.scss */
 .hero-button:hover {
   background-color: #da0000;
 }
 
-/* line 194, ../sass/style.scss */
+/* line 190, ../sass/style.scss */
 .hero-button:active {
   background-color: #ac1831;
 }
@@ -241,7 +240,7 @@ section.story-blurb .story-read-more {
 /*
 * For the Photos feature.
 */
-/* line 203, ../sass/style.scss */
+/* line 199, ../sass/style.scss */
 #photos .feature-content {
   margin: 0px;
   padding: 0px;
@@ -251,30 +250,30 @@ section.story-blurb .story-read-more {
   float: left;
   width: 974px;
 }
-/* line 212, ../sass/style.scss */
+/* line 208, ../sass/style.scss */
 #photos article.photoset {
   display: none;
 }
-/* line 216, ../sass/style.scss */
+/* line 212, ../sass/style.scss */
 #photos article.photoset.opened {
   display: block;
 }
-/* line 220, ../sass/style.scss */
+/* line 216, ../sass/style.scss */
 #photos .photo {
   float: left;
 }
-/* line 223, ../sass/style.scss */
+/* line 219, ../sass/style.scss */
 #photos .photo figure {
   width: 652.58px;
   height: 370px;
   margin: 0px;
 }
-/* line 227, ../sass/style.scss */
+/* line 223, ../sass/style.scss */
 #photos .photo figure img {
   width: 100%;
   float: left;
 }
-/* line 232, ../sass/style.scss */
+/* line 228, ../sass/style.scss */
 #photos .photo figcaption {
   width: 305.42px;
   margin: 0px;
@@ -291,7 +290,7 @@ section.story-blurb .story-read-more {
   -moz-box-shadow: rgba(0, 0, 0, 0.05) 0 0 8px;
   box-shadow: rgba(0, 0, 0, 0.05) 0 0 8px;
 }
-/* line 245, ../sass/style.scss */
+/* line 241, ../sass/style.scss */
 #photos .photo figcaption .notch {
   position: absolute;
   color: #faf7ed;
@@ -301,30 +300,30 @@ section.story-blurb .story-read-more {
   margin: 0px;
   padding: 0px;
 }
-/* line 255, ../sass/style.scss */
+/* line 251, ../sass/style.scss */
 #photos .photo figcaption p {
   margin: 0px;
 }
-/* line 259, ../sass/style.scss */
+/* line 255, ../sass/style.scss */
 #photos .photo figcaption .credit {
   font-size: 11px;
 }
-/* line 268, ../sass/style.scss */
+/* line 264, ../sass/style.scss */
 #photos .photo.opened {
   display: block;
 }
-/* line 272, ../sass/style.scss */
+/* line 268, ../sass/style.scss */
 #photos .content {
   z-index: 0;
   float: left;
 }
-/* line 277, ../sass/style.scss */
+/* line 273, ../sass/style.scss */
 #photos .controls {
   width: 652.58px;
   position: absolute;
   top: 0px;
 }
-/* line 282, ../sass/style.scss */
+/* line 278, ../sass/style.scss */
 #photos .controls .prev, #photos .controls .next {
   height: 60px;
   width: 60px;
@@ -337,32 +336,32 @@ section.story-blurb .story-read-more {
   margin: 4px;
   border: solid 4px rgba(0, 0, 0, 0.6);
 }
-/* line 294, ../sass/style.scss */
+/* line 290, ../sass/style.scss */
 #photos .controls .prev p, #photos .controls .next p {
   position: relative;
   margin: 0px;
   margin-top: -8px;
   opacity: .6;
 }
-/* line 302, ../sass/style.scss */
+/* line 298, ../sass/style.scss */
 #photos .controls .prev {
   left: 0px;
   text-align: left;
 }
-/* line 306, ../sass/style.scss */
+/* line 302, ../sass/style.scss */
 #photos .controls .prev p {
   margin-left: 12px;
 }
-/* line 311, ../sass/style.scss */
+/* line 307, ../sass/style.scss */
 #photos .controls .next {
   right: 0px;
   text-align: right;
 }
-/* line 315, ../sass/style.scss */
+/* line 311, ../sass/style.scss */
 #photos .controls .next p {
   margin-right: 12px;
 }
-/* line 321, ../sass/style.scss */
+/* line 317, ../sass/style.scss */
 #photos .navlinks {
   z-index: 1;
   position: absolute;
@@ -374,7 +373,7 @@ section.story-blurb .story-read-more {
   float: right;
   left: 652.58px;
 }
-/* line 332, ../sass/style.scss */
+/* line 328, ../sass/style.scss */
 #photos .navlinks header {
   margin: 8px;
   line-height: 16px;
@@ -382,17 +381,17 @@ section.story-blurb .story-read-more {
   text-transform: uppercase;
   border-bottom: solid 1px #000;
 }
-/* line 340, ../sass/style.scss */
+/* line 336, ../sass/style.scss */
 #photos .navlinks ul {
   list-style: none;
   margin: 8px;
   padding: 0px;
 }
-/* line 345, ../sass/style.scss */
+/* line 341, ../sass/style.scss */
 #photos .navlinks ul li.opened {
   color: #666;
 }
-/* line 350, ../sass/style.scss */
+/* line 346, ../sass/style.scss */
 #photos .navlinks figure {
   height: 65.167px;
   width: 65.167px;
@@ -405,12 +404,12 @@ section.story-blurb .story-read-more {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 358, ../sass/style.scss */
+/* line 354, ../sass/style.scss */
 #photos .navlinks figure img {
   height: 100%;
   width: 100%;
 }
-/* line 363, ../sass/style.scss */
+/* line 359, ../sass/style.scss */
 #photos .navlinks figure.opened {
   -webkit-box-shadow: 0px 0px 5px black;
   -moz-box-shadow: 0px 0px 5px black;
