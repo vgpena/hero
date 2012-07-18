@@ -265,7 +265,6 @@ body {
 /* line 262, ../sass/style.scss */
 #photos .photo {
   float: left;
-  display: none;
 }
 /* line 265, ../sass/style.scss */
 #photos .photo figure {

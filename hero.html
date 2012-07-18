@@ -6,6 +6,7 @@
 	<script src='hero/js/nav_inter.js' type="text/javascript" charset="utf-8"></script>
 	<script src='hero/js/nav_intra.js' type="text/javascript" charset="utf-8"></script>
 	<script src='hero/js/photoset.js' type="text/javascript" charset="utf-8"></script>
+	<script src='hero/js/jquery.cycle.all.js' type="text/javascript" charset="utf-8"></script>
 	<title>
 		you're my hero!
 	</title>
@@ -24,8 +25,8 @@
 						</header>
 						<ul>
 							<li id="remedios_varo">Remedios Varo</li>
-							<li id="wallpapers" class="opened">Wallpapers</li>
-							<li id="miscellaneous">Miscellaneous</li>
+							<li id="wallpapers">Wallpapers</li>
+							<li id="miscellaneous" class="opened">Miscellaneous</li>
 						</ul>
 					</section>
 					
@@ -51,8 +52,8 @@
 						<article class="feature-article">
 							<section class="article-content">
 								
-								<article class="photoset" id="miscellaneous">
-									<div class="photo opened" id="01">
+								<article class="photoset opened" id="miscellaneous">
+									<div class="photo" id="01">
 										<figure>
 											<img src="media/photos/miscellaneous/01.jpg">
 										</figure>
@@ -72,31 +73,92 @@
 										<figure>
 											<img src="media/photos/miscellaneous/02.jpg">
 										</figure>
+										<figcaption>
+											<div class="notch">
+												&#9664;
+											</div>
+											<p class="caption">
+												This is a city at night. I guess it's okay.
+											</p>
+											<p class="credit">
+												This photo brought to you by Stephen Hawking.
+											</p>
+										</figcaption>
 									</div>
 									<div class="photo" id="03">
 										<figure>
 											<img src="media/photos/miscellaneous/03.jpg">
 										</figure>
+										<figcaption>
+											<div class="notch">
+												&#9664;
+											</div>
+											<p class="caption">
+												Oh, San Francisco, San Francisco B.C. / When I lived with my true love and she lived with me.
+											</p>
+											<p class="credit">
+												<i>San Francisco B.C.</i>, The Silver Jews
+											</p>
+										</figcaption>
 									</div>
 									<div class="photo" id="04">
 										<figure>
 											<img src="media/photos/miscellaneous/04.jpg">
 										</figure>
+										<figcaption>
+											<div class="notch">
+												&#9664;
+											</div>
+											<p class="caption">
+												Totoro-like beings are always good news.
+											</p>
+											<p class="credit">
+												Tumblr, maybe?
+											</p>
+										</figcaption>
 									</div>
-									<div class="photo" id="03">
+									<div class="photo" id="05">
 										<figure>
 											<img src="media/photos/miscellaneous/05.jpg">
 										</figure>
+										<figcaption>
+											<div class="notch">
+												&#9664;
+											</div>
+											<p class="caption">
+												Flowers 'n shit.
+											</p>
+											<p class="credit">
+												Holland or something.
+											</p>
+										</figcaption>
 									</div>
-									<div class="photo" id="04">
+									<div class="photo" id="06">
 										<figure>
 											<img src="media/photos/miscellaneous/06.jpg">
 										</figure>
+										<figcaption>
+											<div class="notch">
+												&#9664;
+											</div>
+											<p class="caption">
+												I AM A ROBOT. RESISTANCE IS FUTILE. pew pew.
+											</p>
+											<p class="credit">
+												YOUR NEW OVERLORD. PATHETIC HUMANS.
+											</p>
+										</figcaption>
 									</div>
 								</article>
 								
+								<script type="text/javascript">
+								    $('.photoset#miscellaneous').cycle({
+										fx: 'fade'
+									});
+
+								</script>
 								
-								<article class="photoset opened" id="wallpapers">
+								<article class="photoset" id="wallpapers">
 									<div class="photo opened" id="01">
 										<figure>
 											<img src="media/photos/wallpapers/01.png">
