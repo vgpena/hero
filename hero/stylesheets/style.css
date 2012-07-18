@@ -1,15 +1,12 @@
 /*
-* Variables and imports
-*/
-/*
 * Large-element styles
 */
-/* line 10, ../sass/style.scss */
+/* line 7, ../sass/style.scss */
 body {
   background-color: #ccc;
 }
 
-/* line 14, ../sass/style.scss */
+/* line 11, ../sass/style.scss */
 #hero {
   width: 974px;
   height: 370px;
@@ -18,23 +15,19 @@ body {
   margin-right: auto;
   position: relative;
   top: 150px;
-  display: block;
   overflow: hidden;
-  padding: 0px;
 }
 
-/* line 27, ../sass/style.scss */
+/* line 22, ../sass/style.scss */
 #strip {
   position: absolute;
-  top: 0px;
-  left: 0px;
   width: 3896px;
 }
 
 /*
 * Main nav styles
 */
-/* line 37, ../sass/style.scss */
+/* line 30, ../sass/style.scss */
 #features {
   height: 41.333px;
   width: 976px;
@@ -53,7 +46,7 @@ body {
   background-image: linear-gradient(#f25757, #ed3232 20%, #a61c1f 90%);
   text-transform: uppercase;
 }
-/* line 48, ../sass/style.scss */
+/* line 41, ../sass/style.scss */
 #features ul {
   margin-left: 0px;
   margin: 0px;
@@ -61,7 +54,7 @@ body {
   height: 100%;
   width: 100%;
 }
-/* line 55, ../sass/style.scss */
+/* line 48, ../sass/style.scss */
 #features li {
   width: 244px;
   display: block;
@@ -73,16 +66,16 @@ body {
   color: #faf7ed;
   font-family: "Helvetica", "Arial", sans-serif;
 }
-/* line 67, ../sass/style.scss */
+/* line 60, ../sass/style.scss */
 #features li.opened {
   text-shadow: rgba(250, 247, 237, 0.4) 0 0 4px;
 }
-/* line 71, ../sass/style.scss */
+/* line 64, ../sass/style.scss */
 #features li:hover {
   color: #FFFDF5;
   text-shadow: rgba(250, 247, 237, 0.8) 0 0 4px;
 }
-/* line 76, ../sass/style.scss */
+/* line 69, ../sass/style.scss */
 #features .feature-nav {
   position: relative;
   height: 18px;
@@ -92,15 +85,16 @@ body {
 /*
 * Inside of the feature itself. General styles.
 */
-/* line 86, ../sass/style.scss */
+/* line 79, ../sass/style.scss */
 .feature {
   padding: 0px;
   width: 974px;
   float: left;
   top: 0px;
 }
-/* line 92, ../sass/style.scss */
-.feature .feature-content {
+
+/* line 85, ../sass/style.scss */
+.feature-content {
   padding: 0px;
   height: 324.667px;
   top: 0px;
@@ -109,25 +103,25 @@ body {
 /*
 * For the Stories feature.
 */
-/* line 103, ../sass/style.scss */
-#stories .navlinks {
+/* line 94, ../sass/style.scss */
+.thumbnail-links {
   overflow: hidden;
   *zoom: 1;
-  float: right;
   height: 324.667px;
   width: 324.667px;
   padding: 8px;
+  float: right;
 }
-/* line 109, ../sass/style.scss */
-#stories .navlinks ul {
+/* line 100, ../sass/style.scss */
+.thumbnail-links ul {
   list-style: none;
   margin: 0px;
   width: 324.667px;
   height: 324.667px;
   padding-left: 0px;
 }
-/* line 116, ../sass/style.scss */
-#stories .navlinks li {
+/* line 107, ../sass/style.scss */
+.thumbnail-links li {
   height: 96.222px;
   width: 96.222px;
   background-color: #000;
@@ -140,31 +134,32 @@ body {
   -moz-box-shadow: 0px 0px 6px #dddddd;
   box-shadow: 0px 0px 6px #dddddd;
 }
-/* line 125, ../sass/style.scss */
-#stories .navlinks li figure {
+/* line 116, ../sass/style.scss */
+.thumbnail-links li figure {
   height: 96.222px;
   width: 96.222px;
   margin: 0px;
 }
-/* line 129, ../sass/style.scss */
-#stories .navlinks li figure img {
+/* line 120, ../sass/style.scss */
+.thumbnail-links li figure img {
   width: 100%;
 }
-/* line 135, ../sass/style.scss */
-#stories .navlinks li.opened {
+/* line 125, ../sass/style.scss */
+.thumbnail-links li.opened, .thumbnail-links li:hover {
   -webkit-box-shadow: 0px 0px 6px #333333;
   -moz-box-shadow: 0px 0px 6px #333333;
   box-shadow: 0px 0px 6px #333333;
 }
-/* line 139, ../sass/style.scss */
-#stories .story {
+
+/* line 129, ../sass/style.scss */
+.story {
   width: 649.333px;
   position: absolute;
   top: 0px;
   display: none;
 }
-/* line 144, ../sass/style.scss */
-#stories .story .story-image {
+/* line 134, ../sass/style.scss */
+.story .story-image {
   width: 324.667px;
   height: 332.667px;
   overflow: hidden;
@@ -173,12 +168,13 @@ body {
   float: left;
   background-color: #000;
 }
-/* line 151, ../sass/style.scss */
-#stories .story .story-image img {
+/* line 141, ../sass/style.scss */
+.story .story-image img {
   width: 100%;
 }
-/* line 155, ../sass/style.scss */
-#stories .story section.story-blurb {
+
+/* line 146, ../sass/style.scss */
+section.story-blurb {
   width: 276.667px;
   height: 324.667px;
   padding: 24px;
@@ -188,23 +184,23 @@ body {
   *zoom: 1;
   float: right;
 }
-/* line 163, ../sass/style.scss */
-#stories .story section.story-blurb header.story-blurb {
+/* line 154, ../sass/style.scss */
+section.story-blurb header.story-blurb {
   font-family: "Georgia", "Times New Roman", serif;
   font-size: 26px;
 }
-/* line 167, ../sass/style.scss */
-#stories .story section.story-blurb .blurb {
+/* line 158, ../sass/style.scss */
+section.story-blurb .blurb {
   margin-top: 24px;
 }
-/* line 169, ../sass/style.scss */
-#stories .story section.story-blurb .blurb p {
+/* line 160, ../sass/style.scss */
+section.story-blurb .blurb p {
   font-family: "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   line-height: 18px;
 }
-/* line 175, ../sass/style.scss */
-#stories .story section.story-blurb .story-read-more {
+/* line 166, ../sass/style.scss */
+section.story-blurb .story-read-more {
   background-color: #d42222;
   border: none;
   font-family: "Helvetica", "Arial", sans-serif;
@@ -223,23 +219,24 @@ body {
   box-shadow: 0px 0px 6px #cccccc;
   text-shadow: rgba(0, 0, 0, 0.5) 0 0 2px;
 }
-/* line 189, ../sass/style.scss */
-#stories .story section.story-blurb .story-read-more:hover {
+/* line 180, ../sass/style.scss */
+section.story-blurb .story-read-more:hover {
   background-color: #ed3232;
 }
-/* line 193, ../sass/style.scss */
-#stories .story section.story-blurb .story-read-more:active {
+/* line 184, ../sass/style.scss */
+section.story-blurb .story-read-more:active {
   background-color: #a61c1f;
 }
-/* line 198, ../sass/style.scss */
-#stories .story.opened {
+
+/* line 188, ../sass/style.scss */
+.story.opened {
   display: block;
 }
 
 /*
 * For the Photos feature.
 */
-/* line 207, ../sass/style.scss */
+/* line 197, ../sass/style.scss */
 #photos .feature-content {
   margin: 0px;
   padding: 0px;
@@ -249,30 +246,30 @@ body {
   float: left;
   width: 974px;
 }
-/* line 216, ../sass/style.scss */
+/* line 206, ../sass/style.scss */
 #photos article.photoset {
   display: none;
 }
-/* line 220, ../sass/style.scss */
+/* line 210, ../sass/style.scss */
 #photos article.photoset.opened {
   display: block;
 }
-/* line 224, ../sass/style.scss */
+/* line 214, ../sass/style.scss */
 #photos .photo {
   float: left;
 }
-/* line 227, ../sass/style.scss */
+/* line 217, ../sass/style.scss */
 #photos .photo figure {
   width: 652.58px;
   height: 370px;
   margin: 0px;
 }
-/* line 231, ../sass/style.scss */
+/* line 221, ../sass/style.scss */
 #photos .photo figure img {
   width: 100%;
   float: left;
 }
-/* line 236, ../sass/style.scss */
+/* line 226, ../sass/style.scss */
 #photos .photo figcaption {
   width: 305.42px;
   margin: 0px;
@@ -289,7 +286,7 @@ body {
   -moz-box-shadow: rgba(0, 0, 0, 0.05) 0 0 8px;
   box-shadow: rgba(0, 0, 0, 0.05) 0 0 8px;
 }
-/* line 249, ../sass/style.scss */
+/* line 239, ../sass/style.scss */
 #photos .photo figcaption .notch {
   position: absolute;
   color: #fffdf7;
@@ -299,30 +296,30 @@ body {
   margin: 0px;
   padding: 0px;
 }
-/* line 259, ../sass/style.scss */
+/* line 249, ../sass/style.scss */
 #photos .photo figcaption p {
   margin: 0px;
 }
-/* line 263, ../sass/style.scss */
+/* line 253, ../sass/style.scss */
 #photos .photo figcaption .credit {
   font-size: 11px;
 }
-/* line 272, ../sass/style.scss */
+/* line 262, ../sass/style.scss */
 #photos .photo.opened {
   display: block;
 }
-/* line 276, ../sass/style.scss */
+/* line 266, ../sass/style.scss */
 #photos .content {
   z-index: 0;
   float: left;
 }
-/* line 281, ../sass/style.scss */
+/* line 271, ../sass/style.scss */
 #photos .controls {
   width: 652.58px;
   position: absolute;
   top: 0px;
 }
-/* line 286, ../sass/style.scss */
+/* line 276, ../sass/style.scss */
 #photos .controls .prev, #photos .controls .next {
   height: 60px;
   width: 60px;
@@ -335,32 +332,32 @@ body {
   margin: 4px;
   border: solid 4px rgba(0, 0, 0, 0.6);
 }
-/* line 298, ../sass/style.scss */
+/* line 288, ../sass/style.scss */
 #photos .controls .prev p, #photos .controls .next p {
   position: relative;
   margin: 0px;
   margin-top: -8px;
   opacity: .6;
 }
-/* line 306, ../sass/style.scss */
+/* line 296, ../sass/style.scss */
 #photos .controls .prev {
   left: 0px;
   text-align: left;
 }
-/* line 310, ../sass/style.scss */
+/* line 300, ../sass/style.scss */
 #photos .controls .prev p {
   margin-left: 12px;
 }
-/* line 315, ../sass/style.scss */
+/* line 305, ../sass/style.scss */
 #photos .controls .next {
   right: 0px;
   text-align: right;
 }
-/* line 319, ../sass/style.scss */
+/* line 309, ../sass/style.scss */
 #photos .controls .next p {
   margin-right: 12px;
 }
-/* line 325, ../sass/style.scss */
+/* line 315, ../sass/style.scss */
 #photos .navlinks {
   z-index: 1;
   position: absolute;
@@ -372,7 +369,7 @@ body {
   float: right;
   left: 652.58px;
 }
-/* line 336, ../sass/style.scss */
+/* line 326, ../sass/style.scss */
 #photos .navlinks header {
   margin: 8px;
   line-height: 16px;
@@ -380,17 +377,17 @@ body {
   text-transform: uppercase;
   border-bottom: solid 1px #000;
 }
-/* line 344, ../sass/style.scss */
+/* line 334, ../sass/style.scss */
 #photos .navlinks ul {
   list-style: none;
   margin: 8px;
   padding: 0px;
 }
-/* line 349, ../sass/style.scss */
+/* line 339, ../sass/style.scss */
 #photos .navlinks ul li.opened {
   color: #666;
 }
-/* line 354, ../sass/style.scss */
+/* line 344, ../sass/style.scss */
 #photos .navlinks figure {
   height: 65.167px;
   width: 65.167px;
@@ -403,12 +400,12 @@ body {
   overflow: hidden;
   *zoom: 1;
 }
-/* line 362, ../sass/style.scss */
+/* line 352, ../sass/style.scss */
 #photos .navlinks figure img {
   height: 100%;
   width: 100%;
 }
-/* line 367, ../sass/style.scss */
+/* line 357, ../sass/style.scss */
 #photos .navlinks figure.opened {
   -webkit-box-shadow: 0px 0px 5px black;
   -moz-box-shadow: 0px 0px 5px black;
