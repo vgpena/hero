@@ -4,9 +4,6 @@
 /*
 * Large-element styles
 */
-body {
-  background-color: #ccc;
-}
 
 #hero {
 	width: $hero-width;
@@ -59,10 +56,10 @@ body {
 	
 	li.opened{
 		@include text-shadow(rgba($cream, 0.4) 0 0 4px);
+		color: $highlight-cream;
 	}
 	
 	li:hover{
-		color: #FFFDF5;
 		@include text-shadow(rgba($cream, 0.8) 0 0 4px);
 	}
 	
@@ -164,29 +161,38 @@ section.story-blurb{
 		}
 	}
 	.story-read-more{
-		background-color: $button-red;
-		border: none;
-		font-family: $sans;
-		text-transform: uppercase;
-		color: #FFFDF5;
-		padding: 6px;
 		float: right;
-		font-size: 11px;
-		@include border-radius(3px);
-		@include box-shadow(0px 0px 6px #ccc);
-		@include text-shadow(rgba(black, 0.5) 0 0 2px);
-	}
-	
-	.story-read-more:hover{
-		background-color: $light-red;
-	}
-	
-	.story-read-more:active{
-		background-color: $dark-red;
 	}
 }
 .story.opened{
 	display: block;
+}
+
+
+/*
+* hero button, e.g. story-read-more
+*/
+
+.hero-button{
+	background-color: $light-red;
+	border: none;
+	font-family: $sans;
+	font-weight:bold;
+	text-transform: uppercase;
+	color: $highlight-cream;
+	padding: 6px;
+	font-size: 11px;
+	@include border-radius(3px);
+	@include box-shadow(0px 0px 6px #ccc);
+	@include text-shadow(rgba(black, 0.5) 0 0 2px);
+}
+
+.hero-button:hover{
+	background-color: $highlight-red;
+}
+
+.hero-button:active{
+	background-color: $mid-red;
 }
 
 
