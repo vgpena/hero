@@ -9,15 +9,13 @@
 		
 		constructor: Photoset,
 		
-		toggleButtons: function(photoset){
-			var buttonsVisible = false,
-				controls = $('.controls', photoset);//figure out how to insert id attr of photoset
-			
-			$('.activearea').on('hover', function(){
-				console.log('active');
+		toggleButtons: function(photoset, controls){
+			var buttonsVisible = false;
+			console.log(controls);	
+			$('figure', photoset).on('hover', function(){
 				if (buttonsVisible == false){
 					buttonsVisible = true;
-					controls.css({'display': 'block', 'opacity':'1', 'z-index':'42',});
+					controls.show();
 				}
 				else{
 					buttonsVisible = false;
@@ -31,27 +29,21 @@
 			var openedID;
 			$('.photoset', photos).each(function(){
 				var thisID = $(this).attr('id');
-				if ($(this).hasClass('opened')){
-					openedID = thisID;
-				};
 				controls = $('<div class="controls" id='+thisID+' >');
 				nextbutton = $('<div id="next-'+thisID+'" class="next"><p>&#187;</p></div>');
 				prevbutton = $('<div id="prev-'+thisID+'" class="prev"><p>&#171;</p></div>');
-				$('.activearea').append(controls);
 				controls.append(nextbutton);
 				controls.append(prevbutton);
-				if (thisID != openedID){
-					controls.hide();
-				}
-				
+				$('.article-content').append(controls.hide());
+
 				$(this).cycle({
 					fx: 'fade',
-					prev: '#prev-'+thisID+'',
-					next: '#next-'+thisID+'',
+					prev: prevbutton,
+					next: nextbutton,
 					timeout: 0
 				});
 				
-				//Photoset.prototype.toggleButtons($(this));	
+				Photoset.prototype.toggleButtons($(this), controls);	
 			});
 			
 			
