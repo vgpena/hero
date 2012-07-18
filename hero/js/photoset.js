@@ -38,10 +38,14 @@
 			photoset.hide();
 			
 			$('li', thumbs).each(function(){
+				//part one: to indicate which photo you were just on
 				$(this).removeClass('opened');
 				if ($(this).attr('id')==latest){
 					$(this).addClass('opened');
 				};
+				//part two: to link each thumbnail to its actual image
+				//*********TODO TODO TODO
+				
 			});
 			thumbs.show();
 		},
@@ -75,6 +79,7 @@
 						latest = $(this).attr('id');
 					};
 				});
+				
 				Photoset.prototype.toggleThumbs(photoset, latest, controls);
 			});
 		},
