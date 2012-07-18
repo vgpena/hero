@@ -10,9 +10,8 @@
 		constructor: Photoset,
 		
 		toggleButtons: function(photoset, controls){
-			var buttonsVisible = false;
-			console.log(controls);	
-			$('figure', photoset).on('hover', function(){
+			var buttonsVisible = false;	
+			$('.activearea').on('hover', function(){
 				if (buttonsVisible == false){
 					buttonsVisible = true;
 					controls.show();
@@ -27,21 +26,14 @@
 		
 		build: function (photos) {
 			
-			var openedID;
 			controls = $('<div class="controls">');
-			nextbutton = $('<div class="next"><p>&#187;</p></div>');
-			prevbutton = $('<div class="prev"><p>&#171;</p></div>');
+			nextbutton = $('<div id="next" class="next"><p>&#187;</p></div>');
+			prevbutton = $('<div id="prev" class="prev"><p>&#171;</p></div>');
 			controls.append(nextbutton);
 			controls.append(prevbutton);
-			$('.article-content').append(controls);
+			$('#photos').append(controls.hide());
 			
 			$('.photoset', photos).each(function(){
-				if($(this).hasClass('opened')){
-					console.log('opened: '+ $(this).attr('id'));
-				}
-				else{
-					console.log('not opened: '+ $(this).attr('id'));
-				};
 				$(this).cycle({
 					fx: 'fade',
 					prev: prevbutton,
@@ -49,7 +41,7 @@
 					timeout: 0
 				});
 				
-				//Photoset.prototype.toggleButtons($(this), controls);	
+				Photoset.prototype.toggleButtons($(this), controls);	
 			});
 			
 			

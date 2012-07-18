@@ -254,7 +254,8 @@ body {
 	.activearea{
 		width: $photos-feature-content;
 		height: $hero-height;
-		z-index: 43;
+		z-index: 41;
+		float: left;
 	}
 	
 	article.photoset{
