@@ -9,12 +9,14 @@
 		
 		constructor: Photoset,
 		
-		toggleButtons: function(photoset, controls){
-			var buttonsVisible = false;	
+		toggleButtons: function(controls){
+			var buttonsVisible = false;
+			console.log(controls);
 			$('.activearea').on('hover', function(){
+				console.log('hover');
 				if (buttonsVisible == false){
 					buttonsVisible = true;
-					controls.show();
+					controls.css("display", "block");
 				}
 				else{
 					buttonsVisible = false;
@@ -31,7 +33,7 @@
 			prevbutton = $('<div id="prev" class="prev"><p>&#171;</p></div>');
 			controls.append(nextbutton);
 			controls.append(prevbutton);
-			$('#photos').append(controls.hide());
+			$('#photos').append(controls);
 			
 			$('.photoset', photos).each(function(){
 				$(this).cycle({
@@ -41,7 +43,7 @@
 					timeout: 0
 				});
 				
-				Photoset.prototype.toggleButtons($(this), controls);	
+				Photoset.prototype.toggleButtons(controls);	
 			});
 			
 			
