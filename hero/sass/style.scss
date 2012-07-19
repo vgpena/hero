@@ -31,7 +31,7 @@
 	top: $hero-height - $features-list-outer-height +6;
 	left: $features-list-margin;
 	@include box-shadow(rgba(black, 0.3) 0 0 8px);
-	@include text-shadow(rgba(black, 0.4) 0 0 2px);
+//	@include text-shadow(rgba(black, 0.4) 0 0 2px);
 	@include background-image(linear-gradient($highlight-red, $light-red 20%, $dark-red 90%));
 	text-transform: uppercase;
 	
@@ -44,31 +44,29 @@
 	}
 	li{
 		width: $features-item-width;
-		display: block;
 		float: left;
 		text-align: center;
 		height: 100%;
-		margin: 0px;
-		padding: 0px;
 		color: $cream;
 		font-family: $sans;
+		list-style: none;
 	}
-	
-	li.opened{
-		@include text-shadow(rgba($cream, 0.4) 0 0 4px);
-		color: $highlight-cream;
-	}
-	
 	li:hover{
-		@include text-shadow(rgba($cream, 0.8) 0 0 4px);
-	}
-	
-	.feature-nav{
-		position: relative;
-		height: $features-item-line-height;
-		top: ($features-list-outer-height - $features-item-line-height)/2;
+		color: $highlight-cream;
+	}	
+	li.opened{
+		@extend li:hover;
+		@include background-image(linear-gradient($dark-red 10%, $light-red 80%, $highlight-red));
+		border-right:$highlight-red 1px solid;
+		border-left:$dark-red 1px solid;
+		margin: 0 -1px;
 	}
 }
+.feature-nav{
+	position: relative;
+	top: ($features-list-outer-height - $features-item-line-height)/2;
+}
+
 
 /*
 * Inside of the feature itself. General styles.
@@ -119,8 +117,25 @@
 			width: 100%;
 		}
 	}
-	li.opened, li:hover{
+	li:hover{
 		@include box-shadow(0px 0px 6px rgba(0,0,0,.5));
+	}
+	li.opened{
+		@extend li:hover;
+		figure{
+			position:relative;
+		}
+		figure::after{
+			content:" ";
+			display:block;
+			border: $light-red 3px solid;
+			position: absolute;
+			top:0;
+			left:0;
+			bottom:0;
+			right:0;
+			z-index: 2;
+		}
 	}
 }
 .story{
@@ -188,7 +203,7 @@
 }
 
 .hero-button:active{
-	background-color: $mid-red;
+	background-color: $dark-red;
 }
 
 
