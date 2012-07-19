@@ -371,50 +371,82 @@
 }
 /* line 308, ../sass/style.scss */
 #photos .controls {
-  width: 652.58px;
+  width: 188px;
+  height: 68px;
+  z-index: 42;
   position: absolute;
   top: 0px;
-  z-index: 42;
+  left: 232.29px;
+  top: 128.333px;
 }
-/* line 314, ../sass/style.scss */
-#photos .controls .prev, #photos .controls .next {
+/* line 317, ../sass/style.scss */
+#photos .controls .prev, #photos .controls .next, #photos .controls .thumbs-button {
   height: 60px;
   width: 60px;
   font-family: "Georgia", "Times New Roman", serif;
   font-size: 60px;
   background-color: rgba(255, 255, 255, 0.5);
   position: absolute;
-  top: 125px;
-  border-radius: 60px;
   margin: 4px;
   border: solid 4px rgba(0, 0, 0, 0.6);
 }
-/* line 326, ../sass/style.scss */
-#photos .controls .prev p, #photos .controls .next p {
+/* line 328, ../sass/style.scss */
+#photos .controls .prev p, #photos .controls .next p, #photos .controls .thumbs-button p {
   position: relative;
   margin: 0px;
   margin-top: -8px;
   opacity: .6;
 }
-/* line 334, ../sass/style.scss */
+/* line 336, ../sass/style.scss */
 #photos .controls .prev {
   left: 0px;
-  text-align: left;
+  -moz-border-radius-topleft: 60px;
+  -webkit-border-top-left-radius: 60px;
+  -o-border-top-left-radius: 60px;
+  -ms-border-top-left-radius: 60px;
+  -khtml-border-top-left-radius: 60px;
+  border-top-left-radius: 60px;
+  -moz-border-radius-bottomleft: 60px;
+  -webkit-border-bottom-left-radius: 60px;
+  -o-border-bottom-left-radius: 60px;
+  -ms-border-bottom-left-radius: 60px;
+  -khtml-border-bottom-left-radius: 60px;
+  border-bottom-left-radius: 60px;
 }
-/* line 338, ../sass/style.scss */
+/* line 340, ../sass/style.scss */
 #photos .controls .prev p {
   margin-left: 12px;
 }
-/* line 343, ../sass/style.scss */
+/* line 345, ../sass/style.scss */
 #photos .controls .next {
-  right: 0px;
-  text-align: right;
+  left: 128px;
+  -moz-border-radius-topright: 60px;
+  -webkit-border-top-right-radius: 60px;
+  -o-border-top-right-radius: 60px;
+  -ms-border-top-right-radius: 60px;
+  -khtml-border-top-right-radius: 60px;
+  border-top-right-radius: 60px;
+  -moz-border-radius-bottomright: 60px;
+  -webkit-border-bottom-right-radius: 60px;
+  -o-border-bottom-right-radius: 60px;
+  -ms-border-bottom-right-radius: 60px;
+  -khtml-border-bottom-right-radius: 60px;
+  border-bottom-right-radius: 60px;
 }
-/* line 347, ../sass/style.scss */
+/* line 350, ../sass/style.scss */
 #photos .controls .next p {
+  text-align: right;
   margin-right: 12px;
 }
-/* line 353, ../sass/style.scss */
+/* line 356, ../sass/style.scss */
+#photos .controls .thumbs-button {
+  left: 64px;
+}
+/* line 359, ../sass/style.scss */
+#photos .controls .thumbs-button p {
+  text-align: center;
+}
+/* line 365, ../sass/style.scss */
 #photos .navlinks {
   z-index: 50;
   position: absolute;
@@ -426,7 +458,7 @@
   float: right;
   left: 652.58px;
 }
-/* line 364, ../sass/style.scss */
+/* line 376, ../sass/style.scss */
 #photos .navlinks header {
   margin: 8px;
   line-height: 16px;
@@ -434,17 +466,17 @@
   text-transform: uppercase;
   border-bottom: solid 1px #000;
 }
-/* line 372, ../sass/style.scss */
+/* line 384, ../sass/style.scss */
 #photos .navlinks ul {
   list-style: none;
   margin: 8px;
   padding: 0px;
 }
-/* line 377, ../sass/style.scss */
+/* line 389, ../sass/style.scss */
 #photos .navlinks ul li.opened {
   color: #666;
 }
-/* line 382, ../sass/style.scss */
+/* line 394, ../sass/style.scss */
 #photos .navlinks figure {
   height: 65.167px;
   width: 65.167px;
@@ -458,12 +490,12 @@
   overflow: hidden;
   *zoom: 1;
 }
-/* line 390, ../sass/style.scss */
+/* line 402, ../sass/style.scss */
 #photos .navlinks figure img {
   height: 100%;
   width: 100%;
 }
-/* line 395, ../sass/style.scss */
+/* line 407, ../sass/style.scss */
 #photos .navlinks figure.opened {
   -moz-box-shadow: 0px 0px 5px black;
   -webkit-box-shadow: 0px 0px 5px black;

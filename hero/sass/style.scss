@@ -306,20 +306,22 @@
 	}
 	
 	.controls{
-		width: $photos-feature-content;
+		width: $controls-width;
+		height: $controls-height;
+		z-index: 42;
 		position: absolute;
 		top: 0px;
-		z-index: 42;
+		left: $photos-feature-content/2 - $controls-width/2;
+		top: $feature-content-height/2 - $controls-height/2;
 		
-		.prev, .next{
+		.prev, .next, .thumbs-button{
 			height: $nav-dim;
 			width: $nav-dim;
 			font-family: $serif;
 			font-size: $nav-dim;
 			background-color: rgba(255,255,255,0.5);
 			position: absolute;
-			top: $hero-height/2 - $nav-dim;
-			border-radius: $nav-dim;
+			//top: $hero-height/2 - $nav-dim;
 			margin: 4px;
 			border: solid 4px rgba(0,0,0,0.6);
 			
@@ -333,7 +335,7 @@
 		
 		.prev{
 			left: 0px;
-			text-align: left;
+			@include border-left-radius($nav-dim);
 			
 			p{
 				margin-left: $nav-arrow-margin;
@@ -341,11 +343,21 @@
 		}
 		
 		.next{
-			right: 0px;
-			text-align: right;
+			//right: 0px;
+			left: $nav-dim*2 + 8px;
+			@include border-right-radius($nav-dim);
 			
 			p{
+				text-align: right;
 				margin-right: $nav-arrow-margin;
+			}
+		}
+		
+		.thumbs-button{
+			left: $nav-dim + 4px;
+			
+			p{
+				text-align: center;
 			}
 		}
 	}

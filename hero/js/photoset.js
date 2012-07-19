@@ -118,8 +118,10 @@
 			controls = $('<div class="controls">');
 			nextbutton = $('<div id="next" class="next"><p>&#187;</p></div>');
 			prevbutton = $('<div id="prev" class="prev"><p>&#171;</p></div>');
+			thumbsbutton = $('<div id="thumbs" class="thumbs-button"><p>&#12320;</p></div>')
 			controls.append(nextbutton);
 			controls.append(prevbutton);
+			controls.append(thumbsbutton);
 			
 			$this.append(controls);
 			
