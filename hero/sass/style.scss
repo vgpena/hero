@@ -1,52 +1,9 @@
-/*
-* Variables and imports
-*/
 @import "compass";
-
-$hero-width: 974px;
-$hero-height: 370px;
-$hero-padding: 4px;
-
-$feature-content-padding: 0px;
-$feature-content-height: $hero-width/3;
-
-$features-list-outer-height: $hero-height - $feature-content-height;
-$features-list-outer-width: $hero-width + 2;
-$features-list-padding: 2px;
-$features-item-width: $features-list-outer-width/4;
-$features-list-margin: 0px;
-$features-item-line-height: 18px;
-
-$stories-thumb-margin: 4px;
-$stories-thumb-dim: $feature-content-height/3 - $stories-thumb-margin*3;
-
-$story-width: $hero-width*(2/3);
-$story-padding: 24px;
-
-$photos-thumb-margin: 4px;
-$photos-thumb-dim: $feature-content-height/4 - $photos-thumb-margin*4;
-$photos-feature-content: $hero-width*.67;
-
-$nav-dim: 60px;
-$nav-arrow-margin: 12px;
-
-$highlight-red: #F25757;
-$light-red:#ED3232;
-$dark-red:#A61C1F;
-$button-red: #D42222;
-$cream:#FAF7ED;
-$light-cream: #FFFDF7;
-
-
-$sans: "Helvetica", "Arial", sans-serif;
-$serif: "Georgia", "Times New Roman", serif;
+@import "variables";
 
 /*
 * Large-element styles
 */
-body {
-  background-color: #ccc;
-}
 
 #hero {
 	width: $hero-width;
@@ -56,15 +13,11 @@ body {
 	margin-right: auto;
 	position: relative;
 	top: 150px;
-	display: block;
 	overflow: hidden;
-	padding: 0px;
 }
 
 #strip{
 	position: absolute;
-	top: 0px;
-	left: 0px;
 	width: $hero-width*4;
 }
 
@@ -83,37 +36,37 @@ body {
 	text-transform: uppercase;
 	
 	ul{
-		margin:0px;
 		margin-left: $features-list-margin;
+		margin:0px;
 		padding: 0px;
 		height: 100%;
 		width: 100%;
-		li{
-			width: $features-item-width;
-			display: block;
-			float: left;
-			text-align: center;
-			height: 100%;
-			margin: 0px;
-			padding: 0px;
-			color: $cream;
-			font-family: $sans;
-		}
-		
-		li.opened{
-			@include text-shadow(rgba($cream, 0.4) 0 0 4px);
-		}
-		
-		li:hover{
-			color: #FFFDF5;
-			@include text-shadow(rgba($cream, 0.8) 0 0 4px);
-		}
-		
-		.feature-nav{
-			position: relative;
-			height: $features-item-line-height;
-			top: ($features-list-outer-height - $features-item-line-height)/2;
-		}
+	}
+	li{
+		width: $features-item-width;
+		display: block;
+		float: left;
+		text-align: center;
+		height: 100%;
+		margin: 0px;
+		padding: 0px;
+		color: $cream;
+		font-family: $sans;
+	}
+	
+	li.opened{
+		@include text-shadow(rgba($cream, 0.4) 0 0 4px);
+		color: $highlight-cream;
+	}
+	
+	li:hover{
+		@include text-shadow(rgba($cream, 0.8) 0 0 4px);
+	}
+	
+	.feature-nav{
+		position: relative;
+		height: $features-item-line-height;
+		top: ($features-list-outer-height - $features-item-line-height)/2;
 	}
 }
 
@@ -125,118 +78,119 @@ body {
 	width: $hero-width;
 	float: left;
 	top: 0px;
-	
-	.feature-content{
-		padding: $feature-content-padding;
-		height: $feature-content-height;
-		top: 0px;
-	}
+}
+.feature-content{
+	padding: $feature-content-padding;
+	height: $feature-content-height;
+	top: 0px;
 }
 
 /*
 * For the Stories feature.
 */
-#stories{
-	.navlinks{
+.thumbnail-links{
+	@include clearfix;
+	height: $feature-content-height;
+	width: $feature-content-height;
+	padding: 8px;
+	float: right;
+	ul{
+		list-style: none;
+		margin: 0px;
+		width: $feature-content-height;
+		height: $feature-content-height;
+		padding-left: 0px;
+	}
+	li{
+		height: $thumblinks-dim;
+		width: $thumblinks-dim;
+		background-color: #000;
+		margin: $thumblinks-margin;
+		padding: 0px;
 		@include clearfix;
 		float: right;
-		height: $feature-content-height;
-		width: $feature-content-height;
-		padding: 8px;
-		ul{
-			list-style: none;
-			margin: 0px;
-			width: $feature-content-height;
-			height: $feature-content-height;
-			padding-left: 0px;
-			li{
-				height: $stories-thumb-dim;
-				width: $stories-thumb-dim;
-				background-color: #000;
-				margin: $stories-thumb-margin;
-				padding: 0px;
-				@include clearfix;
-				float: right;
-				@include box-shadow(0px 0px 6px #ddd);
-				figure{
-					height: $stories-thumb-dim;
-					width: $stories-thumb-dim;
-					margin: 0px;
-
-					img{
-						width: 100%;
-					}
-				}
-			}
-		}
-
-		li.opened{
-			@include box-shadow(0px 0px 6px #333);
+		@include box-shadow(0px 0px 6px #ddd);
+	}
+	figure{
+		height: $thumblinks-dim;
+		width: $thumblinks-dim;
+		margin: 0px;
+		img{
+			width: 100%;
 		}
 	}
-	.story{
-		width: $feature-content-height*2;
-		position: absolute;
-		top: 0px;
-		display: none;
-		.story-image{
-			width: $feature-content-height;
-			height: $feature-content-height + $hero-padding*2;
-			overflow: hidden;
-			@include clearfix;
-			float: left;
-			background-color: #000;
-			img{
-				width: 100%;
-			}
-		}
-		section.story-blurb{
-			width: $feature-content-height - $story-padding*2;
-			height: $feature-content-height;
-			padding: $story-padding;
-			position: relative;
-			left: 4px;
-			@include clearfix;
-			float: right;
-			header.story-blurb{
-				font-family: $serif;
-				font-size: 26px;
-			}
-			.blurb{
-				margin-top: 24px;
-				p{
-					font-family: $sans;
-					font-size: 14px;
-					line-height: 18px;
-				}
-			}
-			.story-read-more{
-				background-color: $button-red;
-				border: none;
-				font-family: $sans;
-				text-transform: uppercase;
-				color: #FFFDF5;
-				padding: 6px;
-				float: right;
-				font-size: 11px;
-				@include border-radius(3px);
-				@include box-shadow(0px 0px 6px #ccc);
-				@include text-shadow(rgba(black, 0.5) 0 0 2px);
-			}
-			
-			.story-read-more:hover{
-				background-color: $light-red;
-			}
-			
-			.story-read-more:active{
-				background-color: $dark-red;
-			}
-		}
+	li.opened, li:hover{
+		@include box-shadow(0px 0px 6px rgba(0,0,0,.5));
 	}
-	.story.opened{
+}
+.story{
+	width: $feature-content-height*2;
+	position: absolute;
+	display: none;
+	&.opened{
 		display: block;
 	}
 }
+.story-image{
+	width: $feature-content-height;
+	height: $feature-content-height + $hero-padding*2;
+	overflow: hidden;
+	@include clearfix;
+	float: left;
+	background-color: #000;
+	img{
+		width: 100%;
+	}
+}
+.story-blurb{
+	width: $feature-content-height - $story-padding*2;
+	height: $feature-content-height;
+	padding: $story-padding;
+	position: relative;
+	@include clearfix;
+	left: 4px;
+	float: right;
+}
+.story-blurb-header{
+	font-family: $serif;
+	font-size: 26px;
+	margin-bottom: $story-padding;
+}
+.blurb{
+	font-family: $sans;
+	font-size: 14px;
+	line-height: 18px;
+}
+.story-read-more{
+	float: right;
+}
+
+/*
+* hero button, e.g. story-read-more
+*/
+
+.hero-button{
+	background-color: $light-red;
+	border: none;
+	font-family: $sans;
+	font-weight:bold;
+	text-transform: uppercase;
+	color: $highlight-cream;
+	padding: 6px;
+	font-size: 11px;
+	@include border-radius(3px);
+	@include box-shadow(0px 0px 6px #ccc);
+	@include text-shadow(rgba(black, 0.5) 0 0 2px);
+}
+
+.hero-button:hover{
+	background-color: $highlight-red;
+}
+
+.hero-button:active{
+	background-color: $mid-red;
+}
+
 
 /*
 * For the Photos feature.
@@ -260,17 +214,17 @@ body {
 			padding-left: 0px;
 			margin: 4px;
 			li{
-				height: $stories-thumb-dim;
-				width: $stories-thumb-dim;
+				height: $thumblinks-dim;
+				width: $thumblinks-dim;
 				background-color: #000;
-				margin: $stories-thumb-margin;
+				margin: $thumblinks-margin;
 				padding: 0px;
 				@include clearfix;
 				float: left;
 				@include box-shadow(0px 0px 6px #ddd);
 				figure{
-					height: $stories-thumb-dim;
-					width: $stories-thumb-dim;
+					height: $thumblinks-dim;
+					width: $thumblinks-dim;
 					margin: 0px;
 
 					img{

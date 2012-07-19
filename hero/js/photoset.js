@@ -70,9 +70,11 @@
 			
 			Photoset.prototype.toggleButtons(controls);
 			
-			$('.photoset').on('click', function(){
-				var photoset = $(this),
+			$('.photo figure').on('click', function(){
+				var photoset = $($(this).parent()).parent(),
 					latest;
+				console.log($(this));
+				console.log(photoset);
 				$('.photo', photoset).each(function(){
 					var visible = $(this).css('display');
 					if (visible == 'block'){
