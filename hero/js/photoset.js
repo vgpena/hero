@@ -91,16 +91,15 @@
 			var $this = photoset,
 				main = $('.main', $this),
 				thumbs = $('.thumbs', $this),
-				controls = $('.controls', $this);
-			$('figure', $this).each(function(){
-				$(this).on('click', function(){
-					$('.photo', main).each(function(){
-						$(this).removeClass('opened');
-					});
-					main.hide();
-					controls.hide();
-					thumbs.show();
+				controls = $('.controls', $this),
+				thumbsbutton = $('.thumbs-button', controls);
+			thumbsbutton.on('click', function(){
+				$('.photo', main).each(function(){
+					$(this).removeClass('opened');
 				});
+				main.hide();
+				controls.hide();
+				thumbs.show();
 			});
 		},
 		
