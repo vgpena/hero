@@ -1,5 +1,5 @@
 (function($){
-	
+	var visible = false;
 	var Photoset = function (photos) {
 		$('.photoset').each(function(){
 			Photoset.prototype.build($(this));
@@ -10,7 +10,6 @@
 		
 		constructor: Photoset,
 		
-		
 		toggleThumbs: function(photoset){
 			var $this = photoset,
 				main = $('.main', $this),
@@ -18,6 +17,7 @@
 				controls = $('.controls', $this),
 				thumbsbutton = $('.thumbs-button', controls);
 			thumbsbutton.on('click', function(){
+				visible = true;
 				$('.photo', main).each(function(){
 					$(this).removeClass('opened');
 				});
@@ -27,18 +27,21 @@
 			});
 		},
 		
-		toggleControls: function(photoset, controls){
+		toggleControls: function(photoset, controls){//still can't get 'em to not show up if thumbnails are visible...
 			var bool = false;
-			photoset.on('hover', function(){
-				if (bool==false){
-					bool = true;
-					controls.show();
-				}
-				else{
-					bool = false;
-					controls.hide();
-				};
-			});
+			if (visible == false){
+				photoset.on('hover', function(){
+					if (bool==false){
+						bool = true;
+						controls.show();
+					}
+					else{
+						bool = false;
+						controls.hide();
+					};
+				});
+			};
+
 		},
 		
 		build: function (photoset) {//this sets up the photosets when the page is first loaded: sets up navigation and enables toggleThumbs.
@@ -84,6 +87,7 @@
 				var $this = $(this),
 					id = $this.attr('id');
 				$this.on('click', function(){
+					visible = false;
 					$('.photo#'+id+'', main).addClass('opened');	
 					main.cycle(id - 1);
 					thumbs.hide();
