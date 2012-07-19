@@ -31,7 +31,7 @@
 	top: $hero-height - $features-list-outer-height +6;
 	left: $features-list-margin;
 	@include box-shadow(rgba(black, 0.3) 0 0 8px);
-	@include text-shadow(rgba(black, 0.4) 0 0 2px);
+//	@include text-shadow(rgba(black, 0.4) 0 0 2px);
 	@include background-image(linear-gradient($highlight-red, $light-red 20%, $dark-red 90%));
 	text-transform: uppercase;
 	
@@ -54,21 +54,24 @@
 		font-family: $sans;
 	}
 	
-	li.opened{
-		@include text-shadow(rgba($cream, 0.4) 0 0 4px);
-		color: $highlight-cream;
-	}
 	
 	li:hover{
-		@include text-shadow(rgba($cream, 0.8) 0 0 4px);
-	}
-	
-	.feature-nav{
-		position: relative;
-		height: $features-item-line-height;
-		top: ($features-list-outer-height - $features-item-line-height)/2;
+		color: $highlight-cream;
+	}	
+}
+.feature-nav{
+	position: relative;
+	top: ($features-list-outer-height - $features-item-line-height)/2 - 2px;
+	padding: 2px 3px 0 3px;
+	display: inline-block;
+	.opened > &{
+		color: $highlight-cream;
+		background-color: rgba($pale-red, .6);
+		@include box-shadow(0 0 5px 1px rgba($pale-red, .5), inset 0 0 5px 1px rgba($light-red, .5));
+		@include border-radius(3px);
 	}
 }
+
 
 /*
 * Inside of the feature itself. General styles.
