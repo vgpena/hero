@@ -88,25 +88,53 @@
 		},
 		
 		build: function (photoset) {//this sets up the photosets when the page is first loaded: sets up navigation and enables toggleThumbs.
+			var $this = photoset;
+			
+			//PART ONE: builds controls.
 			controls = $('<div class="controls">');
 			nextbutton = $('<div id="next" class="next"><p>&#187;</p></div>');
 			prevbutton = $('<div id="prev" class="prev"><p>&#171;</p></div>');
 			controls.append(nextbutton);
 			controls.append(prevbutton);
-			$('#photos').append(controls.hide());
 			
-			$('.photoset', photos).each(function(){
-				Photoset.prototype.spinCycle($(this), prevbutton, nextbutton, 00);
+			$this.append(controls);
+			
+			
+			//PART TWO: set up Cycle
+			$('.main', $this).cycle({
+				fx: 'fade',
+				prev: prevbutton,
+				next: nextbutton,
+				timeout: 0,
+				after: onAfter,
 			});
 			
-			Photoset.prototype.toggleButtons(controls, false);
+			function onAfter(){
+				$('.photo', $($(this).parent())).each(function(){
+					$(this).removeClass('opened');
+					if ($(this).css('display')=='block'){
+						$(this).addClass('opened');
+					}
+				})
+			};
 			
-			$('.photo figure').on('click', function(){
+			
+			//PART TWO: facilitates recently-opened behavior
+			
+			
+			
+		/*	$('.photoset', photos).each(function(){
+				Photoset.prototype.spinCycle($(this), prevbutton, nextbutton, 00);
+			});*/
+			
+			//Photoset.prototype.toggleButtons(controls, false);
+			
+			/*$('.photo figure').on('click', function(){
 				var photoset = $($(this).parent()).parent(),
 					latest = $($(this).parent()).attr('id');
 				
 				Photoset.prototype.toggleThumbs(photoset, latest, controls);
-			});
+			});*/
 		},
 	};
 
