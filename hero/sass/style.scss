@@ -44,32 +44,27 @@
 	}
 	li{
 		width: $features-item-width;
-		display: block;
 		float: left;
 		text-align: center;
 		height: 100%;
-		margin: 0px;
-		padding: 0px;
 		color: $cream;
 		font-family: $sans;
+		list-style: none;
 	}
-	
-	
 	li:hover{
 		color: $highlight-cream;
 	}	
+	li.opened{
+		@extend li:hover;
+		@include background-image(linear-gradient($dark-red 10%, $light-red 80%, $highlight-red));
+		border-right:$highlight-red 1px solid;
+		border-left:$dark-red 1px solid;
+		margin: 0 -1px;
+	}
 }
 .feature-nav{
 	position: relative;
-	top: ($features-list-outer-height - $features-item-line-height)/2 - 2px;
-	padding: 2px 3px 0 3px;
-	display: inline-block;
-	.opened > &{
-		color: $highlight-cream;
-		background-color: rgba($pale-red, .6);
-		@include box-shadow(0 0 5px 1px rgba($pale-red, .5), inset 0 0 5px 1px rgba($light-red, .5));
-		@include border-radius(3px);
-	}
+	top: ($features-list-outer-height - $features-item-line-height)/2;
 }
 
 
