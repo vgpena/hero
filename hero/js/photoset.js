@@ -10,7 +10,7 @@
 		
 		constructor: Photoset,
 		
-		spinCycle: function(photoset, prevbutton, nextbutton, startId){//Sets up a Cycle with the object in question, starting on a specified slide.
+		/*spinCycle: function(photoset, prevbutton, nextbutton, startId){//Sets up a Cycle with the object in question, starting on a specified slide.
 			$(photoset).cycle({
 				fx: 'fade',
 				prev: prevbutton,
@@ -28,7 +28,7 @@
 					}
 				})
 			};
-		},
+		},*/
 			
 	/*	toggleThumbs: function(photoset, latest, controls){//so that you can toggle between the large image and the set's thumbs.
 		//*****TODO: Make it so that if there are more than 18 photos in the set, last thumb becomes "display all thumnails" link.
@@ -104,6 +104,10 @@
 			});
 		},
 		
+		toggleControls: function(photoset){
+			console.log('hi');
+		},
+		
 		build: function (photoset) {//this sets up the photosets when the page is first loaded: sets up navigation and enables toggleThumbs.
 			var $this = photoset,
 				main = $('.main', $this),
@@ -118,6 +122,8 @@
 			controls.append(prevbutton);
 			
 			$this.append(controls);
+			
+			Photoset.prototype.toggleControls($this);
 			
 			//PART TWO: set up Cycle.
 			main.cycle({
@@ -137,7 +143,7 @@
 				})
 			};
 			
-			//PART THREE: sets up thumbnails
+			//PART THREE: set up thumbnails.
 			$('li', thumbs).each(function(){
 				var $this = $(this),
 					id = $this.attr('id');
@@ -150,7 +156,6 @@
 				});
 			});
 			
-			//PART FOUR: allows for toggling between -main- and -thumbs-
 			Photoset.prototype.toggleThumbs($this);
 			
 			/*if ($this.hasClass('opened')){
