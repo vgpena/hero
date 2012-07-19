@@ -9,7 +9,64 @@
 		
 		constructor: Photoset,
 		
-		toggleButtons: function(controls){
+		spinCycle: function(photoset, prevbutton, nextbutton, startId){//Sets up a Cycle with the object in question, starting on a specified slide.
+			$(photoset).cycle({
+				fx: 'fade',
+				prev: prevbutton,
+				next: nextbutton,
+				timeout: 0,
+				after: onAfter,
+				startingSlide: startId,
+			});
+			
+			function onAfter(){
+				$('.photo', $($(this).parent())).each(function(){
+					$(this).removeClass('opened');
+					if ($(this).css('display')=='block'){
+						$(this).addClass('opened');
+					}
+				})
+			};
+		},
+		
+		
+		toggleThumbs: function(photoset, latest, controls){//so that you can toggle between the large image and the set's thumbs.
+		//*****TODO: Make it so that if there are more than 18 photos in the set, last thumb becomes "display all thumnails" link.
+			var setId = photoset.attr('id'),
+				photoId,
+				thumbs = $('.thumbs#'+setId+'');
+			
+			controls.hide();
+			photoset.hide();
+			
+			$('li', thumbs).each(function(){
+				//part one: to indicate which photo you were just on
+				$(this).removeClass('opened');
+				if ($(this).attr('id')==latest){
+					$(this).addClass('opened');
+				};
+				//part two: to link each thumbnail to its actual image
+				$(this).on('click', function(){
+					var corrSet = $('.photoset#'+setId+''),
+						corrId = $(this).attr('id') - 1;
+					$('.thumbs').hide();
+					$('.photo', corrSet).each(function(){
+						$(this).removeClass('opened');
+						if ($(this).attr('id')==corrId){
+							$(this).addClass('opened');
+						};
+					});
+					
+					Photoset.prototype.spinCycle(corrSet, prevbutton, nextbutton, corrId);
+					
+					corrSet.show();
+				});
+				
+			});
+			thumbs.show();
+		},
+		
+		toggleButtons: function(controls){//makes buttons appear and disappear at the right times.
 			var buttonsVisible = false,
 				bool,
 				photoVisible;
@@ -29,28 +86,7 @@
 
 		},
 		
-		toggleThumbs: function(photoset, latest, controls){
-			var setId = photoset.attr('id'),
-				photoId,
-				thumbs = $('.thumbs#'+setId+'');
-			
-			controls.hide();
-			photoset.hide();
-			
-			$('li', thumbs).each(function(){
-				//part one: to indicate which photo you were just on
-				$(this).removeClass('opened');
-				if ($(this).attr('id')==latest){
-					$(this).addClass('opened');
-				};
-				//part two: to link each thumbnail to its actual image
-				//*********TODO TODO TODO
-				
-			});
-			thumbs.show();
-		},
-		
-		build: function (photos) {
+		build: function (photos) {//this sets up the photosets when the page is first loaded: sets up navigation and enables toggleThumbs.
 			
 			controls = $('<div class="controls">');
 			nextbutton = $('<div id="next" class="next"><p>&#187;</p></div>');
@@ -60,27 +96,14 @@
 			$('#photos').append(controls);
 			
 			$('.photoset', photos).each(function(){
-				$(this).cycle({
-					fx: 'fade',
-					prev: prevbutton,
-					next: nextbutton,
-					timeout: 0
-				});
+				Photoset.prototype.spinCycle($(this), prevbutton, nextbutton, 00);
 			});
 			
 			Photoset.prototype.toggleButtons(controls);
 			
 			$('.photo figure').on('click', function(){
 				var photoset = $($(this).parent()).parent(),
-					latest;
-				console.log($(this));
-				console.log(photoset);
-				$('.photo', photoset).each(function(){
-					var visible = $(this).css('display');
-					if (visible == 'block'){
-						latest = $(this).attr('id');
-					};
-				});
+					latest = $($(this).parent()).attr('id');
 				
 				Photoset.prototype.toggleThumbs(photoset, latest, controls);
 			});

@@ -412,7 +412,7 @@
 }
 /* line 351, ../sass/style.scss */
 #photos .navlinks {
-  z-index: 1;
+  z-index: 50;
   position: absolute;
   bottom: 8px;
   width: 321.42px;
