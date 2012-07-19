@@ -1,8 +1,9 @@
 (function($){
 	
 	var Photoset = function (photos) {
-		this.build(photos);
-		
+		$('.photoset').each(function(){
+			Photoset.prototype.build($(this));
+		});
 	};
 	
 	Photoset.prototype = {
@@ -28,8 +29,7 @@
 				})
 			};
 		},
-		
-		
+			
 		toggleThumbs: function(photoset, latest, controls){//so that you can toggle between the large image and the set's thumbs.
 		//*****TODO: Make it so that if there are more than 18 photos in the set, last thumb becomes "display all thumnails" link.
 			var setId = photoset.attr('id'),
@@ -87,8 +87,7 @@
 
 		},
 		
-		build: function (photos) {//this sets up the photosets when the page is first loaded: sets up navigation and enables toggleThumbs.
-			
+		build: function (photoset) {//this sets up the photosets when the page is first loaded: sets up navigation and enables toggleThumbs.
 			controls = $('<div class="controls">');
 			nextbutton = $('<div id="next" class="next"><p>&#187;</p></div>');
 			prevbutton = $('<div id="prev" class="prev"><p>&#171;</p></div>');
