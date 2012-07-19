@@ -60,15 +60,16 @@
 					Photoset.prototype.spinCycle(corrSet, prevbutton, nextbutton, corrId);
 					
 					corrSet.show();
+					controls.show();
+					Photoset.prototype.toggleButtons(controls, true);
 				});
 				
 			});
 			thumbs.show();
 		},
 		
-		toggleButtons: function(controls){//makes buttons appear and disappear at the right times.
-			var buttonsVisible = false,
-				bool,
+		toggleButtons: function(controls, buttonsVisible){//makes buttons appear and disappear at the right times.
+			var bool,
 				photoVisible;
 			$('#photos').on('hover', function(){
 				bool = $('.photoset').css('display');
@@ -93,13 +94,13 @@
 			prevbutton = $('<div id="prev" class="prev"><p>&#171;</p></div>');
 			controls.append(nextbutton);
 			controls.append(prevbutton);
-			$('#photos').append(controls);
+			$('#photos').append(controls.hide());
 			
 			$('.photoset', photos).each(function(){
 				Photoset.prototype.spinCycle($(this), prevbutton, nextbutton, 00);
 			});
 			
-			Photoset.prototype.toggleButtons(controls);
+			Photoset.prototype.toggleButtons(controls, false);
 			
 			$('.photo figure').on('click', function(){
 				var photoset = $($(this).parent()).parent(),
