@@ -85,8 +85,8 @@
 				var $this = $(this),
 					id = $this.attr('id');
 				$this.on('click', function(){
-					$('.photo#'+id+'', main).addClass('opened');	
-					main.cycle(id - 1);
+					$('.photo#'+id+'', main).addClass('opened');
+					main.cycle(id-1);//TODO: make it transition instantly
 					thumbs.hide();
 					main.show();
 					controls.show();
@@ -94,27 +94,6 @@
 			});
 			
 			Photoset.prototype.toggleThumbs($this);
-			
-			/*if ($this.hasClass('opened')){
-				$('.main figure').on('click', function(){
-					console.log($this.attr('id'));
-				});
-			};*/
-			
-			
-			
-		/*	$('.photoset', photos).each(function(){
-				Photoset.prototype.spinCycle($(this), prevbutton, nextbutton, 00);
-			});*/
-			
-			//Photoset.prototype.toggleButtons(controls, false);
-			
-			/*$('.photo figure').on('click', function(){
-				var photoset = $($(this).parent()).parent(),
-					latest = $($(this).parent()).attr('id');
-				
-				Photoset.prototype.toggleThumbs(photoset, latest, controls);
-			});*/
 		},
 	};
 
