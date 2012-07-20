@@ -533,7 +533,19 @@
   height: 330.667px;
 }
 /* line 436, ../sass/style.sass */
-#videos .mainVid {
+#videos .featureVideo {
   height: 330.667px;
   width: 587.852px;
+  overflow: hidden;
+  *zoom: 1;
+}
+/* line 441, ../sass/style.sass */
+#videos .side {
+  height: 330.667px;
+  width: 386.148px;
+  background-color: #666666;
+  overflow: hidden;
+  *zoom: 1;
+  margin: 0px;
+  float: right;
 }

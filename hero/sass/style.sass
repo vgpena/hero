@@ -433,9 +433,16 @@
 		margin: 0px
 		height: $videos-height
 		
-	.mainVid
+	.featureVideo
 		height: $videos-height
-		width: $videos-height*$video-dim-ratio
-	//width: $video-width
-		//padding: 10px
+		width: $video-width
+		+clearfix
+		
+	.side
+		height: $videos-height
+		width: $side-width
+		background-color: #666
+		+clearfix
+		margin: 0px
+		float: right
 
