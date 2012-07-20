@@ -25,7 +25,8 @@
 	position: absolute
 	top: $hero-height - $features-list-outer-height +6
 	left: $features-list-margin
-	+box-shadow(rgba(black, 0.3) 0 0 8px)
+	z-index: 1000
+	+box-shadow(rgba(#000, 0.5) 0 0 8px)
 	+background-image(linear-gradient($highlight-red, $light-red 20%, $dark-red 90%))
 	text-transform: uppercase
 	
@@ -100,32 +101,27 @@
 		float: right
 		+box-shadow(0px 0px 6px #ddd)
 	
+	li:hover, li.opened
+		+box-shadow(0px 0px 6px rgba(0,0,0,.5))
+	
 	figure
 		height: $thumblinks-dim
 		width: $thumblinks-dim
 		margin: 0px
+		position: relative
 		img
 			width: 100%
-		
 	
-	li:hover
-		+box-shadow(0px 0px 6px rgba(0,0,0,.5))
-	
-	li.opened
-		@extend li:hover
-		figure
-			position: relative
-		
-		figure::after
-			content: " "
-			display: block
-			border: $light-red 3px solid
-			position: absolute
-			top: 0
-			left: 0
-			bottom: 0
-			right: 0
-			z-index: 2
+	.opened figure::after
+		content: " "
+		display: block
+		border: $light-red 3px solid
+		position: absolute
+		top: 0
+		left: 0
+		bottom: 0
+		right: 0
+		z-index: 1
 		
 	
 
@@ -218,32 +214,25 @@
 			height: $feature-content-height
 			padding-left: 0px
 			margin: 4px
-			li
-				height: $thumblinks-dim
-				width: $thumblinks-dim
-				background-color: #000
-				margin: $thumblinks-margin
-				padding: 0px
-				+clearfix
-				float: left
-				+box-shadow(0px 0px 6px #ddd)
-				figure
-					height: $thumblinks-dim
-					width: $thumblinks-dim
-					margin: 0px
-
-					img
-						width: 100%
+		li
+			height: $thumblinks-dim
+			width: $thumblinks-dim
+			background-color: #000
+			margin: $thumblinks-margin
+			padding: 0px
+			+clearfix
+			float: left
+			+box-shadow(0px 0px 6px #ddd)
+		li.opened
+			+box-shadow(0px 0px 6px #333)
+		figure
+			height: $thumblinks-dim
+			width: $thumblinks-dim
+			margin: 0px
+        
+		img
+			width: 100%
 					
-				
-			
-			
-			li.opened
-				+box-shadow(0px 0px 6px #333)
-			
-		
-	
-	
 	article.photoset
 		display: none
 		height: $hero-height
