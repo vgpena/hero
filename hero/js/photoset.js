@@ -1,5 +1,4 @@
 (function($){
-	var visible = false;
 	var Photoset = function (photos) {
 		$('.photoset').each(function(){
 			Photoset.prototype.build($(this));
@@ -17,7 +16,6 @@
 				controls = $('.controls', $this),
 				thumbsbutton = $('.thumbs-button', controls);
 			thumbsbutton.on('click', function(){
-				visible = true;
 				$('.photo', main).each(function(){
 					$(this).removeClass('opened');
 				});
@@ -27,10 +25,11 @@
 			});
 		},
 		
-		toggleControls: function(photoset, controls){//still can't get 'em to not show up if thumbnails are visible...
-			var bool = false;
-			if (visible == false){
-				photoset.on('hover', function(){
+		toggleControls: function(photoset, controls){
+			var bool = false,
+				main = $('.main', photoset);
+			photoset.on('hover', function(){
+				if (main.css('display')=='block'){
 					if (bool==false){
 						bool = true;
 						controls.show();
@@ -39,9 +38,8 @@
 						bool = false;
 						controls.hide();
 					};
-				});
-			};
-
+				};
+			});
 		},
 		
 		build: function (photoset) {//this sets up the photosets when the page is first loaded: sets up navigation and enables toggleThumbs.
@@ -87,7 +85,6 @@
 				var $this = $(this),
 					id = $this.attr('id');
 				$this.on('click', function(){
-					visible = false;
 					$('.photo#'+id+'', main).addClass('opened');	
 					main.cycle(id - 1);
 					thumbs.hide();
