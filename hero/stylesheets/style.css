@@ -508,3 +508,32 @@
   -o-box-shadow: 0px 0px 5px black;
   box-shadow: 0px 0px 5px black;
 }
+
+/* line 418, ../sass/style.sass */
+#videos .feature-content {
+  margin: 0px;
+  padding: 0px;
+  height: 330.667px;
+  overflow: hidden;
+  *zoom: 1;
+  float: left;
+  width: 974px;
+}
+/* line 426, ../sass/style.sass */
+#videos .feature-article {
+  position: absolute;
+}
+/* line 429, ../sass/style.sass */
+#videos .article-content {
+  position: absolute;
+}
+/* line 432, ../sass/style.sass */
+#videos p {
+  margin: 0px;
+  height: 330.667px;
+}
+/* line 436, ../sass/style.sass */
+#videos .mainVid {
+  height: 330.667px;
+  width: 587.852px;
+}
