@@ -519,6 +519,8 @@
 	padding: 8px
 	float: left
 	+clearfix
+	border-right: solid 1px #ccc
+	+box-shadow(0px 0px 10px rgba(black, .1))
 	
 	.blog-entry-title
 		font-size: 22px
@@ -528,6 +530,7 @@
 		font-family: $sans
 		color: #666
 		font-size: 13px
+		padding-left: 1px
 		
 	figure
 		float: left
@@ -550,6 +553,9 @@
 	padding: 8px
 	float: left
 	+clearfix
+	border-right: solid 1px #ccc
+	+box-shadow(0px 0px 10px rgba(black, .1))
+	display: block
 	
 	.blog-entry-title
 		font-size: 18px
@@ -559,6 +565,7 @@
 		font-family: $sans
 		color: #666
 		font-size: 12px
+		padding-left: 1px
 		
 	figure
 		float: left
@@ -614,14 +621,17 @@
 .blogs-linky
 	position: absolute
 	bottom: 10px
+	margin-left: -7px
 	background-color: $light-cream
 	font-family: $sans
 	text-align: right
 	padding: 6px
-	width: $feature-content-height - 16px
+	width: $feature-content-height - 12px
 	font-size: 14px
 	+box-shadow(0px 0px 10px rgba(black, .1))
 	
 	p
 		margin: 0px
-	
+		
+.author
+	font-weight: bold

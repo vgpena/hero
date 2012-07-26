@@ -657,19 +657,25 @@
   float: left;
   overflow: hidden;
   *zoom: 1;
+  border-right: solid 1px #cccccc;
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-/* line 523, ../sass/style.sass */
+/* line 525, ../sass/style.sass */
 .primary .blog-entry-title {
   font-size: 22px;
   font-family: "Georgia", "Times New Roman", serif;
 }
-/* line 527, ../sass/style.sass */
+/* line 529, ../sass/style.sass */
 .primary .blog-entry-data {
   font-family: "Helvetica", "Arial", sans-serif;
   color: #666666;
   font-size: 13px;
+  padding-left: 1px;
 }
-/* line 532, ../sass/style.sass */
+/* line 535, ../sass/style.sass */
 .primary figure {
   float: left;
   height: 112px;
@@ -679,17 +685,17 @@
   overflow: hidden;
   *zoom: 1;
 }
-/* line 540, ../sass/style.sass */
+/* line 543, ../sass/style.sass */
 .primary figure img {
   height: 100%;
 }
-/* line 543, ../sass/style.sass */
+/* line 546, ../sass/style.sass */
 .primary p {
   font-size: 14px;
   line-height: 20px;
 }
 
-/* line 547, ../sass/style.sass */
+/* line 550, ../sass/style.sass */
 .secondary {
   width: 308.667px;
   height: 316.667px;
@@ -697,19 +703,26 @@
   float: left;
   overflow: hidden;
   *zoom: 1;
+  border-right: solid 1px #cccccc;
+  -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  -o-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: block;
 }
-/* line 554, ../sass/style.sass */
+/* line 560, ../sass/style.sass */
 .secondary .blog-entry-title {
   font-size: 18px;
   font-family: "Georgia", "Times New Roman", serif;
 }
-/* line 558, ../sass/style.sass */
+/* line 564, ../sass/style.sass */
 .secondary .blog-entry-data {
   font-family: "Helvetica", "Arial", sans-serif;
   color: #666666;
   font-size: 12px;
+  padding-left: 1px;
 }
-/* line 563, ../sass/style.sass */
+/* line 570, ../sass/style.sass */
 .secondary figure {
   float: left;
   height: 60px;
@@ -719,17 +732,17 @@
   overflow: hidden;
   *zoom: 1;
 }
-/* line 571, ../sass/style.sass */
+/* line 578, ../sass/style.sass */
 .secondary figure img {
   height: 100%;
 }
-/* line 574, ../sass/style.sass */
+/* line 581, ../sass/style.sass */
 .secondary p {
   font-size: 13px;
   line-height: 17px;
 }
 
-/* line 578, ../sass/style.sass */
+/* line 585, ../sass/style.sass */
 .tertiary {
   width: 308.667px;
   height: 316.667px;
@@ -738,7 +751,7 @@
   overflow: hidden;
   *zoom: 1;
 }
-/* line 585, ../sass/style.sass */
+/* line 592, ../sass/style.sass */
 .tertiary figure {
   height: 66px;
   width: 66px;
@@ -749,47 +762,53 @@
   background-color: black;
   margin-right: 6px;
 }
-/* line 594, ../sass/style.sass */
+/* line 601, ../sass/style.sass */
 .tertiary figure img {
   height: 100%;
 }
-/* line 597, ../sass/style.sass */
+/* line 604, ../sass/style.sass */
 .tertiary .blog-entry-title {
   margin-top: 4px;
   font-family: "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   font-weight: bold;
 }
-/* line 603, ../sass/style.sass */
+/* line 610, ../sass/style.sass */
 .tertiary .blog-entry-data {
   font-family: "Helvetica", "Arial", sans-serif;
   color: #666666;
   font-size: 13px;
 }
 
-/* line 609, ../sass/style.sass */
+/* line 616, ../sass/style.sass */
 .blog-head {
   width: 100%;
   height: 66px;
   padding: 3px;
 }
 
-/* line 614, ../sass/style.sass */
+/* line 621, ../sass/style.sass */
 .blogs-linky {
   position: absolute;
   bottom: 10px;
+  margin-left: -7px;
   background-color: #faf7ed;
   font-family: "Helvetica", "Arial", sans-serif;
   text-align: right;
   padding: 6px;
-  width: 308.667px;
+  width: 312.667px;
   font-size: 14px;
   -moz-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   -webkit-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   -o-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-/* line 625, ../sass/style.sass */
+/* line 633, ../sass/style.sass */
 .blogs-linky p {
   margin: 0px;
+}
+
+/* line 636, ../sass/style.sass */
+.author {
+  font-weight: bold;
 }
