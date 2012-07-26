@@ -315,7 +315,6 @@
 			font-size: $nav-dim
 			background-color: rgba(255,255,255,0.5)
 			position: absolute
-			//top: $hero-height/2 - $nav-dim
 			margin: 4px
 			border: solid 4px rgba(0,0,0,0.6)
 			
@@ -402,7 +401,7 @@
 			+box-shadow(0px 0px 5px rgba(black, 1.0))
 		
 	
-
+// For the Videos feature
 #videos
 	.feature-content
 		margin: 0px
@@ -418,20 +417,85 @@
 	.article-content
 		position: absolute
 		
-	p
-		margin: 0px
-		height: $videos-height
+		p
+			margin: 0px
+			height: $videos-height
 		
-	.featureVideo
+	.featureVideo //***********IMPORTANT TODO: for some reason, when the height of the iframe is set to its "correct" height, the text in the red nav buttons becomes skinnier. I can't actually find this happening in the css but it's definitely happening, even when the height is set directly in the HTML.*/
 		height: $videos-height
 		width: $video-width
 		+clearfix
 		
 	.side
-		height: $videos-height
-		width: $side-width
-		background-color: #666
+		position: relative
+		height: $feature-content-height + $hero-padding + 2
+		width: $side-width + 1
 		+clearfix
-		margin: 0px
 		float: right
+	
+	.side-content
+		padding: $side-padding
+	
+	.video-header
+		font-family: $serif
+		font-size: 26px
+		
+	.video-youtube-tiein
+		position: absolute
+		font-family: $sans
+		font-size: 12px
+		bottom: 172px
+		
+	.youtube-logo
+		display: block
+		margin-top: -10px
+		margin-left: -2px
+		
+	a
+		text-decoration: none
+		color: #000
+		
+	.view-obie-vids
+		position: absolute
+		bottom: 0px
+		width: $side-width - 12
+		background-color: $light-cream
+		+box-shadow(0px 0px 10px rgba(black, .1))
+		font-family: $sans
+		padding: 6px
+		margin: 0px
+		font-size: 14px
+		text-align: right
+		
+	.video-thumbs
+		position: absolute
+		bottom: 38px
+		left: 10px
+		width: $video-thumbs-width
+		height: 150px
+		
+		ul
+			position: relative
+			margin: 0px
+			padding: 0px
+			list-style-type: none
+			float: left
+			
+		li
+			width: $video-thumbs-width/3 - 7
+			height: 70px
+			display: inline-block
+			margin: 3px 2px
+			+box-shadow(0px 0px 6px #ddd)
 
+		li:hover, li.opened
+			+box-shadow(0px 0px 6px rgba(0,0,0,.5))
+			
+		figure
+			height: 70px
+			width: $video-thumbs-width/3 - 7
+			background-color: #fff
+			margin: 0px
+			
+			img
+				height: 70px
