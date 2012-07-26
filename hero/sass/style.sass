@@ -458,7 +458,7 @@
 	.view-obie-vids
 		position: absolute
 		bottom: 0px
-		width: $side-width - 12
+		width: $side-width - 11
 		background-color: $light-cream
 		+box-shadow(0px 0px 10px rgba(black, .1))
 		font-family: $sans
@@ -503,6 +503,10 @@
 /////////BLOGS
 
 #blogs
+
+	.article-content
+		width: $hero-width
+		
 	p
 		font-family: $sans
 		
@@ -510,7 +514,7 @@
 	margin-top: -10px
 
 .primary
-	width: $feature-content-height - 8px
+	width: $feature-content-height - 16px
 	height: $feature-content-height - 8px
 	padding: 8px
 	float: left
@@ -541,7 +545,7 @@
 		line-height: $blog-primary-line-height
 		
 .secondary
-	width: $feature-content-height - 8px
+	width: $feature-content-height - 16px
 	height: $feature-content-height - 8px
 	padding: 8px
 	float: left
@@ -570,3 +574,54 @@
 	p
 		font-size: 13px
 		line-height: $blog-secondary-line-height
+		
+.tertiary
+	width: $feature-content-height - 16px
+	height: $feature-content-height - 8px
+	padding: 8px
+	float: left
+	+clearfix
+
+	figure
+		height: $blog-head-height
+		width: $blog-head-height
+		margin: 0px
+		float: left
+		+clearfix
+		background-color: #000
+		margin-right: 6px
+		
+		img
+			height: 100%
+			
+	.blog-entry-title
+		margin-top: 4px
+		font-family: $sans
+		font-size: 14px
+		font-weight: bold
+		
+	.blog-entry-data
+		font-family: $sans
+		color: #666
+		font-size: 13px
+		
+			
+.blog-head
+	width: 100%
+	height: $blog-head-height
+	padding: $blog-head-height-padding
+	
+.blogs-linky
+	position: absolute
+	bottom: 10px
+	background-color: $light-cream
+	font-family: $sans
+	text-align: right
+	padding: 6px
+	width: $feature-content-height - 16px
+	font-size: 14px
+	+box-shadow(0px 0px 10px rgba(black, .1))
+	
+	p
+		margin: 0px
+	
