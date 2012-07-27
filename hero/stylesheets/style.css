@@ -643,13 +643,21 @@
 #blogs p {
   font-family: "Helvetica", "Arial", sans-serif;
 }
-
 /* line 513, ../sass/style.sass */
+#blogs a {
+  text-decoration: none;
+}
+/* line 516, ../sass/style.sass */
+#blogs a:visited, #blogs a:active {
+  color: black;
+}
+
+/* line 519, ../sass/style.sass */
 .blog-preview {
   margin-top: -10px;
 }
 
-/* line 516, ../sass/style.sass */
+/* line 522, ../sass/style.sass */
 .primary {
   width: 308.667px;
   height: 316.667px;
@@ -663,19 +671,22 @@
   -o-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-/* line 525, ../sass/style.sass */
+/* line 531, ../sass/style.sass */
 .primary .blog-entry-title {
   font-size: 22px;
   font-family: "Georgia", "Times New Roman", serif;
+  text-decoration: none;
+  color: black;
 }
-/* line 529, ../sass/style.sass */
+/* line 537, ../sass/style.sass */
 .primary .blog-entry-data {
   font-family: "Helvetica", "Arial", sans-serif;
   color: #666666;
   font-size: 13px;
   padding-left: 1px;
+  text-decoration: none;
 }
-/* line 535, ../sass/style.sass */
+/* line 544, ../sass/style.sass */
 .primary figure {
   float: left;
   height: 112px;
@@ -685,17 +696,17 @@
   overflow: hidden;
   *zoom: 1;
 }
-/* line 543, ../sass/style.sass */
+/* line 552, ../sass/style.sass */
 .primary figure img {
   height: 100%;
 }
-/* line 546, ../sass/style.sass */
+/* line 555, ../sass/style.sass */
 .primary p {
   font-size: 14px;
   line-height: 20px;
 }
 
-/* line 550, ../sass/style.sass */
+/* line 559, ../sass/style.sass */
 .secondary {
   width: 308.667px;
   height: 316.667px;
@@ -710,19 +721,22 @@
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   display: block;
 }
-/* line 560, ../sass/style.sass */
+/* line 569, ../sass/style.sass */
 .secondary .blog-entry-title {
   font-size: 18px;
   font-family: "Georgia", "Times New Roman", serif;
+  text-decoration: none;
+  color: black;
 }
-/* line 564, ../sass/style.sass */
+/* line 575, ../sass/style.sass */
 .secondary .blog-entry-data {
   font-family: "Helvetica", "Arial", sans-serif;
   color: #666666;
   font-size: 12px;
   padding-left: 1px;
+  text-decoration: none;
 }
-/* line 570, ../sass/style.sass */
+/* line 582, ../sass/style.sass */
 .secondary figure {
   float: left;
   height: 60px;
@@ -732,17 +746,17 @@
   overflow: hidden;
   *zoom: 1;
 }
-/* line 578, ../sass/style.sass */
+/* line 590, ../sass/style.sass */
 .secondary figure img {
   height: 100%;
 }
-/* line 581, ../sass/style.sass */
+/* line 593, ../sass/style.sass */
 .secondary p {
   font-size: 13px;
   line-height: 17px;
 }
 
-/* line 585, ../sass/style.sass */
+/* line 597, ../sass/style.sass */
 .tertiary {
   width: 308.667px;
   height: 316.667px;
@@ -751,7 +765,7 @@
   overflow: hidden;
   *zoom: 1;
 }
-/* line 592, ../sass/style.sass */
+/* line 604, ../sass/style.sass */
 .tertiary figure {
   height: 66px;
   width: 66px;
@@ -762,32 +776,35 @@
   background-color: black;
   margin-right: 6px;
 }
-/* line 601, ../sass/style.sass */
+/* line 613, ../sass/style.sass */
 .tertiary figure img {
   height: 100%;
 }
-/* line 604, ../sass/style.sass */
+/* line 616, ../sass/style.sass */
 .tertiary .blog-entry-title {
   margin-top: 4px;
   font-family: "Helvetica", "Arial", sans-serif;
   font-size: 14px;
   font-weight: bold;
+  text-decoration: none;
+  color: black;
 }
-/* line 610, ../sass/style.sass */
+/* line 624, ../sass/style.sass */
 .tertiary .blog-entry-data {
   font-family: "Helvetica", "Arial", sans-serif;
   color: #666666;
   font-size: 13px;
+  text-decoration: none;
 }
 
-/* line 616, ../sass/style.sass */
+/* line 631, ../sass/style.sass */
 .blog-head {
   width: 100%;
   height: 66px;
   padding: 3px;
 }
 
-/* line 621, ../sass/style.sass */
+/* line 636, ../sass/style.sass */
 .blogs-linky {
   position: absolute;
   bottom: 10px;
@@ -803,12 +820,12 @@
   -o-box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
-/* line 633, ../sass/style.sass */
+/* line 648, ../sass/style.sass */
 .blogs-linky p {
   margin: 0px;
 }
 
-/* line 636, ../sass/style.sass */
+/* line 651, ../sass/style.sass */
 .author {
   font-weight: bold;
 }
