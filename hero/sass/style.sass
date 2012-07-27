@@ -516,102 +516,75 @@
 	a:visited, a:active
 		color: #000
 		
-.blog-preview
-	margin-top: -10px
-
-.primary
-	width: $feature-content-height - 16px
-	height: $feature-content-height - 8px
-	padding: 8px
-	float: left
-	+clearfix
-	border-right: solid 1px #ccc
-	+box-shadow(0px 0px 10px rgba(black, .1))
-	
-	.blog-entry-title
-		font-size: 22px
-		font-family: $serif
-		text-decoration: none
-		color: #000
-		
-	.blog-entry-data
-		font-family: $sans
-		color: #666
-		font-size: 13px
-		padding-left: 1px
-		text-decoration: none
-		
 	figure
 		float: left
-		height: $blog-primary-img-dim
-		width: $blog-primary-img-dim
-		margin: $blog-primary-img-margin-top 8px $blog-primary-img-margin-bottom 0px
 		background-color: #000
 		+clearfix
 		
 		img
 			height: 100%
 			
-	p
-		font-size: 14px
-		line-height: $blog-primary-line-height
-		
-.secondary
+.primary, .secondary, .tertiary
 	width: $feature-content-height - 16px
 	height: $feature-content-height - 8px
 	padding: 8px
 	float: left
 	+clearfix
+
+.primary, .secondary
 	border-right: solid 1px #ccc
 	+box-shadow(0px 0px 10px rgba(black, .1))
-	display: block
 	
 	.blog-entry-title
-		font-size: 18px
 		font-family: $serif
 		text-decoration: none
 		color: #000
 		
 	.blog-entry-data
-		font-family: $sans
-		color: #666
-		font-size: 12px
 		padding-left: 1px
-		text-decoration: none
+
+.blog-entry-data	
+	font-family: $sans
+	color: #666
+	font-size: 13px
+	text-decoration: none
+		
+.blog-preview
+	margin-top: -10px
+
+.primary
+	.blog-entry-title
+		font-size: 22px
 		
 	figure
-		float: left
+		height: $blog-primary-img-dim
+		width: $blog-primary-img-dim
+		margin: $blog-primary-img-margin-top 8px $blog-primary-img-margin-bottom 0px
+			
+	p
+		font-size: 14px
+		line-height: $blog-primary-line-height
+		
+.secondary
+	.blog-entry-title
+		font-size: 18px
+		
+		
+	figure
 		height: $blog-secondary-img-dim
 		width: $blog-secondary-img-dim
 		margin: $blog-secondary-img-margin-top 8px $blog-secondary-img-margin-bottom 0px
-		background-color: #000
-		+clearfix
-
-		img
-			height: 100%
 
 	p
 		font-size: 13px
 		line-height: $blog-secondary-line-height
 		
 .tertiary
-	width: $feature-content-height - 16px
-	height: $feature-content-height - 8px
-	padding: 8px
-	float: left
-	+clearfix
-
 	figure
 		height: $blog-head-height
 		width: $blog-head-height
 		margin: 0px
-		float: left
-		+clearfix
-		background-color: #000
 		margin-right: 6px
-		
-		img
-			height: 100%
 			
 	.blog-entry-title
 		margin-top: 4px
@@ -620,12 +593,6 @@
 		font-weight: bold
 		text-decoration: none
 		color: #000
-		
-	.blog-entry-data
-		font-family: $sans
-		color: #666
-		font-size: 13px
-		text-decoration: none
 		
 			
 .blog-head
